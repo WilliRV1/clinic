@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pacientes Internacionales — C&P Smile Clinic</title>
+  <meta name="description" content="Turismo dental en Cali, Colombia. Experiencia todo incluido: transporte, alojamiento, staff bilingüe y seguimiento post-tratamiento." />
+  <link rel="icon" type="image/png" href="/logos/logo-icon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
+  <script type="module" src="/src/js/main.js"></script>
+</head>
+<body class="bg-background-light text-slate-900 font-body">
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 w-full border-b border-slate-100 bg-white/90 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex h-20 items-center justify-between">
+        <a href="/" class="flex items-center gap-3">
+          <img src="/logos/logo-icon.png" alt="C&P Smile Clinic" class="h-10 w-10 object-contain" style="mix-blend-mode: multiply" />
+          <div class="flex flex-col">
+            <span class="text-lg font-extrabold leading-none tracking-tight text-slate-800">C&P <span class="text-primary">Smile</span></span>
+            <span class="text-[10px] uppercase tracking-[0.2em] text-muted font-semibold">Clinic</span>
+          </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a class="nav-link" href="/">Inicio</a>
+          <a class="nav-link" href="/servicios.html">Servicios</a>
+          <div class="relative group">
+            <button class="nav-link flex items-center gap-1 cursor-pointer bg-transparent border-0 p-0 font-inherit">
+              Doctores
+              <span class="material-symbols-outlined text-[18px] transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+            </button>
+            <div class="absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div class="bg-white rounded-2xl shadow-xl border border-slate-100 py-2 min-w-[270px]">
+                <a href="/el-doctor.html" class="flex items-center gap-3 px-5 py-3 hover:bg-slate-50 transition-colors">
+                  <span class="material-symbols-outlined text-primary">person</span>
+                  <div>
+                    <p class="font-bold text-slate-900 text-sm leading-tight">Dr. John Freddy Prado Giraldo</p>
+                    <p class="text-xs text-muted">Odontólogo Rehabilitador</p>
+                  </div>
+                </a>
+                <a href="/la-doctora.html" class="flex items-center gap-3 px-5 py-3 hover:bg-slate-50 transition-colors">
+                  <span class="material-symbols-outlined text-primary">person</span>
+                  <div>
+                    <p class="font-bold text-slate-900 text-sm leading-tight">La Doctora</p>
+                    <p class="text-xs text-muted">Próximamente</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <a class="nav-link" href="/testimonios.html">Testimonios</a>
+          <a class="nav-link" href="/contacto.html">Contacto</a>
+        </nav>
+        <div class="flex items-center gap-4">
+          <a href="/contacto.html" class="hidden sm:flex items-center justify-center rounded-xl bg-primary px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-primary/20 hover:bg-primary-dark transition-all">Agendar Cita</a>
+          <button id="mobile-menu-btn" class="md:hidden text-slate-900"><span class="material-symbols-outlined text-3xl">menu</span></button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden pb-6 border-t border-slate-100">
+        <nav class="flex flex-col gap-4 pt-4">
+          <a class="nav-link" href="/">Inicio</a>
+          <a class="nav-link" href="/servicios.html">Servicios</a>
+          <div>
+            <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="nav-link w-full text-left flex items-center justify-between">
+              Doctores
+              <span class="material-symbols-outlined text-[18px]">expand_more</span>
+            </button>
+            <div class="hidden flex flex-col gap-1 mt-2 pl-4 border-l-2 border-slate-100 ml-2">
+              <a class="nav-link text-sm py-1" href="/el-doctor.html">Dr. John Freddy Prado Giraldo</a>
+              <a class="nav-link text-sm py-1" href="/la-doctora.html">La Doctora</a>
+            </div>
+          </div>
+          <a class="nav-link" href="/testimonios.html">Testimonios</a>
+          <a class="nav-link" href="/contacto.html">Contacto</a>
+          <a href="/contacto.html" class="btn-primary text-center mt-2">Agendar Cita</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-b from-primary-dark to-primary z-0"></div>
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 text-center text-white">
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-6 fade-in">
+          Tu Nueva Sonrisa Te Espera en <span class="italic underline decoration-white/30">Cali</span>
+        </h1>
+        <p class="text-xl text-blue-100 max-w-2xl mx-auto mb-10 fade-in">
+          Combinamos excelencia dental de clase mundial con la calidez del turismo médico en la capital mundial de la salsa.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 fade-in">
+          <a href="/contacto.html" class="inline-flex items-center justify-center rounded-xl bg-white text-primary px-8 py-4 font-bold hover:bg-blue-50 transition-colors shadow-lg gap-2">
+            <span class="material-symbols-outlined">videocam</span> Consulta Virtual de Valoración
+          </a>
+          <a href="/servicios.html" class="inline-flex items-center justify-center rounded-xl border-2 border-white/30 px-8 py-4 font-bold text-white hover:bg-white/10 transition-colors">
+            Ver Paquetes
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CALI -->
+    <section class="py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row justify-between items-start gap-8 mb-12 fade-in">
+          <div>
+            <span class="section-label block mb-2">Destino Dental</span>
+            <h2 class="section-title">¿Por qué elegir Cali, Colombia?</h2>
+          </div>
+          <p class="text-slate-500 max-w-md lg:text-right">Cali no solo es reconocida por su calidad médica, sino por ser un paraíso de recuperación con clima perfecto todo el año.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="card fade-in">
+            <div class="rounded-2xl overflow-hidden aspect-[3/2] bg-slate-100 mb-6">
+              <img class="w-full h-full object-cover" alt="Clima primaveral en Cali" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBicx_79xMfR3b9hsXiZ0Mda9i1RbGVV8WWM2c7zAPakT4yLSEQfIXPxZjr2-HOpwZ7VRGh93N42XdpvqFICyIXim--QK6FKidfdnigu7yics_i50Yw9aQM0iUM7QGaL4wQmbsUdXu1BbeKNMz_HkD6nWVovsAQIMrJ-LQh6FW-LnytV6vydVfs8wiDXq66Pit8Hg9ajODu_Dr8qkXmJsZrEHafLGPOHCXDt_azhybQk_Cwo3PkcmkitQBBT12xyYQ9u7YBl6gRaE0" />
+            </div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="material-symbols-outlined text-primary">wb_sunny</span>
+              <h4 class="font-bold text-slate-900">Clima Primaveral</h4>
+            </div>
+            <p class="text-slate-500 text-sm">Disfruta de una temperatura promedio de 25°C, ideal para una recuperación relajada y placentera.</p>
+          </div>
+          <div class="card fade-in">
+            <div class="rounded-2xl overflow-hidden aspect-[3/2] bg-slate-100 mb-6">
+              <img class="w-full h-full object-cover" alt="Precios competitivos" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY2LoSKMo0XnSnIzVjzSHTKODGbwvvzJUQUlIzymTdH8jqz4pCkBK-4K5mF3a57Q7VvaCiIOk_l_1WRiOR53UHN8owsoaXQoi1KcX1ZQhA-TANinGZ2-kgwL7dg_sNEfOdtHaHqgt4OplQcnjQjhe5eLuTxrVBdG74MBtN8WYIIFynlTLvhE2hqLWP9LeTGNje6ah47FD8jXegxx5fjHlm5PVBjdXMcp0q50KenLnL7xocfW8WvJ6BC44hpgxSmsXBMgXKNv7I_6s" />
+            </div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="material-symbols-outlined text-primary">payments</span>
+              <h4 class="font-bold text-slate-900">Precios Competitivos</h4>
+            </div>
+            <p class="text-slate-500 text-sm">Ahorra hasta un 70% en comparación con tratamientos en EE.UU. o Europa, con la misma tecnología.</p>
+          </div>
+          <div class="card fade-in">
+            <div class="rounded-2xl overflow-hidden aspect-[3/2] bg-slate-100 mb-6">
+              <img class="w-full h-full object-cover" alt="Turismo de bienestar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1KwahucJ6tSl9fOP-_dtjiO7Zq6QFdhrhbjsML-XhkIaEvQaVptvKof_iC2eKg8EBJ7e1yuEr32BW2EAlSXg-23pSn-F0XHPe89JKOXVOszcptxV42cbOFItNrJS8L2bzVj3ZY4HwvUIAOX8-VaZAA3idzPjIyKU_6aSrkymIvEQP0iwSStfDFNGWCiiY3jfaDejeCSXKbvz71lgTtxM9shiQyv0OjwCdFBsGuihnp3J4_hpwRP17bQRF4LGC7UvrGpcLCgkprjo" />
+            </div>
+            <div class="flex items-center gap-2 mb-2">
+              <span class="material-symbols-outlined text-primary">spa</span>
+              <h4 class="font-bold text-slate-900">Turismo de Bienestar</h4>
+            </div>
+            <p class="text-slate-500 text-sm">Gastronomía exquisita y una cultura vibrante que harán de tu viaje una experiencia inolvidable.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALL INCLUSIVE -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="section-title mb-2 fade-in">Experiencia "Todo Incluido"</h2>
+        <p class="text-muted mb-12 fade-in">Nos encargamos de cada detalle para que tú solo te preocupes por sonreír.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="card text-center fade-in">
+            <div class="size-16 bg-primary-light rounded-2xl flex items-center justify-center text-primary mx-auto mb-4">
+              <span class="material-symbols-outlined text-3xl">airport_shuttle</span>
+            </div>
+            <h4 class="font-bold text-slate-900 mb-2">Transporte VIP</h4>
+            <p class="text-slate-500 text-sm">Recogida en el aeropuerto y traslados privados a todas tus citas dentales.</p>
+          </div>
+          <div class="card text-center fade-in">
+            <div class="size-16 bg-blue-50 rounded-2xl flex items-center justify-center text-accent mx-auto mb-4">
+              <span class="material-symbols-outlined text-3xl">hotel</span>
+            </div>
+            <h4 class="font-bold text-slate-900 mb-2">Alojamiento</h4>
+            <p class="text-slate-500 text-sm">Convenios con los mejores hoteles y apartamentos boutique de la zona norte de Cali.</p>
+          </div>
+          <div class="card text-center fade-in">
+            <div class="size-16 bg-primary-light rounded-2xl flex items-center justify-center text-primary mx-auto mb-4">
+              <span class="material-symbols-outlined text-3xl">translate</span>
+            </div>
+            <h4 class="font-bold text-slate-900 mb-2">Staff Bilingüe</h4>
+            <p class="text-slate-500 text-sm">Acompañamiento constante en inglés para una comunicación clara y fluida.</p>
+          </div>
+          <div class="card text-center fade-in">
+            <div class="size-16 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-600 mx-auto mb-4">
+              <span class="material-symbols-outlined text-3xl">monitor_heart</span>
+            </div>
+            <h4 class="font-bold text-slate-900 mb-2">Post-Tratamiento</h4>
+            <p class="text-slate-500 text-sm">Seguimiento remoto y garantía internacional en nuestros tratamientos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW TO COORDINATE -->
+    <section class="py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="rounded-3xl overflow-hidden aspect-[4/3] bg-slate-100 shadow-2xl fade-in">
+            <img class="w-full h-full object-cover" alt="Consulta virtual con Doctor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY2LoSKMo0XnSnIzVjzSHTKODGbwvvzJUQUlIzymTdH8jqz4pCkBK-4K5mF3a57Q7VvaCiIOk_l_1WRiOR53UHN8owsoaXQoi1KcX1ZQhA-TANinGZ2-kgwL7dg_sNEfOdtHaHqgt4OplQcnjQjhe5eLuTxrVBdG74MBtN8WYIIFynlTLvhE2hqLWP9LeTGNje6ah47FD8jXegxx5fjHlm5PVBjdXMcp0q50KenLnL7xocfW8WvJ6BC44hpgxSmsXBMgXKNv7I_6s" />
+          </div>
+          <div class="fade-in">
+            <h2 class="section-title mb-8">¿Cómo coordinar desde el extranjero?</h2>
+            <div class="space-y-8">
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 size-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg">1</div>
+                <div>
+                  <h4 class="text-lg font-bold text-slate-900 mb-1">Consulta Virtual Inicial</h4>
+                  <p class="text-slate-500">Envíanos tus radiografías o fotos. Realizamos una videollamada para discutir tus objetivos y presupuesto.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 size-12 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg">2</div>
+                <div>
+                  <h4 class="text-lg font-bold text-slate-900 mb-1">Plan de Tratamiento y Cotización</h4>
+                  <p class="text-slate-500">Recibe una propuesta detallada con tiempos, costos y logística de viaje incluida.</p>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 size-12 rounded-full bg-slate-700 text-white flex items-center justify-center font-bold text-lg">3</div>
+                <div>
+                  <h4 class="text-lg font-bold text-slate-900 mb-1">Reserva y Viaje</h4>
+                  <p class="text-slate-500">Coordinamos tus fechas. Te recibimos en el aeropuerto de Cali (CLO) para iniciar tu transformación.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col sm:flex-row items-center gap-4 mt-10">
+              <div class="bg-primary-light rounded-2xl px-6 py-4 text-center">
+                <p class="text-3xl font-black text-primary">100%</p>
+                <p class="text-sm font-medium text-primary-dark">Asistencia Digital</p>
+              </div>
+              <a href="/contacto.html" class="btn-primary gap-2">Hablar con un Coordinador</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="section-title mb-2 fade-in">Ubicación Estratégica</h2>
+        <p class="text-muted mb-12 fade-in">Estamos en el corazón médico de Cali, rodeados de los mejores servicios.</p>
+        <div class="rounded-3xl overflow-hidden aspect-[2/1] bg-slate-100 shadow-xl fade-in">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127270.58998451767!2d-76.58717325!3d3.4372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a6f0cc4bb3f1%3A0x1f0fb5ac2e7b3f1!2sCali%2C%20Valle%20del%20Cauca!5e0!3m2!1ses!2sco!4v1700000000000!5m2!1ses!2sco"
+            class="w-full h-full border-0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación C&P Smile Clinic">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-slate-100 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+            <img src="/logos/logo-icon.png" alt="C&P Smile" class="h-8 w-8 object-contain" />
+            <span class="text-lg font-bold text-slate-900 leading-none">C&P <span class="text-primary">Smile Clinic</span></span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed">Líderes en diseño de sonrisa y turismo dental en Colombia. Tu bienestar es nuestra prioridad.</p>
+          <div class="flex gap-3 mt-4">
+            <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+            <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">translate</span></a>
+          </div>
+        </div>
+        <div>
+          <h5 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-xs">Navegación</h5>
+          <ul class="space-y-3 text-sm text-slate-400">
+            <li><a class="hover:text-primary transition-colors" href="/">Inicio</a></li>
+            <li><a class="hover:text-primary transition-colors" href="/servicios.html">Servicios</a></li>
+            <li><a class="hover:text-primary transition-colors" href="/pacientes-internacionales.html">Pacientes Internacionales</a></li>
+            <li><a class="hover:text-primary transition-colors" href="/contacto.html">Preguntas Frecuentes</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-xs">Contacto</h5>
+          <ul class="space-y-3 text-sm text-slate-400">
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-muted text-lg">call</span> +57 (300) 123 4567</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-muted text-lg">mail</span> info@cpsmileclinic.com</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-muted text-lg">location_on</span> CL 5 #38-25, Cali</li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-xs">Newsletter</h5>
+          <p class="text-slate-400 text-sm mb-4">Recibe tips de salud dental y ofertas especiales.</p>
+          <form class="flex">
+            <input type="email" placeholder="Email" class="flex-1 px-4 py-3 rounded-l-xl border border-slate-200 text-sm focus:outline-none focus:border-primary" />
+            <button type="submit" class="px-4 py-3 bg-primary text-white rounded-r-xl hover:bg-primary-dark transition-colors">
+              <span class="material-symbols-outlined">send</span>
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="border-t border-slate-100 pt-8 text-center">
+        <p class="text-xs text-slate-400">© 2025 C&P Smile Clinic. Todos los derechos reservados. Cali, Colombia.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

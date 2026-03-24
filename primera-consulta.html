@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tu Primera Consulta — C&P Smile Clinic</title>
+  <meta name="description" content="Descubre qué esperar en tu primera visita a C&P Smile Clinic. Evaluación integral, plan de salud personalizado y atención profesional." />
+  <link rel="icon" type="image/png" href="/logos/logo-icon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
+  <script type="module" src="/src/js/main.js"></script>
+</head>
+<body class="bg-background-light text-slate-900 font-body" data-cloak>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 w-full border-b border-slate-100 bg-white/90 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex h-20 items-center justify-between">
+        <a href="/" class="flex items-center gap-3">
+          <img src="/logos/logo-icon.png" alt="C&P Smile Clinic" class="h-10 w-10 object-contain" style="mix-blend-mode: multiply" />
+          <div class="flex flex-col">
+            <span class="text-lg font-extrabold leading-none tracking-tight text-slate-800">C&P <span class="text-primary">Smile</span></span>
+            <span class="text-[10px] uppercase tracking-[0.2em] text-muted font-semibold">Clinic</span>
+          </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a class="nav-link" href="/">Inicio</a>
+          <a class="nav-link" href="/servicios.html">Servicios</a>
+          <div class="relative group">
+            <button class="nav-link flex items-center gap-1 cursor-pointer bg-transparent border-0 p-0 font-inherit">
+              Doctores
+              <span class="material-symbols-outlined text-[18px] transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+            </button>
+            <div class="absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div class="bg-white rounded-2xl shadow-xl border border-slate-100 py-2 min-w-[270px]">
+                <a href="/el-doctor.html" class="flex items-center gap-3 px-5 py-3 hover:bg-slate-50 transition-colors">
+                  <span class="material-symbols-outlined text-primary">person</span>
+                  <div>
+                    <p class="font-bold text-slate-900 text-sm leading-tight">Dr. John Freddy Prado Giraldo</p>
+                    <p class="text-xs text-muted">Odontólogo Rehabilitador</p>
+                  </div>
+                </a>
+                <a href="/la-doctora.html" class="flex items-center gap-3 px-5 py-3 hover:bg-slate-50 transition-colors">
+                  <span class="material-symbols-outlined text-primary">person</span>
+                  <div>
+                    <p class="font-bold text-slate-900 text-sm leading-tight">La Doctora</p>
+                    <p class="text-xs text-muted">Próximamente</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <a class="nav-link" href="/testimonios.html">Testimonios</a>
+          <a class="nav-link" href="/contacto.html">Contacto</a>
+        </nav>
+        <div class="flex items-center gap-4">
+          <a href="/contacto.html" class="hidden sm:flex items-center justify-center rounded-xl bg-primary px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-primary/20 hover:bg-primary-dark transition-all">
+            <span class="material-symbols-outlined mr-1 text-lg">calendar_month</span> Reservar Cita
+          </a>
+          <button id="mobile-menu-btn" class="md:hidden text-slate-900"><span class="material-symbols-outlined text-3xl">menu</span></button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden pb-6 border-t border-slate-100">
+        <nav class="flex flex-col gap-4 pt-4">
+          <a class="nav-link" href="/">Inicio</a>
+          <a class="nav-link" href="/servicios.html">Servicios</a>
+          <div>
+            <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="nav-link w-full text-left flex items-center justify-between">
+              Doctores
+              <span class="material-symbols-outlined text-[18px]">expand_more</span>
+            </button>
+            <div class="hidden flex flex-col gap-1 mt-2 pl-4 border-l-2 border-slate-100 ml-2">
+              <a class="nav-link text-sm py-1" href="/el-doctor.html">Dr. John Freddy Prado Giraldo</a>
+              <a class="nav-link text-sm py-1" href="/la-doctora.html">La Doctora</a>
+            </div>
+          </div>
+          <a class="nav-link" href="/testimonios.html">Testimonios</a>
+          <a class="nav-link" href="/contacto.html">Contacto</a>
+          <a href="/contacto.html" class="btn-primary text-center mt-2">Reservar Cita</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO BANNER -->
+    <section class="relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-900/80 to-slate-900/40 z-10"></div>
+      <img class="absolute inset-0 w-full h-full object-cover" alt="Consultorio dental moderno" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBicx_79xMfR3b9hsXiZ0Mda9i1RbGVV8WWM2c7zAPakT4yLSEQfIXPxZjr2-HOpwZ7VRGh93N42XdpvqFICyIXim--QK6FKidfdnigu7yics_i50Yw9aQM0iUM7QGaL4wQmbsUdXu1BbeKNMz_HkD6nWVovsAQIMrJ-LQh6FW-LnytV6vydVfs8wiDXq66Pit8Hg9ajODu_Dr8qkXmJsZrEHafLGPOHCXDt_azhybQk_Cwo3PkcmkitQBBT12xyYQ9u7YBl6gRaE0" />
+      <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
+        <span class="inline-flex items-center rounded-full bg-primary px-4 py-1.5 text-white text-xs font-bold uppercase tracking-wider mb-6 fade-in">Tu Bienvenida</span>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-4 max-w-2xl fade-in">Tu Primera Consulta</h1>
+        <p class="text-xl text-slate-200 max-w-xl fade-in">Inicia tu camino hacia una sonrisa saludable con una evaluación integral y personalizada.</p>
+      </div>
+    </section>
+
+    <!-- WHAT TO EXPECT -->
+    <section class="py-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col lg:flex-row justify-between items-start gap-8 mb-16">
+          <div class="fade-in">
+            <h2 class="section-title mb-4">¿Qué esperar de tu visita?</h2>
+            <p class="text-lg text-slate-500 max-w-2xl">Diseñamos una experiencia profesional y tranquila para que te sientas cómodo desde el primer momento. Nos tomamos el tiempo necesario para escucharte y entender tus objetivos estéticos y de salud.</p>
+          </div>
+          <div class="bg-primary-light rounded-2xl px-8 py-6 text-center flex-shrink-0 fade-in">
+            <span class="material-symbols-outlined text-primary text-4xl">schedule</span>
+            <p class="text-2xl font-black text-slate-900 mt-2">20 - 25 min</p>
+            <p class="text-muted text-sm">Duración estimada</p>
+          </div>
+        </div>
+
+        <!-- 3 STEPS -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="card fade-in">
+            <div class="size-12 bg-primary-light rounded-xl flex items-center justify-center text-primary mb-6">
+              <span class="material-symbols-outlined text-2xl">person_add</span>
+            </div>
+            <h4 class="text-lg font-bold text-slate-900 mb-2">1. Recepción</h4>
+            <p class="text-slate-500">Te recibiremos con calidez para completar tu ficha médica y antecedentes de salud dental.</p>
+          </div>
+          <div class="card fade-in">
+            <div class="size-12 bg-blue-50 rounded-xl flex items-center justify-center text-accent mb-6">
+              <span class="material-symbols-outlined text-2xl">stethoscope</span>
+            </div>
+            <h4 class="text-lg font-bold text-slate-900 mb-2">2. Evaluación</h4>
+            <p class="text-slate-500">Nuestros especialistas realizarán un examen clínico detallado utilizando tecnología de vanguardia.</p>
+          </div>
+          <div class="card fade-in">
+            <div class="size-12 bg-slate-100 rounded-xl flex items-center justify-center text-slate-600 mb-6">
+              <span class="material-symbols-outlined text-2xl">description</span>
+            </div>
+            <h4 class="text-lg font-bold text-slate-900 mb-2">3. Plan de Salud</h4>
+            <p class="text-slate-500">Explicaremos los hallazgos y propondremos el mejor plan de tratamiento adaptado a tus necesidades.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT TO BRING + CANCELLATION -->
+    <section class="pb-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-8">
+          <!-- What to bring -->
+          <div class="card fade-in">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="material-symbols-outlined text-primary text-2xl">inventory_2</span>
+              <h3 class="text-xl font-bold text-slate-900">¿Qué debes traer?</h3>
+            </div>
+            <div class="space-y-5">
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-green-500 mt-0.5">check_circle</span>
+                <div>
+                  <p class="font-bold text-slate-900">Radiografías previas</p>
+                  <p class="text-slate-500 text-sm">Si posees estudios realizados en los últimos 6 meses, por favor tráelos contigo.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-green-500 mt-0.5">check_circle</span>
+                <div>
+                  <p class="font-bold text-slate-900">Coordinación de registros</p>
+                  <p class="text-slate-500 text-sm">Si no tienes estudios, podemos coordinar la toma de imágenes digitales en nuestra clínica.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-green-500 mt-0.5">check_circle</span>
+                <div>
+                  <p class="font-bold text-slate-900">Historial de medicación</p>
+                  <p class="text-slate-500 text-sm">Lista de medicamentos que estés tomando actualmente.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cancellation policy -->
+          <div class="bg-primary-light border border-primary/10 p-8 rounded-2xl fade-in">
+            <div class="flex items-center gap-3 mb-6">
+              <span class="material-symbols-outlined text-primary text-2xl">info</span>
+              <h3 class="text-xl font-bold text-slate-900">Política de Cancelación</h3>
+            </div>
+            <p class="text-slate-600 mb-6">
+              Valoramos el tiempo de nuestros pacientes y profesionales. Por ello, requerimos un <strong>pre-pago para confirmar tu cita</strong>.
+            </p>
+            <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 flex items-start gap-3">
+              <span class="material-symbols-outlined text-amber-600 mt-0.5">warning</span>
+              <p class="text-amber-800 text-sm">
+                El pago inicial <strong>no es reembolsable</strong> si la cita no se cancela o reprograma con al menos 24 horas de antelación. Agradecemos tu comprensión.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-gradient-to-br from-primary to-primary-dark rounded-3xl p-12 text-center text-white fade-in">
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4">¿Listo para transformar tu sonrisa?</h2>
+          <p class="text-blue-100 mb-8 text-lg">Reserva tu primera consulta hoy mismo y da el primer paso hacia una salud dental óptima.</p>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="/contacto.html" class="inline-flex items-center justify-center rounded-xl bg-white text-primary px-8 py-4 font-bold hover:bg-blue-50 transition-colors shadow-lg gap-2">
+              <span class="material-symbols-outlined">calendar_month</span> Reservar Ahora
+            </a>
+            <a href="https://wa.me/573001234567" target="_blank" class="inline-flex items-center justify-center rounded-xl bg-slate-700 px-8 py-4 font-bold text-white hover:bg-slate-600 transition-colors gap-2">
+              <span class="material-symbols-outlined">chat</span> Consultar por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-slate-100 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+            <img src="/logos/logo-icon.png" alt="C&P Smile" class="h-8 w-8 object-contain" />
+            <span class="text-lg font-bold text-slate-900 leading-none">C&P <span class="text-primary">Smile Clinic</span></span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed">Cuidando de tu salud dental con pasión y tecnología avanzada en cada tratamiento.</p>
+        </div>
+        <div>
+          <h5 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-xs">Ubicación</h5>
+          <ul class="space-y-3 text-sm text-slate-400">
+            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-muted text-lg">location_on</span> Calle Principal de la Salud #123, Cali</li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-xs">Contacto</h5>
+          <ul class="space-y-3 text-sm text-slate-400">
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-muted text-lg">call</span> +57 300 123 456</li>
+            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-muted text-lg">mail</span> hola@cpsmileclinic.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-slate-100 pt-8 text-center">
+        <p class="text-xs text-slate-400">© 2025 C&P Smile Clinic. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════ WHATSAPP ═══════════════════ -->
+  <a href="https://wa.me/570000000000" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <span class="material-symbols-outlined">chat_bubble</span>
+  </a>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.env
+.env.local
+
+# Raw assets (ya están en public/)
+Casos clinicos/
+Casos clinicos.zip
+FOTOS DOCTOR/
+FOTOS DOCTOR.zip
+LOGO/
+
+# Misc
+stitch/
+clinic/
+*.DS_Store

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Servicios — C&P Smile Clinic</title>
+  <meta name="description" content="Especialidades en rehabilitación oral y estética dental bajo la dirección del Dr. John Fredy Prado en Cali, Colombia." />
+  <link rel="icon" type="image/png" href="/logos/logo-icon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
+  <script type="module" src="/src/js/main.js"></script>
+</head>
+<body class="bg-background-light text-slate-900 font-body" data-cloak>
+
+  <!-- NAVBAR -->
+  <header class="sticky top-0 z-50 w-full border-b border-slate-100 bg-white/90 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex h-20 items-center justify-between">
+        <a href="/" class="flex items-center gap-3">
+          <img src="/logos/logo-icon.png" alt="C&P Smile Clinic" class="h-10 w-10 object-contain" style="mix-blend-mode: multiply" />
+          <div class="flex flex-col">
+            <span class="text-lg font-extrabold leading-none tracking-tight text-slate-800">C&P <span class="text-primary">Smile</span></span>
+            <span class="text-[10px] uppercase tracking-[0.2em] text-muted font-semibold">Clinic</span>
+          </div>
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a class="nav-link" href="/">Inicio</a>
+          <a class="nav-link active" href="/servicios.html">Servicios</a>
+          <div class="relative group">
+            <button class="nav-link flex items-center gap-1 cursor-pointer bg-transparent border-0 p-0 font-inherit">
+              Doctores
+              <span class="material-symbols-outlined text-[18px] transition-transform duration-200 group-hover:rotate-180">expand_more</span>
+            </button>
+            <div class="absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div class="bg-white rounded-2xl shadow-xl border border-slate-100 py-2 min-w-[270px]">
+                <a href="/el-doctor.html" class="flex items-center gap-3 px-5 py-3 hover:bg-slate-50 transition-colors">
+                  <span class="material-symbols-outlined text-primary">person</span>
+                  <div>
+                    <p class="font-bold text-slate-900 text-sm leading-tight">Dr. John Freddy Prado Giraldo</p>
+                    <p class="text-xs text-muted">Odontólogo Rehabilitador</p>
+                  </div>
+                </a>
+                <a href="/la-doctora.html" class="flex items-center gap-3 px-5 py-3 hover:bg-slate-50 transition-colors">
+                  <span class="material-symbols-outlined text-primary">person</span>
+                  <div>
+                    <p class="font-bold text-slate-900 text-sm leading-tight">La Doctora</p>
+                    <p class="text-xs text-muted">Próximamente</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <a class="nav-link" href="/testimonios.html">Testimonios</a>
+          <a class="nav-link" href="/contacto.html">Contacto</a>
+        </nav>
+        <div class="flex items-center gap-4">
+          <a href="/contacto.html" class="hidden sm:flex items-center justify-center rounded-xl bg-primary px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-primary/20 hover:bg-primary-dark transition-all">Agendar Cita</a>
+          <button id="mobile-menu-btn" class="md:hidden text-slate-900"><span class="material-symbols-outlined text-3xl">menu</span></button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden md:hidden pb-6 border-t border-slate-100">
+        <nav class="flex flex-col gap-4 pt-4">
+          <a class="nav-link" href="/">Inicio</a>
+          <a class="nav-link active" href="/servicios.html">Servicios</a>
+          <div>
+            <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="nav-link w-full text-left flex items-center justify-between">
+              Doctores
+              <span class="material-symbols-outlined text-[18px]">expand_more</span>
+            </button>
+            <div class="hidden flex flex-col gap-1 mt-2 pl-4 border-l-2 border-slate-100 ml-2">
+              <a class="nav-link text-sm py-1" href="/el-doctor.html">Dr. John Freddy Prado Giraldo</a>
+              <a class="nav-link text-sm py-1" href="/la-doctora.html">La Doctora</a>
+            </div>
+          </div>
+          <a class="nav-link" href="/testimonios.html">Testimonios</a>
+          <a class="nav-link" href="/contacto.html">Contacto</a>
+          <a href="/contacto.html" class="btn-primary text-center mt-2">Agendar Cita</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="pt-16 pb-20 lg:pt-24 lg:pb-32">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+          <div class="fade-in">
+            <h1 class="text-4xl sm:text-5xl font-black text-slate-900 leading-[1.1] mb-6">
+              Nuestros <span class="text-primary">Servicios</span> Especializados
+            </h1>
+            <p class="text-lg text-slate-500 max-w-xl leading-relaxed mb-8">
+              En C&P Smile Clinic combinamos tecnología de vanguardia con un trato humano excepcional para devolverte la confianza de sonreír.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <span class="inline-flex items-center gap-2 rounded-full bg-primary-light px-4 py-2 text-primary text-sm font-bold">
+                <span class="material-symbols-outlined text-lg">verified</span> Tecnología Digital
+              </span>
+              <span class="inline-flex items-center gap-2 rounded-full bg-primary-light px-4 py-2 text-primary text-sm font-bold">
+                <span class="material-symbols-outlined text-lg">school</span> Especialistas Certificados
+              </span>
+            </div>
+          </div>
+          <div class="mt-12 lg:mt-0 fade-in">
+            <div class="rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] bg-slate-100">
+              <img class="w-full h-full object-cover" alt="Silla odontológica moderna" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBicx_79xMfR3b9hsXiZ0Mda9i1RbGVV8WWM2c7zAPakT4yLSEQfIXPxZjr2-HOpwZ7VRGh93N42XdpvqFICyIXim--QK6FKidfdnigu7yics_i50Yw9aQM0iUM7QGaL4wQmbsUdXu1BbeKNMz_HkD6nWVovsAQIMrJ-LQh6FW-LnytV6vydVfs8wiDXq66Pit8Hg9ajODu_Dr8qkXmJsZrEHafLGPOHCXDt_azhybQk_Cwo3PkcmkitQBBT12xyYQ9u7YBl6gRaE0" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES GRID -->
+    <section class="pb-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <!-- Valoración Inicial -->
+          <div class="card group fade-in">
+            <div class="rounded-2xl overflow-hidden aspect-[3/2] bg-slate-100 mb-6">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Valoración inicial odontológica" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBicx_79xMfR3b9hsXiZ0Mda9i1RbGVV8WWM2c7zAPakT4yLSEQfIXPxZjr2-HOpwZ7VRGh93N42XdpvqFICyIXim--QK6FKidfdnigu7yics_i50Yw9aQM0iUM7QGaL4wQmbsUdXu1BbeKNMz_HkD6nWVovsAQIMrJ-LQh6FW-LnytV6vydVfs8wiDXq66Pit8Hg9ajODu_Dr8qkXmJsZrEHafLGPOHCXDt_azhybQk_Cwo3PkcmkitQBBT12xyYQ9u7YBl6gRaE0" />
+            </div>
+            <div class="flex items-center gap-3 mb-3">
+              <div class="size-10 bg-primary-light rounded-lg flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined">stethoscope</span>
+              </div>
+              <h4 class="text-xl font-bold text-slate-900">Valoración Inicial</h4>
+            </div>
+            <p class="text-slate-500 mb-4">El punto de partida hacia tu nueva sonrisa. Incluye diagnóstico integral, radiografías digitales y plan de tratamiento personalizado detallado.</p>
+            <ul class="space-y-2 text-sm">
+              <li class="flex items-center gap-2 text-primary font-medium"><span class="material-symbols-outlined text-lg">check_circle</span> Diagnóstico 3D</li>
+              <li class="flex items-center gap-2 text-primary font-medium"><span class="material-symbols-outlined text-lg">check_circle</span> Plan preventivo</li>
+            </ul>
+          </div>
+
+          <!-- Implantología -->
+          <div class="card group fade-in">
+            <div class="rounded-2xl overflow-hidden aspect-[3/2] bg-slate-100 mb-6">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Implante dental de titanio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY2LoSKMo0XnSnIzVjzSHTKODGbwvvzJUQUlIzymTdH8jqz4pCkBK-4K5mF3a57Q7VvaCiIOk_l_1WRiOR53UHN8owsoaXQoi1KcX1ZQhA-TANinGZ2-kgwL7dg_sNEfOdtHaHqgt4OplQcnjQjhe5eLuTxrVBdG74MBtN8WYIIFynlTLvhE2hqLWP9LeTGNje6ah47FD8jXegxx5fjHlm5PVBjdXMcp0q50KenLnL7xocfW8WvJ6BC44hpgxSmsXBMgXKNv7I_6s" />
+            </div>
+            <div class="flex items-center gap-3 mb-3">
+              <div class="size-10 bg-primary-light rounded-lg flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined">hardware</span>
+              </div>
+              <h4 class="text-xl font-bold text-slate-900">Implantología</h4>
+            </div>
+            <p class="text-slate-500 mb-4">Restauramos la funcionalidad y estética de piezas perdidas utilizando implantes de titanio de última generación con procesos mínimamente invasivos.</p>
+            <ul class="space-y-2 text-sm">
+              <li class="flex items-center gap-2 text-primary font-medium"><span class="material-symbols-outlined text-lg">check_circle</span> Carga inmediata</li>
+              <li class="flex items-center gap-2 text-primary font-medium"><span class="material-symbols-outlined text-lg">check_circle</span> Sedación consciente</li>
+            </ul>
+          </div>
+
+          <!-- Rehabilitación Oral -->
+          <div class="card group fade-in">
+            <div class="rounded-2xl overflow-hidden aspect-[3/2] bg-slate-100 mb-6">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Rehabilitación oral completa" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1KwahucJ6tSl9fOP-_dtjiO7Zq6QFdhrhbjsML-XhkIaEvQaVptvKof_iC2eKg8EBJ7e1yuEr32BW2EAlSXg-23pSn-F0XHPe89JKOXVOszcptxV42cbOFItNrJS8L2bzVj3ZY4HwvUIAOX8-VaZAA3idzPjIyKU_6aSrkymIvEQP0iwSStfDFNGWCiiY3jfaDejeCSXKbvz71lgTtxM9shiQyv0OjwCdFBsGuihnp3J4_hpwRP17bQRF4LGC7UvrGpcLCgkprjo" />
+            </div>
+            <div class="flex items-center gap-3 mb-3">
+              <div class="size-10 bg-primary-light rounded-lg flex items-center justify-center text-primary">
+                <span class="material-symbols-outlined">biotech</span>
+              </div>
+              <h4 class="text-xl font-bold text-slate-900">Rehabilitación Oral</h4>
+            </div>
+            <p class="text-slate-500 mb-4">Especialidad encargada de devolver la función estética y equilibrio masticatorio mediante prótesis fijas, removibles o sobre implantes.</p>
+            <ul class="space-y-2 text-sm">
+              <li class="flex items-center gap-2 text-primary font-medium"><span class="material-symbols-outlined text-lg">check_circle</span> Coronas Zirconio</li>
+              <li class="flex items-center gap-2 text-primary font-medium"><span class="material-symbols-outlined text-lg">check_circle</span> Prótesis Híbridas</li>
+            </ul>
+          </div>
+
+          <!-- Estética Dental -->
+          <div class="card group fade-in">
+            <div class="rounded-2xl overflow-hidden aspect-[3/2] bg-slate-100 mb-6">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Diseño de sonrisa digital" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBicx_79xMfR3b9hsXiZ0Mda9i1RbGVV8WWM2c7zAPakT4yLSEQfIXPxZjr2-HOpwZ7VRGh93N42XdpvqFICyIXim--QK6FKidfdnigu7yics_i50Yw9aQM0iUM7QGaL4wQmbsUdXu1BbeKNMz_HkD6nWVovsAQIMrJ-LQh6FW-LnytV6vydVfs8wiDXq66Pit8Hg9ajODu_Dr8qkXmJsZrEHafLGPOHCXDt_azhybQk_Cwo3PkcmkitQBBT12xyYQ9u7YBl6gRaE0" />
+            </div>
+            <div class="flex items-center gap-3 mb-3">
+              <div class="size-10 bg-blue-50 rounded-lg flex items-center justify-center text-accent">
+                <span class="material-symbols-outlined">auto_fix_high</span>
+              </div>
+              <h4 class="text-xl font-bold text-slate-900">Estética Dental</h4>
+            </div>
+            <p class="text-slate-500 mb-4">Diseño de sonrisa digital, carillas de porcelana y blanqueamiento profesional para lograr la armonía facial y dental que siempre deseaste.</p>
+            <ul class="space-y-2 text-sm">
+              <li class="flex items-center gap-2 text-primary font-medium"><span class="material-symbols-outlined text-lg">check_circle</span> Blanqueamiento Láser</li>
+              <li class="flex items-center gap-2 text-primary font-medium"><span class="material-symbols-outlined text-lg">check_circle</span> Lentes Cerámicos</li>
+            </ul>
+          </div>
+
+          <!-- Manejo de Tejidos Blandos -->
+          <div class="card group fade-in">
+            <div class="rounded-2xl overflow-hidden aspect-[3/2] bg-slate-100 mb-6">
+              <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt="Tratamiento periodontal" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY2LoSKMo0XnSnIzVjzSHTKODGbwvvzJUQUlIzymTdH8jqz4pCkBK-4K5mF3a57Q7VvaCiIOk_l_1WRiOR53UHN8owsoaXQoi1KcX1ZQhA-TANinGZ2-kgwL7dg_sNEfOdtHaHqgt4OplQcnjQjhe5eLuTxrVBdG74MBtN8WYIIFynlTLvhE2hqLWP9LeTGNje6ah47FD8jXegxx5fjHlm5PVBjdXMcp0q50KenLnL7xocfW8WvJ6BC44hpgxSmsXBMgXKNv7I_6s" />
+            </div>
+            <div class="flex items-center gap-3 mb-3">
+              <div class="size-10 bg-slate-100 rounded-lg flex items-center justify-center text-slate-600">
+                <span class="material-symbols-outlined">healing</span>
+              </div>
+              <h4 class="text-xl font-bold text-slate-900">Manejo de Tejidos Blandos</h4>
+            </div>
+            <p class="text-slate-500 mb-4">Salud periodontal integral: injertos de encía, alargamiento de corona y tratamiento de enfermedades que afectan el soporte de tus dientes.</p>
+            <ul class="space-y-2 text-sm">
+              <li class="flex items-center gap-2 text-primary font-medium"><span class="material-symbols-outlined text-lg">check_circle</span> Cirugía Plástica Gingival</li>
+              <li class="flex items-center gap-2 text-primary font-medium"><span class="material-symbols-outlined text-lg">check_circle</span> Periodoncia Avanzada</li>
+            </ul>
+          </div>
+
+          <!-- CTA Card -->
+          <div class="bg-primary rounded-2xl p-8 flex flex-col items-center justify-center text-center text-white fade-in">
+            <span class="material-symbols-outlined text-5xl mb-4">calendar_month</span>
+            <h4 class="text-2xl font-bold mb-3">¿Listo para comenzar?</h4>
+            <p class="text-blue-100 mb-6">No pospongas más tu salud dental. Agenda hoy mismo tu cita de valoración.</p>
+            <a href="/contacto.html" class="inline-flex items-center justify-center rounded-xl bg-white text-primary px-8 py-4 font-bold hover:bg-blue-50 transition-colors shadow-lg">Solicitar Cita</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- NOTE -->
+    <section class="pb-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 fade-in">
+        <div class="bg-primary-light rounded-2xl p-8 flex flex-col lg:flex-row items-start lg:items-center gap-6">
+          <div class="flex items-start gap-4 flex-1">
+            <div class="size-12 bg-primary/10 rounded-full flex items-center justify-center text-primary flex-shrink-0">
+              <span class="material-symbols-outlined">info</span>
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-slate-900 mb-2">Nota Importante sobre Tratamientos</h4>
+              <p class="text-slate-600">En <strong>C&P Smile Clinic</strong>, entendemos que cada paciente es único. Debido a la complejidad y personalización de los servicios odontológicos especializados, los precios finales se definirán exclusivamente durante la consulta diagnóstica inicial.</p>
+            </div>
+          </div>
+          <a href="/primera-consulta.html" class="text-primary font-bold whitespace-nowrap hover:underline flex items-center gap-1">
+            Más sobre valoración <span class="material-symbols-outlined text-lg">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t border-slate-100 pt-16 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div>
+          <div class="flex items-center gap-3 mb-6">
+            <img src="/logos/logo-icon.png" alt="C&P Smile" class="h-8 w-8 object-contain" />
+            <span class="text-lg font-bold text-slate-900 leading-none">C&P <span class="text-primary">Smile Clinic</span></span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed">Expertos en odontología estética y restauración dental avanzada.</p>
+        </div>
+        <div>
+          <h5 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-xs">Legal</h5>
+          <ul class="space-y-3 text-sm text-slate-400">
+            <li><a class="hover:text-primary transition-colors" href="#">Aviso de Privacidad</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#">Términos y Condiciones</a></li>
+          </ul>
+        </div>
+        <div class="flex items-end justify-start md:justify-end gap-4">
+          <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-3xl">share</span></a>
+          <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-3xl">alternate_email</span></a>
+        </div>
+      </div>
+      <div class="border-t border-slate-100 pt-8 text-center">
+        <p class="text-xs text-slate-400">© 2025 C&P Smile Clinic. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════ WHATSAPP ═══════════════════ -->
+  <a href="https://wa.me/570000000000" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+    <span class="material-symbols-outlined">chat_bubble</span>
+  </a>
+
+</body>
+</html>
