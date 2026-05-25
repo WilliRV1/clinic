@@ -5,22 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>C&P Smile Clinic — Odontología Científica en Cali</title>
   <meta name="description" content="Restauramos tu sonrisa con respaldo científico. Clínica odontológica especializada en rehabilitación oral, estética dental e implantología en Cali, Colombia." />
-  <link rel="icon" type="image/png" href="/logos/logo-icon.png" />
+  <link rel="icon" type="image/png" href="/logos/logo-clinic.svg" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
   <script type="module" src="/src/js/main.js"></script>
+    <script>
+        document.documentElement.classList.add('hide-fouc');
+        window.addEventListener('DOMContentLoaded', () => {
+            document.documentElement.classList.remove('hide-fouc');
+        });
+    </script>
+    <style>
+        .hide-fouc body { opacity: 0; }
+        body { transition: opacity 0.4s ease-in-out; }
+    </style>
 </head>
 <body class="bg-background-light text-slate-900 font-body" data-cloak>
 
-  <!-- ═══════════════════ NAVBAR ═══════════════════ -->
-  <header class="sticky top-0 z-50 w-full border-b border-slate-100 bg-white/90 backdrop-blur-md">
+  <!-- =================== NAVBAR =================== -->
+  <header class="sticky top-0 z-50 w-full border-b border-slate-100/50 bg-white/70 backdrop-blur-xl transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex h-20 items-center justify-between">
-        <a href="/" class="flex items-center gap-3">
-          <img src="/logos/logo-icon.png" alt="C&P Smile Clinic" class="h-10 w-10 object-contain" style="mix-blend-mode: multiply" />
-          <div class="flex flex-col">
-            <span class="text-lg font-extrabold leading-none tracking-tight text-slate-800">C&P <span class="text-primary">Smile</span></span>
-            <span class="text-[10px] uppercase tracking-[0.2em] text-muted font-semibold">Clinic</span>
-          </div>
+      <div class="flex h-24 items-center justify-between">
+        <a href="/" class="flex items-center group">
+          <img src="/logos/logo-clinic.svg" alt="C&P Smile Clinic" class="h-20 w-auto object-contain transition-all duration-300 group-hover:brightness-110" />
         </a>
         <nav class="hidden md:flex items-center gap-8">
           <a class="nav-link active" href="/">Inicio</a>
@@ -32,25 +38,29 @@
             </button>
             <div class="absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div class="bg-white rounded-2xl shadow-xl border border-slate-100 py-2 min-w-[270px]">
-                <a href="/el-doctor.html" class="flex items-center gap-3 px-5 py-3 hover:bg-slate-50 transition-colors">
-                  <span class="material-symbols-outlined text-primary">person</span>
+                <a href="/el-doctor.html" class="flex items-center gap-4 px-5 py-3.5 hover:bg-slate-50 transition-all group/item">
+                  <div class="size-10 rounded-full bg-primary/5 flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-white transition-colors">
+                    <span class="material-symbols-outlined text-[22px]">person</span>
+                  </div>
                   <div>
                     <p class="font-bold text-slate-900 text-sm leading-tight">Dr. John Freddy Prado Giraldo</p>
-                    <p class="text-xs text-muted">Odontólogo Rehabilitador</p>
+                    <p class="text-[11px] text-muted font-medium mt-0.5">Odontólogo Rehabilitador</p>
                   </div>
                 </a>
-                <a href="/la-doctora.html" class="flex items-center gap-3 px-5 py-3 hover:bg-slate-50 transition-colors">
-                  <span class="material-symbols-outlined text-primary">person</span>
+                <a href="/la-doctora.html" class="flex items-center gap-4 px-5 py-3.5 hover:bg-slate-50 transition-all group/item">
+                  <div class="size-10 rounded-full bg-primary/5 flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-white transition-colors">
+                    <span class="material-symbols-outlined text-[22px]">person</span>
+                  </div>
                   <div>
-                    <p class="font-bold text-slate-900 text-sm leading-tight">La Doctora</p>
-                    <p class="text-xs text-muted">Próximamente</p>
+                    <p class="font-bold text-slate-900 text-sm leading-tight">Dra. Isabel Cristina Calero</p>
+                    <p class="text-[11px] text-muted font-medium mt-0.5">Odontopediatría</p>
                   </div>
                 </a>
               </div>
             </div>
           </div>
-          <a class="nav-link" href="/casos-clinicos.html">Casos Clínicos</a>
-          <a class="nav-link" href="/testimonios.html">Testimonios</a>
+          
+          
           <a class="nav-link" href="/contacto.html">Contacto</a>
         </nav>
         <div class="flex items-center gap-4">
@@ -72,13 +82,13 @@
               Doctores
               <span class="material-symbols-outlined text-[18px]">expand_more</span>
             </button>
-            <div class="hidden flex flex-col gap-1 mt-2 pl-4 border-l-2 border-slate-100 ml-2">
+            <div class="hidden flex-col gap-1 mt-2 pl-4 border-l-2 border-slate-100 ml-2">
               <a class="nav-link text-sm py-1" href="/el-doctor.html">Dr. John Freddy Prado Giraldo</a>
-              <a class="nav-link text-sm py-1" href="/la-doctora.html">La Doctora</a>
+              <a class="nav-link text-sm py-1" href="/la-doctora.html">Dra. Isabel C. Calero</a>
             </div>
           </div>
-          <a class="nav-link" href="/casos-clinicos.html">Casos Clínicos</a>
-          <a class="nav-link" href="/testimonios.html">Testimonios</a>
+          
+          
           <a class="nav-link" href="/contacto.html">Contacto</a>
           <a href="/contacto.html" class="btn-primary text-center mt-2">Agendar Cita</a>
         </nav>
@@ -88,7 +98,7 @@
 
   <main>
 
-    <!-- ═══════════════════ HERO ═══════════════════ -->
+    <!-- =================== HERO =================== -->
     <section class="relative overflow-hidden pt-16 pb-20 lg:pt-24 lg:pb-32">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="lg:grid lg:grid-cols-12 lg:gap-12 items-center">
@@ -113,7 +123,7 @@
           </div>
           <div class="mt-16 lg:mt-0 lg:col-span-6 relative fade-in">
             <div class="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] bg-slate-100">
-              <img class="w-full h-full object-cover" alt="Consultorio odontológico moderno con equipos de alta tecnología" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBicx_79xMfR3b9hsXiZ0Mda9i1RbGVV8WWM2c7zAPakT4yLSEQfIXPxZjr2-HOpwZ7VRGh93N42XdpvqFICyIXim--QK6FKidfdnigu7yics_i50Yw9aQM0iUM7QGaL4wQmbsUdXu1BbeKNMz_HkD6nWVovsAQIMrJ-LQh6FW-LnytV6vydVfs8wiDXq66Pit8Hg9ajODu_Dr8qkXmJsZrEHafLGPOHCXDt_azhybQk_Cwo3PkcmkitQBBT12xyYQ9u7YBl6gRaE0" />
+              <img class="w-full h-full object-cover" alt="Vista real de las instalaciones de C&P Smile Clinic  Odontología Científica en Cali" src="/images/clinica/consultorio-hero.jpg" />
             </div>
             <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-2xl shadow-xl border border-slate-100 hidden sm:block">
               <div class="flex items-center gap-4">
@@ -131,7 +141,7 @@
       </div>
     </section>
 
-    <!-- ═══════════════════ DR. Prado PREVIEW ═══════════════════ -->
+    <!-- =================== DR. Prado PREVIEW =================== -->
     <section class="py-24 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-24">
@@ -139,14 +149,14 @@
             <div class="relative group">
               <div class="absolute inset-0 bg-primary rounded-3xl rotate-3 group-hover:rotate-0 transition-transform duration-500"></div>
               <div class="relative rounded-3xl overflow-hidden aspect-[4/5] bg-slate-200">
-                <img class="w-full h-full object-cover object-top" alt="Dr. John Fredy Prado — Especialista en Rehabilitación Oral" src="/doctor/IMG_0694rojo.jpg" />
+                <img class="w-full h-full object-cover object-top" alt="Dr. John Freddy Prado  Especialista en Rehabilitación Oral" src="/doctor/IMG_0694rojo.jpg" />
               </div>
             </div>
           </div>
           <div class="w-full md:w-2/3 flex flex-col gap-6 fade-in">
             <div class="flex flex-col gap-2">
               <h3 class="section-label">Liderazgo Médico</h3>
-              <h2 class="section-title">Dr. John Fredy Prado</h2>
+              <h2 class="section-title">Dr. John Freddy Prado</h2>
               <p class="text-xl text-primary font-medium italic">Especialista en Rehabilitación Oral y Estética</p>
             </div>
             <p class="text-lg text-slate-500 leading-relaxed">
@@ -172,10 +182,59 @@
             </ul>
           </div>
         </div>
+
+        <!-- =================== DRA. Isabel PREVIEW =================== -->
+        <div class="flex flex-col md:flex-row-reverse items-center gap-12 lg:gap-24 mt-32">
+          <div class="w-full md:w-1/3 fade-in">
+            <div class="relative group">
+              <div class="absolute inset-0 bg-accent rounded-3xl -rotate-3 group-hover:rotate-0 transition-transform duration-500"></div>
+              <div class="relative rounded-3xl overflow-hidden aspect-[4/5] bg-slate-100 flex items-center justify-center">
+                <!-- <img class="w-full h-full object-cover object-top" alt="Dra. Isabel Cristina Calero" src="/doctor/foto-dra.jpg" /> -->
+                <div class="text-center p-6">
+                  <span class="material-symbols-outlined text-5xl text-slate-300 mb-2">photo_camera</span>
+                  <p class="text-slate-400 font-medium text-sm">Sesión Fotográfica en Proceso</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full md:w-2/3 flex flex-col gap-6 fade-in">
+            <div class="flex flex-col gap-2">
+              <h3 class="section-label text-accent">Odontopediatría</h3>
+              <h2 class="section-title">Dra. Isabel C. Calero</h2>
+              <p class="text-xl text-accent font-medium italic">Especialista en Odontopediatría y Ortopedia Maxilar</p>
+            </div>
+            <p class="text-lg text-slate-500 leading-relaxed">
+              Con un enfoque centrado en la empatía y la prevención, la Dra. Isabel se especializa en la salud oral de niños y adolescentes. Además de su destacada labor clínica, ejerce un liderazgo académico activo como Directora de Programa, asegurando que sus tratamientos incorporen las prácticas más actualizadas y respetuosas para el desarrollo dental infantil.
+            </p>
+            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+              <li class="flex items-center gap-3 text-slate-700">
+                <span class="material-symbols-outlined text-accent">check_circle</span>
+                <span class="font-medium">Atención Infantil Especializada</span>
+              </li>
+              <li class="flex items-center gap-3 text-slate-700">
+                <span class="material-symbols-outlined text-accent">check_circle</span>
+                <span class="font-medium">Ortopedia Maxilar Temprana</span>
+              </li>
+              <li class="flex items-center gap-3 text-slate-700">
+                <span class="material-symbols-outlined text-accent">check_circle</span>
+                <span class="font-medium">Directora de Programa Académico</span>
+              </li>
+              <li class="flex items-center gap-3 text-slate-700">
+                <span class="material-symbols-outlined text-accent">check_circle</span>
+                <span class="font-medium">Manejo de Ansiedad Dental</span>
+              </li>
+            </ul>
+            <div class="mt-4">
+              <a href="/la-doctora.html" class="inline-flex items-center gap-2 font-bold text-accent hover:text-blue-700 transition-colors">
+                Conocer más sobre la Dra. Isabel <span class="material-symbols-outlined text-lg">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- ═══════════════════ SERVICES PREVIEW ═══════════════════ -->
+    <!-- =================== SERVICES PREVIEW =================== -->
     <section class="py-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16 fade-in">
         <h2 class="section-label">Nuestros Servicios</h2>
@@ -191,14 +250,14 @@
             <p class="text-slate-500">Restauración funcional y estética integral de la dentadura mediante procesos diagnósticos precisos.</p>
           </div>
           <div class="card group fade-in">
-            <div class="size-14 bg-blue-50 rounded-xl flex items-center justify-center text-accent mb-6 group-hover:bg-accent group-hover:text-white transition-colors duration-300">
+            <div class="size-14 bg-primary-light rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
               <span class="material-symbols-outlined text-3xl">auto_fix_high</span>
             </div>
             <h4 class="text-xl font-bold text-slate-900 mb-3">Estética Dental</h4>
             <p class="text-slate-500">Diseño de sonrisa personalizado utilizando las últimas tendencias en carillas y blanqueamiento clínico.</p>
           </div>
           <div class="card group fade-in">
-            <div class="size-14 bg-slate-100 rounded-xl flex items-center justify-center text-slate-600 mb-6 group-hover:bg-slate-700 group-hover:text-white transition-colors duration-300">
+            <div class="size-14 bg-primary-light rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-300">
               <span class="material-symbols-outlined text-3xl">settings_input_component</span>
             </div>
             <h4 class="text-xl font-bold text-slate-900 mb-3">Implantología</h4>
@@ -208,13 +267,14 @@
       </div>
     </section>
 
-    <!-- ═══════════════════ WHY CHOOSE US ═══════════════════ -->
+    <!-- =================== WHY CHOOSE US =================== -->
     <section class="py-24 bg-background-dark text-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div class="fade-in">
             <h2 class="text-accent font-bold tracking-widest text-sm uppercase mb-4">Diferenciadores</h2>
             <h3 class="text-4xl font-bold mb-8">¿Por qué confiar en C&P Smile Clinic?</h3>
+
             <div class="space-y-8">
               <div class="flex gap-4">
                 <div class="flex-shrink-0 size-12 rounded-full bg-primary/20 flex items-center justify-center text-accent">
@@ -247,14 +307,14 @@
           </div>
           <div class="relative fade-in">
             <div class="aspect-video rounded-3xl overflow-hidden shadow-2xl">
-              <img class="w-full h-full object-cover opacity-80" alt="Equipos de odontología digital de alta tecnología" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY2LoSKMo0XnSnIzVjzSHTKODGbwvvzJUQUlIzymTdH8jqz4pCkBK-4K5mF3a57Q7VvaCiIOk_l_1WRiOR53UHN8owsoaXQoi1KcX1ZQhA-TANinGZ2-kgwL7dg_sNEfOdtHaHqgt4OplQcnjQjhe5eLuTxrVBdG74MBtN8WYIIFynlTLvhE2hqLWP9LeTGNje6ah47FD8jXegxx5fjHlm5PVBjdXMcp0q50KenLnL7xocfW8WvJ6BC44hpgxSmsXBMgXKNv7I_6s" />
+              <img class="w-full h-full object-cover opacity-80" alt="Equipos de odontología digital de alta tecnología" src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=1200" />
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ═══════════════════ CTA ═══════════════════ -->
+    <!-- =================== CTA =================== -->
     <section class="py-24 relative overflow-hidden">
       <div class="absolute inset-0 bg-primary/5 pointer-events-none"></div>
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 fade-in">
@@ -266,7 +326,7 @@
           <a href="/contacto.html" class="btn-primary text-lg px-10 py-5 shadow-2xl shadow-primary/40 hover:scale-105">
             Agendar mi Valoración
           </a>
-          <a class="flex items-center gap-3 font-bold text-slate-700 hover:text-primary transition-colors" href="tel:+123456789">
+          <a class="flex items-center gap-3 font-bold text-slate-700 hover:text-primary transition-colors" href="tel:+573137942686">
             <span class="material-symbols-outlined p-2 bg-white rounded-full shadow-sm">call</span>
             Llámanos ahora
           </a>
@@ -276,65 +336,89 @@
 
   </main>
 
-  <!-- ═══════════════════ FOOTER ═══════════════════ -->
-  <footer class="bg-white border-t border-slate-100 pt-16 pb-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-        <div class="col-span-1">
-          <div class="flex items-center gap-3 mb-6">
-            <img src="/logos/logo-icon.png" alt="C&P Smile" class="h-8 w-8 object-contain" />
-            <span class="text-lg font-bold text-slate-900 leading-none">C&P <span class="text-primary">Smile Clinic</span></span>
-          </div>
-          <p class="text-slate-400 text-sm leading-relaxed">
-            Comprometidos con la excelencia odontológica y la salud integral de nuestros pacientes a través de la ciencia.
+  <!-- =================== FOOTER =================== -->
+  <footer class="bg-slate-900 text-white pt-24 pb-12 overflow-hidden relative">
+    <!-- Decorative glow -->
+    <div class="absolute bottom-0 right-0 translate-y-1/2 translate-x-1/4 size-[500px] bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-20">
+        <div class="lg:col-span-4">
+          <a href="/" class="flex items-center mb-8 group">
+            <img src="/logos/logo-clinic.svg" alt="C&P Smile Clinic" class="h-24 w-auto brightness-0 invert transition-all group-hover:brightness-100" />
+          </a>
+          <p class="text-slate-400 text-lg leading-relaxed mb-10 max-w-sm font-medium">
+            Redefiniendo la excelencia dental a través de la ciencia, la ética y el compromiso humano.
           </p>
+          <div class="flex gap-4">
+            <a href="#" class="size-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-300">
+              <span class="material-symbols-outlined text-xl">share</span>
+            </a>
+            <a href="#" class="size-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-300">
+              <span class="material-symbols-outlined text-xl">public</span>
+            </a>
+          </div>
         </div>
-        <div>
-          <h5 class="font-bold text-slate-900 mb-6 uppercase tracking-wider text-xs">Navegación</h5>
-          <ul class="space-y-4 text-sm text-slate-400">
-            <li><a class="hover:text-primary transition-colors" href="/">Inicio</a></li>
-            <li><a class="hover:text-primary transition-colors" href="/servicios.html">Servicios</a></li>
-            <li><a class="hover:text-primary transition-colors" href="/el-doctor.html">Sobre el Dr. Prado</a></li>
-            <li><a class="hover:text-primary transition-colors" href="/casos-clinicos.html">Casos Clínicos</a></li>
-            <li><a class="hover:text-primary transition-colors" href="/testimonios.html">Testimonios</a></li>
+
+        <div class="lg:col-span-2">
+          <h5 class="text-sm font-black uppercase tracking-[0.2em] mb-8 text-white">Navegación</h5>
+          <ul class="space-y-4">
+            <li><a class="text-slate-400 hover:text-white transition-colors font-medium flex items-center gap-2 group" href="/"><div class="size-1 bg-primary rounded-full scale-0 group-hover:scale-100 transition-transform"></div> Inicio</a></li>
+            <li><a class="text-slate-400 hover:text-white transition-colors font-medium flex items-center gap-2 group" href="/servicios.html"><div class="size-1 bg-primary rounded-full scale-0 group-hover:scale-100 transition-transform"></div> Servicios</a></li>
+            <li><a class="text-slate-400 hover:text-white transition-colors font-medium flex items-center gap-2 group" href="/el-doctor.html"><div class="size-1 bg-primary rounded-full scale-0 group-hover:scale-100 transition-transform"></div> Doctores</a></li>
+            
+            
           </ul>
         </div>
-        <div>
-          <h5 class="font-bold text-slate-900 mb-6 uppercase tracking-wider text-xs">Contacto</h5>
-          <ul class="space-y-4 text-sm text-slate-400">
-            <li class="flex items-start gap-3">
-              <span class="material-symbols-outlined text-muted text-xl">location_on</span>
-              <span>Calle Principal, Edificio Médico<br/>Cali, Colombia</span>
+
+        <div class="lg:col-span-3">
+          <h5 class="text-sm font-black uppercase tracking-[0.2em] mb-8 text-white">Contacto</h5>
+          <ul class="space-y-6">
+            <li class="flex items-start gap-4 group">
+              <div class="size-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                <span class="material-symbols-outlined text-primary text-xl">location_on</span>
+              </div>
+              <span class="text-slate-400 font-medium">Cl. 52 Nte. #2 DN 05<br/>La Merced, Cali</span>
             </li>
-            <li class="flex items-center gap-3">
-              <span class="material-symbols-outlined text-muted text-xl">call</span>
-              <span>+57 (300) 123 4567</span>
+            <li class="flex items-center gap-4 group">
+              <div class="size-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                <span class="material-symbols-outlined text-primary text-xl">call</span>
+              </div>
+              <span class="text-slate-400 font-medium">+57 313 794 2686</span>
             </li>
           </ul>
         </div>
-        <div>
-          <h5 class="font-bold text-slate-900 mb-6 uppercase tracking-wider text-xs">Horarios</h5>
-          <ul class="space-y-2 text-sm text-slate-400">
-            <li class="flex justify-between"><span>Martes:</span> <span>1:00 PM - 6:00 PM</span></li>
-            <li class="flex justify-between"><span>Viernes:</span> <span>7:00 AM - 12:00 PM</span></li>
-            <li class="flex justify-between"><span>Sábado:</span> <span>7:00 AM - 6:00 PM</span></li>
-          </ul>
+
+        <div class="lg:col-span-3">
+          <h5 class="text-sm font-black uppercase tracking-[0.2em] mb-8 text-white">Horarios</h5>
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+            <ul class="space-y-3">
+              <li class="flex justify-between text-sm"><span class="text-slate-400 font-medium">Martes:</span> <span class="text-white font-bold text-right">1:00 PM - 6:00 PM</span></li>
+              <li class="flex justify-between text-sm"><span class="text-slate-400 font-medium">Viernes:</span> <span class="text-white font-bold text-right">7:00 AM - 12:00 PM</span></li>
+              <li class="flex justify-between text-sm"><span class="text-slate-400 font-medium">Sábado:</span> <span class="text-white font-bold text-right">7:00 AM - 6:00 PM</span></li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="border-t border-slate-100 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-        <p class="text-xs text-slate-400">© 2025 C&P Smile Clinic. Todos los derechos reservados.</p>
-        <div class="flex gap-6">
-          <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
-          <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+      
+      <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-center">
+        <p class="text-xs text-slate-500 font-medium">© 2026 C&P Smile Clinic. Todos los derechos reservados.</p>
+        <div class="flex items-center gap-8">
+          <a href="#" class="text-xs text-slate-500 hover:text-white transition-colors font-bold uppercase tracking-widest">Privacidad</a>
+          <a href="#" class="text-xs text-slate-500 hover:text-white transition-colors font-bold uppercase tracking-widest">Términos</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- ═══════════════════ WHATSAPP ═══════════════════ -->
-  <a href="https://wa.me/570000000000" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+  <!-- =================== WHATSAPP =================== -->
+  <a href="https://wa.me/573137942686" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
     <span class="material-symbols-outlined">chat_bubble</span>
   </a>
 
 </body>
 </html>
+
+
+
+

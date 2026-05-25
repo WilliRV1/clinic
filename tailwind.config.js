@@ -7,18 +7,18 @@ export default {
   theme: {
     extend: {
       colors: {
-        "primary": "#2563EB",
-        "primary-dark": "#1E40AF",
-        "primary-light": "#DBEAFE",
-        "accent": "#3B82F6",
-        "background-light": "#F8FAFC",
+        "primary": "#0033cc",
+        "primary-dark": "#013791",
+        "primary-light": "#a4d1fb",
+        "accent": "#0033cc", /* Mapping accent to primary for now, could be another color if needed */
+        "background-light": "#f2eee3",
         "background-dark": "#0F172A",
-        "muted": "#64748B",
+        "muted": "#d8d8d8",
         "surface": "#FFFFFF",
       },
       fontFamily: {
-        "display": ["Montserrat", "sans-serif"],
-        "body": ["Montserrat", "sans-serif"],
+        "display": ["Inter", "sans-serif"],
+        "body": ["Inter", "sans-serif"],
       },
       borderRadius: {
         "DEFAULT": "0.25rem",

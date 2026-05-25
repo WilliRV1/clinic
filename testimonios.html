@@ -5,24 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Testimonios — C&P Smile Clinic</title>
   <meta name="description" content="Conoce las historias reales de transformación de nuestros pacientes. Casos de éxito y testimonios verificados." />
-  <link rel="icon" type="image/png" href="/logos/logo-icon.png" />
+  <link rel="icon" type="image/png" href="/logos/logo-clinic.svg" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script type="module" src="/src/js/main.js"></script>
+    <script>
+        document.documentElement.classList.add('hide-fouc');
+        window.addEventListener('DOMContentLoaded', () => {
+            document.documentElement.classList.remove('hide-fouc');
+        });
+    </script>
+    <style>
+        .hide-fouc body { opacity: 0; }
+        body { transition: opacity 0.4s ease-in-out; }
+    </style>
 </head>
 <body class="bg-background-light text-slate-900 font-body" data-cloak>
 
   <!-- NAVBAR -->
-  <header class="sticky top-0 z-50 w-full border-b border-slate-100 bg-white/90 backdrop-blur-md">
+  <header class="sticky top-0 z-50 w-full border-b border-slate-100/50 bg-white/70 backdrop-blur-xl transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex h-20 items-center justify-between">
-        <a href="/" class="flex items-center gap-3">
-          <img src="/logos/logo-icon.png" alt="C&P Smile Clinic" class="h-10 w-10 object-contain" style="mix-blend-mode: multiply" />
-          <div class="flex flex-col">
-            <span class="text-lg font-extrabold leading-none tracking-tight text-slate-800">C&P <span class="text-primary">Smile</span></span>
-            <span class="text-[10px] uppercase tracking-[0.2em] text-muted font-semibold">Clinic</span>
-          </div>
+      <div class="flex h-24 items-center justify-between">
+        <a href="/" class="flex items-center group">
+          <img src="/logos/logo-clinic.svg" alt="C&P Smile Clinic" class="h-20 w-auto object-contain transition-all duration-300 group-hover:brightness-110" />
         </a>
         <nav class="hidden md:flex items-center gap-8">
           <a class="nav-link" href="/">Inicio</a>
@@ -34,24 +40,28 @@
             </button>
             <div class="absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div class="bg-white rounded-2xl shadow-xl border border-slate-100 py-2 min-w-[270px]">
-                <a href="/el-doctor.html" class="flex items-center gap-3 px-5 py-3 hover:bg-slate-50 transition-colors">
-                  <span class="material-symbols-outlined text-primary">person</span>
+                <a href="/el-doctor.html" class="flex items-center gap-4 px-5 py-3.5 hover:bg-slate-50 transition-all group/item">
+                  <div class="size-10 rounded-full bg-primary/5 flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-white transition-colors">
+                    <span class="material-symbols-outlined text-[22px]">person</span>
+                  </div>
                   <div>
                     <p class="font-bold text-slate-900 text-sm leading-tight">Dr. John Freddy Prado Giraldo</p>
-                    <p class="text-xs text-muted">Odontólogo Rehabilitador</p>
+                    <p class="text-[11px] text-muted font-medium mt-0.5">Odontólogo Rehabilitador</p>
                   </div>
                 </a>
-                <a href="/la-doctora.html" class="flex items-center gap-3 px-5 py-3 hover:bg-slate-50 transition-colors">
-                  <span class="material-symbols-outlined text-primary">person</span>
+                <a href="/la-doctora.html" class="flex items-center gap-4 px-5 py-3.5 hover:bg-slate-50 transition-all group/item">
+                  <div class="size-10 rounded-full bg-primary/5 flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-white transition-colors">
+                    <span class="material-symbols-outlined text-[22px]">person</span>
+                  </div>
                   <div>
-                    <p class="font-bold text-slate-900 text-sm leading-tight">La Doctora</p>
-                    <p class="text-xs text-muted">Próximamente</p>
+                    <p class="font-bold text-slate-900 text-sm leading-tight">Dra. Isabel Cristina Calero</p>
+                    <p class="text-[11px] text-muted font-medium mt-0.5">Odontopediatría</p>
                   </div>
                 </a>
               </div>
             </div>
           </div>
-          <a class="nav-link active" href="/testimonios.html">Testimonios</a>
+          
           <a class="nav-link" href="/contacto.html">Contacto</a>
         </nav>
         <div class="flex items-center gap-4">
@@ -68,12 +78,12 @@
               Doctores
               <span class="material-symbols-outlined text-[18px]">expand_more</span>
             </button>
-            <div class="hidden flex flex-col gap-1 mt-2 pl-4 border-l-2 border-slate-100 ml-2">
+            <div class="hidden flex-col gap-1 mt-2 pl-4 border-l-2 border-slate-100 ml-2">
               <a class="nav-link text-sm py-1" href="/el-doctor.html">Dr. John Freddy Prado Giraldo</a>
-              <a class="nav-link text-sm py-1" href="/la-doctora.html">La Doctora</a>
+              <a class="nav-link text-sm py-1" href="/la-doctora.html">Dra. Isabel C. Calero</a>
             </div>
           </div>
-          <a class="nav-link active" href="/testimonios.html">Testimonios</a>
+          
           <a class="nav-link" href="/contacto.html">Contacto</a>
           <a href="/contacto.html" class="btn-primary text-center mt-2">Agendar Cita</a>
         </nav>
@@ -110,7 +120,7 @@
                 <span class="material-symbols-outlined text-4xl ml-1">play_arrow</span>
               </div>
               <div class="absolute bottom-0 left-0 right-0 p-6 z-10">
-                <p class="text-white font-medium text-sm">"Cambiaron mi vida por completo" — Elena G.</p>
+                <p class="text-white font-medium text-sm">"Cambiaron mi vida por completo"  Elena G.</p>
               </div>
             </div>
           </div>
@@ -123,7 +133,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center mb-12 fade-in">
           <div>
-            <h2 class="section-title">Casos de Éxito</h2>
+            <h2 class="section-title">Casos de Áxito</h2>
             <p class="text-muted mt-2">Transformaciones estéticas y funcionales reales.</p>
           </div>
           <div class="hidden sm:flex gap-3">
@@ -142,7 +152,7 @@
               <div class="card">
                 <div class="rounded-2xl overflow-hidden aspect-[3/2] bg-slate-100 mb-6 relative">
                   <span class="absolute top-4 left-4 bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Restauración</span>
-                  <img class="w-full h-full object-cover" alt="Caso de restauración total" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBicx_79xMfR3b9hsXiZ0Mda9i1RbGVV8WWM2c7zAPakT4yLSEQfIXPxZjr2-HOpwZ7VRGh93N42XdpvqFICyIXim--QK6FKidfdnigu7yics_i50Yw9aQM0iUM7QGaL4wQmbsUdXu1BbeKNMz_HkD6nWVovsAQIMrJ-LQh6FW-LnytV6vydVfs8wiDXq66Pit8Hg9ajODu_Dr8qkXmJsZrEHafLGPOHCXDt_azhybQk_Cwo3PkcmkitQBBT12xyYQ9u7YBl6gRaE0" />
+                  <img class="w-full h-full object-cover" alt="Caso de restauración total" src="/images/clinica/consultorio-hero.jpg" />
                 </div>
                 <h4 class="text-lg font-bold text-slate-900 mb-1">Implantes de Arco Completa</h4>
                 <p class="text-muted text-sm mb-3">Paciente: Juan M. (45 años)</p>
@@ -155,7 +165,7 @@
               <div class="card">
                 <div class="rounded-2xl overflow-hidden aspect-[3/2] bg-slate-100 mb-6 relative">
                   <span class="absolute top-4 left-4 bg-accent text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Estética</span>
-                  <img class="w-full h-full object-cover" alt="Caso de carillas de porcelana" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY2LoSKMo0XnSnIzVjzSHTKODGbwvvzJUQUlIzymTdH8jqz4pCkBK-4K5mF3a57Q7VvaCiIOk_l_1WRiOR53UHN8owsoaXQoi1KcX1ZQhA-TANinGZ2-kgwL7dg_sNEfOdtHaHqgt4OplQcnjQjhe5eLuTxrVBdG74MBtN8WYIIFynlTLvhE2hqLWP9LeTGNje6ah47FD8jXegxx5fjHlm5PVBjdXMcp0q50KenLnL7xocfW8WvJ6BC44hpgxSmsXBMgXKNv7I_6s" />
+                  <img class="w-full h-full object-cover" alt="Caso de carillas de porcelana" src="/images/servicios/estetica.png" />
                 </div>
                 <h4 class="text-lg font-bold text-slate-900 mb-1">Carillas de Porcelana</h4>
                 <p class="text-muted text-sm mb-3">Paciente: Ana P. (28 años)</p>
@@ -168,7 +178,7 @@
               <div class="card">
                 <div class="rounded-2xl overflow-hidden aspect-[3/2] bg-slate-100 mb-6 relative">
                   <span class="absolute top-4 left-4 bg-slate-700 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Aclaramiento</span>
-                  <img class="w-full h-full object-cover" alt="Caso de diseño express" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1KwahucJ6tSl9fOP-_dtjiO7Zq6QFdhrhbjsML-XhkIaEvQaVptvKof_iC2eKg8EBJ7e1yuEr32BW2EAlSXg-23pSn-F0XHPe89JKOXVOszcptxV42cbOFItNrJS8L2bzVj3ZY4HwvUIAOX8-VaZAA3idzPjIyKU_6aSrkymIvEQP0iwSStfDFNGWCiiY3jfaDejeCSXKbvz71lgTtxM9shiQyv0OjwCdFBsGuihnp3J4_hpwRP17bQRF4LGC7UvrGpcLCgkprjo" />
+                  <img class="w-full h-full object-cover" alt="Caso de diseño express" src="/images/servicios/valoracion.png" />
                 </div>
                 <h4 class="text-lg font-bold text-slate-900 mb-1">Diseño Express 48h</h4>
                 <p class="text-muted text-sm mb-3">Paciente: Carlos R. (33 años)</p>
@@ -285,48 +295,76 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="bg-white border-t border-slate-100 pt-16 pb-8">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-        <div>
-          <div class="flex items-center gap-3 mb-6">
-            <img src="/logos/logo-icon.png" alt="C&P Smile" class="h-8 w-8 object-contain" />
-            <span class="text-lg font-bold text-slate-900 leading-none">C&P <span class="text-primary">Smile Clinic</span></span>
+  <footer class="bg-slate-900 text-white pt-24 pb-12 overflow-hidden relative">
+    <!-- Decorative glow -->
+    <div class="absolute bottom-0 right-0 translate-y-1/2 translate-x-1/4 size-[500px] bg-primary/10 rounded-full blur-[120px] pointer-events-none"></div>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-20">
+        <div class="lg:col-span-4">
+          <a href="/" class="flex items-center mb-8 group">
+            <img src="/logos/logo-clinic.svg" alt="C&P Smile Clinic" class="h-24 w-auto brightness-0 invert transition-all group-hover:brightness-100" />
+          </a>
+          <p class="text-slate-400 text-lg leading-relaxed mb-10 max-w-sm font-medium">
+            Redefiniendo la excelencia dental a través de la ciencia, la ética y el compromiso humano.
+          </p>
+          <div class="flex gap-4">
+            <a href="#" class="size-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-300">
+              <span class="material-symbols-outlined text-xl">share</span>
+            </a>
+            <a href="#" class="size-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-300">
+              <span class="material-symbols-outlined text-xl">public</span>
+            </a>
           </div>
-          <p class="text-slate-400 text-sm leading-relaxed">Expertos en odontología estética y restauración dental avanzada. Cuidando tu sonrisa desde hace más de 15 años.</p>
-          <div class="flex gap-3 mt-4">
-            <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
-            <a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">photo_camera</span></a>
+        </div>
+
+        <div class="lg:col-span-2">
+          <h5 class="text-sm font-black uppercase tracking-[0.2em] mb-8 text-white">Navegación</h5>
+          <ul class="space-y-4">
+            <li><a class="text-slate-400 hover:text-white transition-colors font-medium flex items-center gap-2 group" href="/"><div class="size-1 bg-primary rounded-full scale-0 group-hover:scale-100 transition-transform"></div> Inicio</a></li>
+            <li><a class="text-slate-400 hover:text-white transition-colors font-medium flex items-center gap-2 group" href="/servicios.html"><div class="size-1 bg-primary rounded-full scale-0 group-hover:scale-100 transition-transform"></div> Servicios</a></li>
+            <li><a class="text-slate-400 hover:text-white transition-colors font-medium flex items-center gap-2 group" href="/el-doctor.html"><div class="size-1 bg-primary rounded-full scale-0 group-hover:scale-100 transition-transform"></div> Doctores</a></li>
+            
+            
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3">
+          <h5 class="text-sm font-black uppercase tracking-[0.2em] mb-8 text-white">Contacto</h5>
+          <ul class="space-y-6">
+            <li class="flex items-start gap-4 group">
+              <div class="size-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                <span class="material-symbols-outlined text-primary text-xl">location_on</span>
+              </div>
+              <span class="text-slate-400 font-medium">Cl. 52 Nte. #2 DN 05<br/>La Merced, Cali</span>
+            </li>
+            <li class="flex items-center gap-4 group">
+              <div class="size-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                <span class="material-symbols-outlined text-primary text-xl">call</span>
+              </div>
+              <span class="text-slate-400 font-medium">+57 313 794 2686</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-3">
+          <h5 class="text-sm font-black uppercase tracking-[0.2em] mb-8 text-white">Horarios</h5>
+          <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+            <ul class="space-y-3">
+              <li class="flex justify-between text-sm"><span class="text-slate-400 font-medium">Martes:</span> <span class="text-white font-bold text-right">1:00 PM - 6:00 PM</span></li>
+              <li class="flex justify-between text-sm"><span class="text-slate-400 font-medium">Viernes:</span> <span class="text-white font-bold text-right">7:00 AM - 12:00 PM</span></li>
+              <li class="flex justify-between text-sm"><span class="text-slate-400 font-medium">Sábado:</span> <span class="text-white font-bold text-right">7:00 AM - 6:00 PM</span></li>
+            </ul>
           </div>
-        </div>
-        <div>
-          <h5 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-xs">Especialidades</h5>
-          <ul class="space-y-3 text-sm text-slate-400">
-            <li><a class="hover:text-primary transition-colors" href="/servicios.html">Diseño de Sonrisa</a></li>
-            <li><a class="hover:text-primary transition-colors" href="/servicios.html">Implantes Dentales</a></li>
-            <li><a class="hover:text-primary transition-colors" href="/servicios.html">Ortodoncia Invisible</a></li>
-            <li><a class="hover:text-primary transition-colors" href="/servicios.html">Blanqueamiento Láser</a></li>
-          </ul>
-        </div>
-        <div>
-          <h5 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-xs">Navegación</h5>
-          <ul class="space-y-3 text-sm text-slate-400">
-            <li><a class="hover:text-primary transition-colors" href="/el-doctor.html">Sobre Nosotros</a></li>
-            <li><a class="hover:text-primary transition-colors" href="/testimonios.html">Casos de Éxito</a></li>
-            <li><a class="hover:text-primary transition-colors" href="/el-doctor.html">Nuestro Equipo</a></li>
-            <li><a class="hover:text-primary transition-colors" href="#">Políticas de Privacidad</a></li>
-          </ul>
-        </div>
-        <div>
-          <h5 class="font-bold text-slate-900 mb-4 uppercase tracking-wider text-xs">Ubicación</h5>
-          <ul class="space-y-3 text-sm text-slate-400">
-            <li class="flex items-start gap-2"><span class="material-symbols-outlined text-muted text-lg">location_on</span> Calle Principal, Edificio Médico, Cali</li>
-            <li class="flex items-center gap-2"><span class="material-symbols-outlined text-muted text-lg">call</span> +57 (300) 123-4567</li>
-          </ul>
         </div>
       </div>
-      <div class="border-t border-slate-100 pt-8 text-center">
-        <p class="text-xs text-slate-400">© 2025 C&P SMILE CLINIC. TODOS LOS DERECHOS RESERVADOS.</p>
+      
+      <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-center">
+        <p class="text-xs text-slate-500 font-medium">© 2026 C&P Smile Clinic. Todos los derechos reservados.</p>
+        <div class="flex items-center gap-8">
+          <a href="#" class="text-xs text-slate-500 hover:text-white transition-colors font-bold uppercase tracking-widest">Privacidad</a>
+          <a href="#" class="text-xs text-slate-500 hover:text-white transition-colors font-bold uppercase tracking-widest">Términos</a>
+        </div>
       </div>
     </div>
   </footer>
@@ -350,10 +388,16 @@
     });
   </script>
 
-  <!-- ═══════════════════ WHATSAPP ═══════════════════ -->
-  <a href="https://wa.me/570000000000" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+  <!-- =================== WHATSAPP =================== -->
+  <a href="https://wa.me/573137942686" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
     <span class="material-symbols-outlined">chat_bubble</span>
   </a>
 
 </body>
 </html>
+
+
+
+
+
+
