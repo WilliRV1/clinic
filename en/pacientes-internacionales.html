@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pacientes Internacionales — C&P Smile Clinic</title>
-  <meta name="description" content="Turismo dental en Cali, Colombia. Experiencia todo incluido: transporte, alojamiento, staff bilingüe y seguimiento post-tratamiento." />
+  <title>International Patients & Dental Tourism — C&P Smile Clinic</title>
+  <meta name="description" content="Premium dental tourism in Cali, Colombia. All-inclusive experience: VIP transport, boutique lodging, bilingual staff, and digital remote follow-up." />
   <link rel="icon" type="image/png" href="/logos/logo-clinic.svg" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
   <script type="module" src="/src/js/main.js"></script>
@@ -25,77 +25,76 @@
   <header class="sticky top-0 z-50 w-full border-b border-slate-100/50 bg-white/70 backdrop-blur-xl transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex h-24 items-center justify-between">
-        <a href="/" class="flex items-center group">
+        <a href="/en/index.html" class="flex items-center group">
           <img src="/logos/logo-clinic.svg" alt="C&P Smile Clinic" class="h-20 w-auto object-contain transition-all duration-300 group-hover:brightness-110" />
         </a>
         <nav class="hidden md:flex items-center gap-8">
-          <a class="nav-link" href="/">Inicio</a>
-          <a class="nav-link" href="/servicios.html">Servicios</a>
+          <a class="nav-link" href="/en/index.html">Home</a>
+          <a class="nav-link" href="/en/servicios.html">Services</a>
           <div class="relative group">
             <button class="nav-link flex items-center gap-1 cursor-pointer bg-transparent border-0 p-0 font-inherit">
-              Doctores
+              Doctors
               <span class="material-symbols-outlined text-[18px] transition-transform duration-200 group-hover:rotate-180">expand_more</span>
             </button>
             <div class="absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div class="bg-white rounded-2xl shadow-xl border border-slate-100 py-2 min-w-[270px]">
-                <a href="/el-doctor.html" class="flex items-center gap-4 px-5 py-3.5 hover:bg-slate-50 transition-all group/item">
+                <a href="/en/el-doctor.html" class="flex items-center gap-4 px-5 py-3.5 hover:bg-slate-50 transition-all group/item">
                   <div class="size-10 rounded-full bg-primary/5 flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-white transition-colors">
                     <span class="material-symbols-outlined text-[22px]">person</span>
                   </div>
                   <div>
                     <p class="font-bold text-slate-900 text-sm leading-tight">Dr. John Freddy Prado Giraldo</p>
-                    <p class="text-[11px] text-muted font-medium mt-0.5">Odontólogo Integral</p>
+                    <p class="text-[11px] text-muted font-medium mt-0.5">Comprehensive Dentist</p>
                   </div>
                 </a>
-                <a href="/la-doctora.html" class="flex items-center gap-4 px-5 py-3.5 hover:bg-slate-50 transition-all group/item">
+                <a href="/en/la-doctora.html" class="flex items-center gap-4 px-5 py-3.5 hover:bg-slate-50 transition-all group/item">
                   <div class="size-10 rounded-full bg-primary/5 flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-white transition-colors">
                     <span class="material-symbols-outlined text-[22px]">person</span>
                   </div>
                   <div>
                     <p class="font-bold text-slate-900 text-sm leading-tight">Dra. Isabel Cristina Calero</p>
-                    <p class="text-[11px] text-muted font-medium mt-0.5">Odontopediatría</p>
+                    <p class="text-[11px] text-muted font-medium mt-0.5">Pediatric Dentistry</p>
                   </div>
                 </a>
               </div>
             </div>
           </div>
-          
-          <a class="nav-link" href="/contacto.html">Contacto</a>
+          <a class="nav-link active" href="/en/pacientes-internacionales.html">International Patients</a>
+          <a class="nav-link" href="/en/contacto.html">Contact</a>
         </nav>
         <div class="flex items-center gap-4">
-          <!-- Selector de Idioma -->
+          <!-- Language Switcher -->
           <div class="flex items-center gap-1.5 mr-2">
-            <a href="/en/pacientes-internacionales.html" class="text-[11px] font-bold text-slate-400 hover:text-primary transition-colors py-1 px-1.5 rounded hover:bg-slate-100">EN</a>
+            <span class="text-[11px] font-bold text-primary py-1 px-1.5 rounded bg-primary-light">EN</span>
             <span class="text-slate-200 text-xs">|</span>
-            <span class="text-[11px] font-bold text-primary py-1 px-1.5 rounded bg-primary-light">ES</span>
+            <a href="/pacientes-internacionales.html" class="text-[11px] font-bold text-slate-400 hover:text-primary transition-colors py-1 px-1.5 rounded hover:bg-slate-100">ES</a>
           </div>
-          <a href="/contacto.html" class="hidden sm:flex items-center justify-center rounded-xl bg-primary px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-primary/20 hover:bg-primary-dark transition-all">Agendar Cita</a>
+          <a href="/en/contacto.html" class="hidden sm:flex items-center justify-center rounded-xl bg-primary px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-primary/20 hover:bg-primary-dark transition-all">Book Appointment</a>
           <button id="mobile-menu-btn" class="md:hidden text-slate-900"><span class="material-symbols-outlined text-3xl">menu</span></button>
         </div>
       </div>
       <div id="mobile-menu" class="hidden md:hidden pb-6 border-t border-slate-100">
         <nav class="flex flex-col gap-4 pt-4">
-          <a class="nav-link" href="/">Inicio</a>
-          <a class="nav-link" href="/servicios.html">Servicios</a>
+          <a class="nav-link" href="/en/index.html">Home</a>
+          <a class="nav-link" href="/en/servicios.html">Services</a>
           <div>
             <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="nav-link w-full text-left flex items-center justify-between">
-              Doctores
+              Doctors
               <span class="material-symbols-outlined text-[18px]">expand_more</span>
             </button>
             <div class="hidden flex-col gap-1 mt-2 pl-4 border-l-2 border-slate-100 ml-2">
-              <a class="nav-link text-sm py-1" href="/el-doctor.html">Dr. John Freddy Prado Giraldo</a>
-              <a class="nav-link text-sm py-1" href="/la-doctora.html">Dra. Isabel C. Calero</a>
+              <a class="nav-link text-sm py-1" href="/en/el-doctor.html">Dr. John Freddy Prado</a>
+              <a class="nav-link text-sm py-1" href="/en/la-doctora.html">Dra. Isabel C. Calero</a>
             </div>
           </div>
-          
-          <a class="nav-link active" href="/pacientes-internacionales.html">Pacientes Internacionales</a>
-          <a class="nav-link" href="/contacto.html">Contacto</a>
+          <a class="nav-link active" href="/en/pacientes-internacionales.html">International Patients</a>
+          <a class="nav-link" href="/en/contacto.html">Contact</a>
           <div class="flex items-center justify-center gap-4 py-2 border-y border-slate-100 my-2">
-            <span class="text-xs font-bold text-primary py-1 px-2 rounded bg-primary-light">Español</span>
+            <span class="text-xs font-bold text-primary py-1 px-2 rounded bg-primary-light">English</span>
             <span class="text-slate-200">|</span>
-            <a href="/en/pacientes-internacionales.html" class="text-xs font-bold text-slate-400 hover:text-primary transition-colors py-1 px-2 rounded">English</a>
+            <a href="/pacientes-internacionales.html" class="text-xs font-bold text-slate-400 hover:text-primary transition-colors py-1 px-2 rounded">Español</a>
           </div>
-          <a href="/contacto.html" class="btn-primary text-center mt-2">Agendar Cita</a>
+          <a href="/en/contacto.html" class="btn-primary text-center mt-2">Book Appointment</a>
         </nav>
       </div>
     </div>
@@ -108,17 +107,17 @@
       <div class="absolute inset-0 bg-gradient-to-b from-primary-dark to-primary z-0"></div>
       <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 text-center text-white">
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-6 fade-in">
-          Tu Nueva Sonrisa Te Espera en <span class="italic underline decoration-white/30">Cali</span>
+          Your New Smile Awaits in <span class="italic underline decoration-white/30">Cali</span>
         </h1>
         <p class="text-xl text-blue-100 max-w-2xl mx-auto mb-10 fade-in">
-          Combinamos excelencia dental de clase mundial con la calidez del turismo médico en la capital mundial de la salsa.
+          We combine world-class dental excellence with the comfort of premium medical tourism in the salsa capital of the world.
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 fade-in">
-          <a href="/contacto.html" class="inline-flex items-center justify-center rounded-xl bg-white text-primary px-8 py-4 font-bold hover:bg-blue-50 transition-colors shadow-lg gap-2">
-            <span class="material-symbols-outlined">videocam</span> Consulta Virtual de Valoración
+          <a href="/en/contacto.html" class="inline-flex items-center justify-center rounded-xl bg-white text-primary px-8 py-4 font-bold hover:bg-blue-50 transition-colors shadow-lg gap-2">
+            <span class="material-symbols-outlined">videocam</span> Virtual Dental Assessment
           </a>
-          <a href="/servicios.html" class="inline-flex items-center justify-center rounded-xl border-2 border-white/30 px-8 py-4 font-bold text-white hover:bg-white/10 transition-colors">
-            Ver Paquetes
+          <a href="/en/servicios.html" class="inline-flex items-center justify-center rounded-xl border-2 border-white/30 px-8 py-4 font-bold text-white hover:bg-white/10 transition-colors">
+            View Packages & Pricing
           </a>
         </div>
       </div>
@@ -129,41 +128,41 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col lg:flex-row justify-between items-start gap-8 mb-12 fade-in">
           <div>
-            <span class="section-label block mb-2">Destino Dental</span>
-            <h2 class="section-title">¿Por qué elegir Cali, Colombia?</h2>
+            <span class="section-label block mb-2">Dental Destination</span>
+            <h2 class="section-title">Why Choose Cali, Colombia?</h2>
           </div>
-          <p class="text-slate-500 max-w-md lg:text-right">Cali no solo es reconocida por su calidad médica, sino por ser un paraíso de recuperación con clima perfecto todo el año.</p>
+          <p class="text-slate-500 max-w-md lg:text-right">Cali is not only widely recognized for its high medical standards, but is also a fantastic recovery paradise with warm spring weather year-round.</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="card fade-in">
             <div class="rounded-2xl overflow-hidden aspect-[3/2] bg-slate-100 mb-6">
-              <img class="w-full h-full object-cover" alt="Clima primaveral en Cali" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBicx_79xMfR3b9hsXiZ0Mda9i1RbGVV8WWM2c7zAPakT4yLSEQfIXPxZjr2-HOpwZ7VRGh93N42XdpvqFICyIXim--QK6FKidfdnigu7yics_i50Yw9aQM0iUM7QGaL4wQmbsUdXu1BbeKNMz_HkD6nWVovsAQIMrJ-LQh6FW-LnytV6vydVfs8wiDXq66Pit8Hg9ajODu_Dr8qkXmJsZrEHafLGPOHCXDt_azhybQk_Cwo3PkcmkitQBBT12xyYQ9u7YBl6gRaE0" />
+              <img class="w-full h-full object-cover" alt="Spring weather in Cali" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBicx_79xMfR3b9hsXiZ0Mda9i1RbGVV8WWM2c7zAPakT4yLSEQfIXPxZjr2-HOpwZ7VRGh93N42XdpvqFICyIXim--QK6FKidfdnigu7yics_i50Yw9aQM0iUM7QGaL4wQmbsUdXu1BbeKNMz_HkD6nWVovsAQIMrJ-LQh6FW-LnytV6vydVfs8wiDXq66Pit8Hg9ajODu_Dr8qkXmJsZrEHafLGPOHCXDt_azhybQk_Cwo3PkcmkitQBBT12xyYQ9u7YBl6gRaE0" />
             </div>
             <div class="flex items-center gap-2 mb-2">
               <span class="material-symbols-outlined text-primary">wb_sunny</span>
-              <h4 class="font-bold text-slate-900">Clima Primaveral</h4>
+              <h4 class="font-bold text-slate-900">Spring-like Weather</h4>
             </div>
-            <p class="text-slate-500 text-sm">Disfruta de una temperatura promedio de 25°C, ideal para una recuperación relajada y placentera.</p>
+            <p class="text-slate-500 text-sm">Enjoy an average temperature of 77°F (25°C), perfect for a relaxing and pleasurable recovery experience.</p>
           </div>
           <div class="card fade-in">
             <div class="rounded-2xl overflow-hidden aspect-[3/2] bg-slate-100 mb-6">
-              <img class="w-full h-full object-cover" alt="Precios competitivos" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY2LoSKMo0XnSnIzVjzSHTKODGbwvvzJUQUlIzymTdH8jqz4pCkBK-4K5mF3a57Q7VvaCiIOk_l_1WRiOR53UHN8owsoaXQoi1KcX1ZQhA-TANinGZ2-kgwL7dg_sNEfOdtHaHqgt4OplQcnjQjhe5eLuTxrVBdG74MBtN8WYIIFynlTLvhE2hqLWP9LeTGNje6ah47FD8jXegxx5fjHlm5PVBjdXMcp0q50KenLnL7xocfW8WvJ6BC44hpgxSmsXBMgXKNv7I_6s" />
+              <img class="w-full h-full object-cover" alt="Highly competitive prices" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY2LoSKMo0XnSnIzVjzSHTKODGbwvvzJUQUlIzymTdH8jqz4pCkBK-4K5mF3a57Q7VvaCiIOk_l_1WRiOR53UHN8owsoaXQoi1KcX1ZQhA-TANinGZ2-kgwL7dg_sNEfOdtHaHqgt4OplQcnjQjhe5eLuTxrVBdG74MBtN8WYIIFynlTLvhE2hqLWP9LeTGNje6ah47FD8jXegxx5fjHlm5PVBjdXMcp0q50KenLnL7xocfW8WvJ6BC44hpgxSmsXBMgXKNv7I_6s" />
             </div>
             <div class="flex items-center gap-2 mb-2">
               <span class="material-symbols-outlined text-primary">payments</span>
-              <h4 class="font-bold text-slate-900">Precios Competitivos</h4>
+              <h4 class="font-bold text-slate-900">Highly Competitive Prices</h4>
             </div>
-            <p class="text-slate-500 text-sm">Ahorra hasta un 70% en comparación con tratamientos en EE.UU. o Europa, con la misma tecnología.</p>
+            <p class="text-slate-500 text-sm">Save up to 70% compared to treatments in the US or Europe, utilizing the exact same premium digital technology.</p>
           </div>
           <div class="card fade-in">
             <div class="rounded-2xl overflow-hidden aspect-[3/2] bg-slate-100 mb-6">
-              <img class="w-full h-full object-cover" alt="Turismo de bienestar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1KwahucJ6tSl9fOP-_dtjiO7Zq6QFdhrhbjsML-XhkIaEvQaVptvKof_iC2eKg8EBJ7e1yuEr32BW2EAlSXg-23pSn-F0XHPe89JKOXVOszcptxV42cbOFItNrJS8L2bzVj3ZY4HwvUIAOX8-VaZAA3idzPjIyKU_6aSrkymIvEQP0iwSStfDFNGWCiiY3jfaDejeCSXKbvz71lgTtxM9shiQyv0OjwCdFBsGuihnp3J4_hpwRP17bQRF4LGC7UvrGpcLCgkprjo" />
+              <img class="w-full h-full object-cover" alt="Wellness tourism" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1KwahucJ6tSl9fOP-_dtjiO7Zq6QFdhrhbjsML-XhkIaEvQaVptvKof_iC2eKg8EBJ7e1yuEr32BW2EAlSXg-23pSn-F0XHPe89JKOXVOszcptxV42cbOFItNrJS8L2bzVj3ZY4HwvUIAOX8-VaZAA3idzPjIyKU_6aSrkymIvEQP0iwSStfDFNGWCiiY3jfaDejeCSXKbvz71lgTtxM9shiQyv0OjwCdFBsGuihnp3J4_hpwRP17bQRF4LGC7UvrGpcLCgkprjo" />
             </div>
             <div class="flex items-center gap-2 mb-2">
               <span class="material-symbols-outlined text-primary">spa</span>
-              <h4 class="font-bold text-slate-900">Turismo de Bienestar</h4>
+              <h4 class="font-bold text-slate-900">Wellness & Culture</h4>
             </div>
-            <p class="text-slate-500 text-sm">Gastronomía exquisita y una cultura vibrante que harán de tu viaje una experiencia inolvidable.</p>
+            <p class="text-slate-500 text-sm">Exquisite Colombian gastronomy, world-class salsa music, and vibrant local culture make your trip unforgettable.</p>
           </div>
         </div>
       </div>
@@ -172,36 +171,36 @@
     <!-- ALL INCLUSIVE -->
     <section class="py-24 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="section-title mb-2 fade-in">Experiencia "Todo Incluido"</h2>
-        <p class="text-muted mb-12 fade-in">Nos encargamos de cada detalle para que tú solo te preocupes por sonreír.</p>
+        <h2 class="section-title mb-2 fade-in">Your All-Inclusive Premium Experience</h2>
+        <p class="text-muted mb-12 fade-in">We handle every technical and logistical detail so you only have to focus on smiling.</p>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <div class="card text-center fade-in">
             <div class="size-16 bg-primary-light rounded-2xl flex items-center justify-center text-primary mx-auto mb-4">
               <span class="material-symbols-outlined text-3xl">airport_shuttle</span>
             </div>
-            <h4 class="font-bold text-slate-900 mb-2">Transporte VIP</h4>
-            <p class="text-slate-500 text-sm">Recogida en el aeropuerto y traslados privados a todas tus citas dentales.</p>
+            <h4 class="font-bold text-slate-900 mb-2">VIP Concierge & Transport</h4>
+            <p class="text-slate-500 text-sm">Private airport pickup and transfers to all your dental appointments.</p>
           </div>
           <div class="card text-center fade-in">
             <div class="size-16 bg-blue-50 rounded-2xl flex items-center justify-center text-accent mx-auto mb-4">
               <span class="material-symbols-outlined text-3xl">hotel</span>
             </div>
-            <h4 class="font-bold text-slate-900 mb-2">Alojamiento</h4>
-            <p class="text-slate-500 text-sm">Convenios con los mejores hoteles y apartamentos boutique de la zona norte de Cali.</p>
+            <h4 class="font-bold text-slate-900 mb-2">Boutique Lodging</h4>
+            <p class="text-slate-500 text-sm">Partnerships with top hotels and boutique apartments in Cali's safest, most upscale areas.</p>
           </div>
           <div class="card text-center fade-in">
             <div class="size-16 bg-primary-light rounded-2xl flex items-center justify-center text-primary mx-auto mb-4">
               <span class="material-symbols-outlined text-3xl">translate</span>
             </div>
-            <h4 class="font-bold text-slate-900 mb-2">Staff Bilingüe</h4>
-            <p class="text-slate-500 text-sm">Acompañamiento constante en inglés para una comunicación clara y fluida.</p>
+            <h4 class="font-bold text-slate-900 mb-2">Bilingual Staff</h4>
+            <p class="text-slate-500 text-sm">Full English accompaniment for absolutely clear, transparent, and seamless communication.</p>
           </div>
           <div class="card text-center fade-in">
             <div class="size-16 bg-slate-100 rounded-2xl flex items-center justify-center text-slate-600 mx-auto mb-4">
               <span class="material-symbols-outlined text-3xl">monitor_heart</span>
             </div>
-            <h4 class="font-bold text-slate-900 mb-2">Post-Tratamiento</h4>
-            <p class="text-slate-500 text-sm">Seguimiento remoto y garantía internacional en nuestros tratamientos.</p>
+            <h4 class="font-bold text-slate-900 mb-2">Post-Treatment Care</h4>
+            <p class="text-slate-500 text-sm">Remote follow-up protocols and international warranties on all prosthetic restorations.</p>
           </div>
         </div>
       </div>
@@ -212,39 +211,39 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
           <div class="rounded-3xl overflow-hidden aspect-[4/3] bg-slate-100 shadow-2xl fade-in">
-            <img class="w-full h-full object-cover" alt="Consulta virtual con Doctor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAY2LoSKMo0XnSnIzVjzSHTKODGbwvvzJUQUlIzymTdH8jqz4pCkBK-4K5mF3a57Q7VvaCiIOk_l_1WRiOR53UHN8owsoaXQoi1KcX1ZQhA-TANinGZ2-kgwL7dg_sNEfOdtHaHqgt4OplQcnjQjhe5eLuTxrVBdG74MBtN8WYIIFynlTLvhE2hqLWP9LeTGNje6ah47FD8jXegxx5fjHlm5PVBjdXMcp0q50KenLnL7xocfW8WvJ6BC44hpgxSmsXBMgXKNv7I_6s" />
+            <img class="w-full h-full object-cover" alt="Virtual consultation with dentist" src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&q=80&w=1200" />
           </div>
           <div class="fade-in">
-            <h2 class="section-title mb-8">¿Cómo coordinar desde el extranjero?</h2>
+            <h2 class="section-title mb-8">How to Coordinate Your Trip</h2>
             <div class="space-y-8">
               <div class="flex gap-4">
                 <div class="flex-shrink-0 size-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-lg">1</div>
                 <div>
-                  <h4 class="text-lg font-bold text-slate-900 mb-1">Consulta Virtual Inicial</h4>
-                  <p class="text-slate-500">Envíanos tus radiografías o fotos. Realizamos una videollamada para discutir tus objetivos y presupuesto.</p>
+                  <h4 class="text-lg font-bold text-slate-900 mb-1">Initial Virtual Assessment</h4>
+                  <p class="text-slate-500">Send us your recent X-rays or dental photographs. We organize a secure video consultation to discuss your clinical goals.</p>
                 </div>
               </div>
               <div class="flex gap-4">
                 <div class="flex-shrink-0 size-12 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg">2</div>
                 <div>
-                  <h4 class="text-lg font-bold text-slate-900 mb-1">Plan de Tratamiento y Cotización</h4>
-                  <p class="text-slate-500">Recibe una propuesta detallada con tiempos, costos y logística de viaje incluida.</p>
+                  <h4 class="text-lg font-bold text-slate-900 mb-1">Customized Treatment Plan & Quote</h4>
+                  <p class="text-slate-500">Receive a detailed medical and economic proposal, including treatment timelines and exact pricing.</p>
                 </div>
               </div>
               <div class="flex gap-4">
                 <div class="flex-shrink-0 size-12 rounded-full bg-slate-700 text-white flex items-center justify-center font-bold text-lg">3</div>
                 <div>
-                  <h4 class="text-lg font-bold text-slate-900 mb-1">Reserva y Viaje</h4>
-                  <p class="text-slate-500">Coordinamos tus fechas. Te recibimos en el aeropuerto de Cali (CLO) para iniciar tu transformación.</p>
+                  <h4 class="text-lg font-bold text-slate-900 mb-1">Booking & Flight</h4>
+                  <p class="text-slate-500">We align your dates and assist with booking, welcoming you at Cali Airport (CLO) to start your transformation.</p>
                 </div>
               </div>
             </div>
             <div class="flex flex-col sm:flex-row items-center gap-4 mt-10">
               <div class="bg-primary-light rounded-2xl px-6 py-4 text-center">
                 <p class="text-3xl font-black text-primary">100%</p>
-                <p class="text-sm font-medium text-primary-dark">Asistencia Digital</p>
+                <p class="text-sm font-medium text-primary-dark">Digital Support</p>
               </div>
-              <a href="/contacto.html" class="btn-primary gap-2">Hablar con un Coordinador</a>
+              <a href="/en/contacto.html" class="btn-primary gap-2">Talk to a Dental Coordinator</a>
             </div>
           </div>
         </div>
@@ -254,8 +253,8 @@
     <!-- MAP -->
     <section class="py-24 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="section-title mb-2 fade-in">Ubicación Estratégica</h2>
-        <p class="text-muted mb-12 fade-in">Estamos en el corazón médico de Cali, rodeados de los mejores servicios.</p>
+        <h2 class="section-title mb-2 fade-in">Strategic Premium Location</h2>
+        <p class="text-muted mb-12 fade-in">We are located in Cali's premium medical and business district, surrounded by top-tier amenities.</p>
         <div class="rounded-3xl overflow-hidden aspect-[2/1] bg-slate-100 shadow-xl fade-in">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248.90326750369675!2d-76.51158928871827!3d3.4821297862149456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e30a703f19b725b%3A0xb893c3ffab46df78!2sTerapias%20Hidr%C3%B3geno%20Molecular!5e0!3m2!1ses!2sco!4v1779742384593!5m2!1ses!2sco"
@@ -263,7 +262,7 @@
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            title="Ubicación C&P Smile Clinic">
+            title="C&P Smile Clinic Location">
           </iframe>
         </div>
       </div>
@@ -279,11 +278,11 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-20">
         <div class="lg:col-span-4">
-          <a href="/" class="flex items-center mb-8 group">
+          <a href="/en/index.html" class="flex items-center mb-8 group">
             <img src="/logos/logo-clinic.svg" alt="C&P Smile Clinic" class="h-24 w-auto brightness-0 invert transition-all group-hover:brightness-100" />
           </a>
           <p class="text-slate-400 text-lg leading-relaxed mb-10 max-w-sm font-medium">
-            Redefiniendo la excelencia dental a través de la ciencia, la ética y el compromiso humano.
+            Redefining dental excellence through science, ethics, and a human-centered commitment.
           </p>
           <div class="flex gap-4">
             <a href="#" class="size-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-300">
@@ -296,24 +295,22 @@
         </div>
 
         <div class="lg:col-span-2">
-          <h5 class="text-sm font-black uppercase tracking-[0.2em] mb-8 text-white">Navegación</h5>
+          <h5 class="text-sm font-black uppercase tracking-[0.2em] mb-8 text-white">Navigation</h5>
           <ul class="space-y-4">
-            <li><a class="text-slate-400 hover:text-white transition-colors font-medium flex items-center gap-2 group" href="/"><div class="size-1 bg-primary rounded-full scale-0 group-hover:scale-100 transition-transform"></div> Inicio</a></li>
-            <li><a class="text-slate-400 hover:text-white transition-colors font-medium flex items-center gap-2 group" href="/servicios.html"><div class="size-1 bg-primary rounded-full scale-0 group-hover:scale-100 transition-transform"></div> Servicios</a></li>
-            <li><a class="text-slate-400 hover:text-white transition-colors font-medium flex items-center gap-2 group" href="/el-doctor.html"><div class="size-1 bg-primary rounded-full scale-0 group-hover:scale-100 transition-transform"></div> Doctores</a></li>
-            
-            
+            <li><a class="text-slate-400 hover:text-white transition-colors font-medium flex items-center gap-2 group" href="/en/index.html"><div class="size-1 bg-primary rounded-full scale-0 group-hover:scale-100 transition-transform"></div> Home</a></li>
+            <li><a class="text-slate-400 hover:text-white transition-colors font-medium flex items-center gap-2 group" href="/en/servicios.html"><div class="size-1 bg-primary rounded-full scale-0 group-hover:scale-100 transition-transform"></div> Services</a></li>
+            <li><a class="text-slate-400 hover:text-white transition-colors font-medium flex items-center gap-2 group" href="/en/el-doctor.html"><div class="size-1 bg-primary rounded-full scale-0 group-hover:scale-100 transition-transform"></div> Doctors</a></li>
           </ul>
         </div>
 
         <div class="lg:col-span-3">
-          <h5 class="text-sm font-black uppercase tracking-[0.2em] mb-8 text-white">Contacto</h5>
+          <h5 class="text-sm font-black uppercase tracking-[0.2em] mb-8 text-white">Contact</h5>
           <ul class="space-y-6">
             <li class="flex items-start gap-4 group">
               <div class="size-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                 <span class="material-symbols-outlined text-primary text-xl">location_on</span>
               </div>
-              <span class="text-slate-400 font-medium">Cl. 52 Nte. #2 DN 05<br/>La Merced, Cali</span>
+              <span class="text-slate-400 font-medium">Cl. 52 Nte. #2 DN 05<br/>La Merced, Cali, Col</span>
             </li>
             <li class="flex items-center gap-4 group">
               <div class="size-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -325,22 +322,22 @@
         </div>
 
         <div class="lg:col-span-3">
-          <h5 class="text-sm font-black uppercase tracking-[0.2em] mb-8 text-white">Horarios</h5>
+          <h5 class="text-sm font-black uppercase tracking-[0.2em] mb-8 text-white">Hours</h5>
           <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
             <ul class="space-y-3">
-              <li class="flex justify-between text-sm"><span class="text-slate-400 font-medium">Martes:</span> <span class="text-white font-bold text-right">1:00 PM - 6:00 PM</span></li>
-              <li class="flex justify-between text-sm"><span class="text-slate-400 font-medium">Viernes:</span> <span class="text-white font-bold text-right">7:00 AM - 12:00 PM</span></li>
-              <li class="flex justify-between text-sm"><span class="text-slate-400 font-medium">Sábado:</span> <span class="text-white font-bold text-right">7:00 AM - 6:00 PM</span></li>
+              <li class="flex justify-between text-sm"><span class="text-slate-400 font-medium">Tuesday:</span> <span class="text-white font-bold text-right">1:00 PM - 6:00 PM</span></li>
+              <li class="flex justify-between text-sm"><span class="text-slate-400 font-medium">Friday:</span> <span class="text-white font-bold text-right">7:00 AM - 12:00 PM</span></li>
+              <li class="flex justify-between text-sm"><span class="text-slate-400 font-medium">Saturday:</span> <span class="text-white font-bold text-right">7:00 AM - 6:00 PM</span></li>
             </ul>
           </div>
         </div>
       </div>
       
       <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-center">
-        <p class="text-xs text-slate-500 font-medium">© 2026 C&P Smile Clinic. Todos los derechos reservados.</p>
+        <p class="text-xs text-slate-500 font-medium">© 2026 C&P Smile Clinic. All rights reserved.</p>
         <div class="flex items-center gap-8">
-          <a href="#" class="text-xs text-slate-500 hover:text-white transition-colors font-bold uppercase tracking-widest">Privacidad</a>
-          <a href="#" class="text-xs text-slate-500 hover:text-white transition-colors font-bold uppercase tracking-widest">Términos</a>
+          <a href="#" class="text-xs text-slate-500 hover:text-white transition-colors font-bold uppercase tracking-widest">Privacy</a>
+          <a href="#" class="text-xs text-slate-500 hover:text-white transition-colors font-bold uppercase tracking-widest">Terms</a>
         </div>
       </div>
     </div>
@@ -348,5 +345,3 @@
 
 </body>
 </html>
-
-

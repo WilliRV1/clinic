@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contacto — C&P Smile Clinic</title>
-  <meta name="description" content="Contáctanos para agendar tu cita odontológica. WhatsApp, ubicación en Cali y horarios de atención." />
+  <title>Contact Us — C&P Smile Clinic</title>
+  <meta name="description" content="Get in touch to book your specialized dental appointment. WhatsApp support, clinic location in Cali, and operational hours." />
   <link rel="icon" type="image/png" href="/logos/logo-clinic.svg" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
   <script type="module" src="/src/js/main.js"></script>
@@ -25,76 +25,76 @@
   <header class="sticky top-0 z-50 w-full border-b border-slate-100/50 bg-white/70 backdrop-blur-xl transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex h-24 items-center justify-between">
-        <a href="/" class="flex items-center group">
+        <a href="/en/index.html" class="flex items-center group">
           <img src="/logos/logo-clinic.svg" alt="C&P Smile Clinic" class="h-20 w-auto object-contain transition-all duration-300 group-hover:brightness-110" />
         </a>
         <nav class="hidden md:flex items-center gap-8">
-          <a class="nav-link" href="/">Inicio</a>
-          <a class="nav-link" href="/servicios.html">Servicios</a>
+          <a class="nav-link" href="/en/index.html">Home</a>
+          <a class="nav-link" href="/en/servicios.html">Services</a>
           <div class="relative group">
             <button class="nav-link flex items-center gap-1 cursor-pointer bg-transparent border-0 p-0 font-inherit">
-              Doctores
+              Doctors
               <span class="material-symbols-outlined text-[18px] transition-transform duration-200 group-hover:rotate-180">expand_more</span>
             </button>
             <div class="absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div class="bg-white rounded-2xl shadow-xl border border-slate-100 py-2 min-w-[270px]">
-                <a href="/el-doctor.html" class="flex items-center gap-4 px-5 py-3.5 hover:bg-slate-50 transition-all group/item">
+                <a href="/en/el-doctor.html" class="flex items-center gap-4 px-5 py-3.5 hover:bg-slate-50 transition-all group/item">
                   <div class="size-10 rounded-full bg-primary/5 flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-white transition-colors">
                     <span class="material-symbols-outlined text-[22px]">person</span>
                   </div>
                   <div>
                     <p class="font-bold text-slate-900 text-sm leading-tight">Dr. John Freddy Prado Giraldo</p>
-                    <p class="text-[11px] text-muted font-medium mt-0.5">Odontólogo Integral</p>
+                    <p class="text-[11px] text-muted font-medium mt-0.5">Comprehensive Dentist</p>
                   </div>
                 </a>
-                <a href="/la-doctora.html" class="flex items-center gap-4 px-5 py-3.5 hover:bg-slate-50 transition-all group/item">
+                <a href="/en/la-doctora.html" class="flex items-center gap-4 px-5 py-3.5 hover:bg-slate-50 transition-all group/item">
                   <div class="size-10 rounded-full bg-primary/5 flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-white transition-colors">
                     <span class="material-symbols-outlined text-[22px]">person</span>
                   </div>
                   <div>
                     <p class="font-bold text-slate-900 text-sm leading-tight">Dra. Isabel Cristina Calero</p>
-                    <p class="text-[11px] text-muted font-medium mt-0.5">Odontopediatría</p>
+                    <p class="text-[11px] text-muted font-medium mt-0.5">Pediatric Dentistry</p>
                   </div>
                 </a>
               </div>
             </div>
           </div>
-          
-          <a class="nav-link active" href="/contacto.html">Contacto</a>
+          <a class="nav-link" href="/en/pacientes-internacionales.html">International Patients</a>
+          <a class="nav-link active" href="/en/contacto.html">Contact</a>
         </nav>
         <div class="flex items-center gap-4">
-          <!-- Selector de Idioma -->
+          <!-- Language Switcher -->
           <div class="flex items-center gap-1.5 mr-2">
-            <a href="/en/contacto.html" class="text-[11px] font-bold text-slate-400 hover:text-primary transition-colors py-1 px-1.5 rounded hover:bg-slate-100">EN</a>
+            <span class="text-[11px] font-bold text-primary py-1 px-1.5 rounded bg-primary-light">EN</span>
             <span class="text-slate-200 text-xs">|</span>
-            <span class="text-[11px] font-bold text-primary py-1 px-1.5 rounded bg-primary-light">ES</span>
+            <a href="/contacto.html" class="text-[11px] font-bold text-slate-400 hover:text-primary transition-colors py-1 px-1.5 rounded hover:bg-slate-100">ES</a>
           </div>
-          <a href="/contacto.html" class="hidden sm:flex items-center justify-center rounded-xl bg-primary px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-primary/20 hover:bg-primary-dark transition-all">Agendar Cita</a>
+          <a href="/en/contacto.html" class="hidden sm:flex items-center justify-center rounded-xl bg-primary px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-primary/20 hover:bg-primary-dark transition-all">Book Appointment</a>
           <button id="mobile-menu-btn" class="md:hidden text-slate-900"><span class="material-symbols-outlined text-3xl">menu</span></button>
         </div>
       </div>
       <div id="mobile-menu" class="hidden md:hidden pb-6 border-t border-slate-100">
         <nav class="flex flex-col gap-4 pt-4">
-          <a class="nav-link" href="/">Inicio</a>
-          <a class="nav-link" href="/servicios.html">Servicios</a>
+          <a class="nav-link" href="/en/index.html">Home</a>
+          <a class="nav-link" href="/en/servicios.html">Services</a>
           <div>
             <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="nav-link w-full text-left flex items-center justify-between">
-              Doctores
+              Doctors
               <span class="material-symbols-outlined text-[18px]">expand_more</span>
             </button>
             <div class="hidden flex-col gap-1 mt-2 pl-4 border-l-2 border-slate-100 ml-2">
-              <a class="nav-link text-sm py-1" href="/el-doctor.html">Dr. John Freddy Prado Giraldo</a>
-              <a class="nav-link text-sm py-1" href="/la-doctora.html">Dra. Isabel C. Calero</a>
+              <a class="nav-link text-sm py-1" href="/en/el-doctor.html">Dr. John Freddy Prado</a>
+              <a class="nav-link text-sm py-1" href="/en/la-doctora.html">Dra. Isabel C. Calero</a>
             </div>
           </div>
-          
-          <a class="nav-link active" href="/contacto.html">Contacto</a>
+          <a class="nav-link" href="/en/pacientes-internacionales.html">International Patients</a>
+          <a class="nav-link active" href="/en/contacto.html">Contact</a>
           <div class="flex items-center justify-center gap-4 py-2 border-y border-slate-100 my-2">
-            <span class="text-xs font-bold text-primary py-1 px-2 rounded bg-primary-light">Español</span>
+            <span class="text-xs font-bold text-primary py-1 px-2 rounded bg-primary-light">English</span>
             <span class="text-slate-200">|</span>
-            <a href="/en/contacto.html" class="text-xs font-bold text-slate-400 hover:text-primary transition-colors py-1 px-2 rounded">English</a>
+            <a href="/contacto.html" class="text-xs font-bold text-slate-400 hover:text-primary transition-colors py-1 px-2 rounded">Español</a>
           </div>
-          <a href="/contacto.html" class="btn-primary text-center mt-2">Agendar Cita</a>
+          <a href="/en/contacto.html" class="btn-primary text-center mt-2">Book Appointment</a>
         </nav>
       </div>
     </div>
@@ -105,8 +105,8 @@
     <!-- HERO -->
     <section class="pt-16 pb-8 lg:pt-24 lg:pb-12">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 fade-in">
-        <h1 class="text-5xl sm:text-6xl font-black text-slate-900 mb-4">Contacto</h1>
-        <p class="text-xl text-slate-500 max-w-2xl">Estamos aquí para cuidar tu sonrisa. Agenda tu cita o visítanos en nuestra sede en Cali.</p>
+        <h1 class="text-5xl sm:text-6xl font-black text-slate-900 mb-4">Contact Us</h1>
+        <p class="text-xl text-slate-500 max-w-2xl">We are here to care for your smile. Book your appointment or visit our premium clinic in Cali.</p>
       </div>
     </section>
 
@@ -125,12 +125,12 @@
                     <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
                     <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
                   </span>
-                  <span class="text-green-600 text-xs font-bold uppercase tracking-wider">Disponible Ahora</span>
+                  <span class="text-green-600 text-xs font-bold uppercase tracking-wider">Available Now</span>
                 </div>
-                <h3 class="text-2xl font-bold text-slate-900 mb-2">WhatsApp Principal</h3>
-                <p class="text-slate-500 mb-4">Atención inmediata para citas y consultas rápidas.</p>
+                <h3 class="text-2xl font-bold text-slate-900 mb-2">Primary WhatsApp</h3>
+                <p class="text-slate-500 mb-4">Immediate support for fast bookings and quick inquiries.</p>
                 <a href="https://wa.me/573137942686" target="_blank" class="btn-primary gap-2">
-                  <span class="material-symbols-outlined">chat</span> Enviar mensaje
+                  <span class="material-symbols-outlined">chat</span> Send a Message
                 </a>
               </div>
               <div class="w-20 h-20 rounded-2xl bg-green-500 flex items-center justify-center flex-shrink-0 hidden sm:flex shadow-lg shadow-green-200">
@@ -144,27 +144,27 @@
             <div class="card fade-in">
               <div class="flex items-center gap-3 mb-6">
                 <span class="material-symbols-outlined text-primary text-2xl">schedule</span>
-                <h3 class="text-2xl font-bold text-slate-900">Horarios de Atención</h3>
+                <h3 class="text-2xl font-bold text-slate-900">Operational Hours</h3>
               </div>
               <div class="space-y-4">
                 <div class="flex justify-between items-center py-3 border-b border-slate-100">
-                  <span class="font-medium text-slate-700">Martes</span>
+                  <span class="font-medium text-slate-700">Tuesday</span>
                   <span class="font-bold text-slate-900">1:00 PM - 6:00 PM</span>
                 </div>
                 <div class="flex justify-between items-center py-3 border-b border-slate-100">
-                  <span class="font-medium text-slate-700">Viernes</span>
+                  <span class="font-medium text-slate-700">Friday</span>
                   <span class="font-bold text-slate-900">7:00 AM - 12:00 PM</span>
                 </div>
                 <div class="flex justify-between items-center py-3">
-                  <span class="font-medium text-slate-700">Sábado</span>
+                  <span class="font-medium text-slate-700">Saturday</span>
                   <span class="font-bold text-slate-900">7:00 AM - 6:00 PM</span>
                 </div>
               </div>
               <div class="mt-6 bg-red-50 rounded-xl p-4 flex items-start gap-3">
                 <span class="material-symbols-outlined text-red-500">warning</span>
                 <div>
-                  <p class="font-bold text-red-700 text-sm">Urgencias</p>
-                  <p class="text-red-600 text-sm">Atención de emergencias bajo previa coordinación telefónica.</p>
+                  <p class="font-bold text-red-700 text-sm">Emergencies</p>
+                  <p class="text-red-600 text-sm">Emergency dental attention is available under previous telephone coordination.</p>
                 </div>
               </div>
             </div>
@@ -176,8 +176,8 @@
               <div class="flex items-center gap-3 mb-4">
                 <span class="material-symbols-outlined text-primary text-2xl">location_on</span>
                 <div>
-                  <h3 class="text-2xl font-bold text-slate-900">Ubicación</h3>
-                  <p class="text-muted text-sm">Barrio La Merced — Cali, Colombia</p>
+                  <h3 class="text-2xl font-bold text-slate-900">Our Address</h3>
+                  <p class="text-muted text-sm">La Merced Neighborhood — Cali, Colombia</p>
                 </div>
               </div>
               <div class="rounded-2xl overflow-hidden aspect-[4/3] bg-slate-100 mb-6">
@@ -187,15 +187,15 @@
                   allowfullscreen=""
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"
-                  title="Ubicación C&P Smile Clinic en Cali">
+                  title="C&P Smile Clinic Location in Cali">
                 </iframe>
               </div>
               <div class="flex flex-col sm:flex-row gap-4">
                 <a href="https://maps.app.goo.gl/m5MgHuansz1Xt5Qp9" target="_blank" class="btn-primary flex-1 gap-2 text-center justify-center">
-                  <span class="material-symbols-outlined">near_me</span> Indicaciones
+                  <span class="material-symbols-outlined">near_me</span> Get Directions
                 </a>
                 <button onclick="navigator.share && navigator.share({title:'C&P Smile Clinic', url: window.location.href})" class="btn-secondary flex-1 gap-2 text-center justify-center">
-                  <span class="material-symbols-outlined">share</span> Compartir
+                  <span class="material-symbols-outlined">share</span> Share Location
                 </button>
               </div>
             </div>
@@ -215,11 +215,11 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-20">
         <div class="lg:col-span-4">
-          <a href="/" class="flex items-center mb-8 group">
+          <a href="/en/index.html" class="flex items-center mb-8 group">
             <img src="/logos/logo-clinic.svg" alt="C&P Smile Clinic" class="h-24 w-auto brightness-0 invert transition-all group-hover:brightness-100" />
           </a>
           <p class="text-slate-400 text-lg leading-relaxed mb-10 max-w-sm font-medium">
-            Redefiniendo la excelencia dental a través de la ciencia, la ética y el compromiso humano.
+            Redefining dental excellence through science, ethics, and a human-centered commitment.
           </p>
           <div class="flex gap-4">
             <a href="#" class="size-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-300">
@@ -232,24 +232,22 @@
         </div>
 
         <div class="lg:col-span-2">
-          <h5 class="text-sm font-black uppercase tracking-[0.2em] mb-8 text-white">Navegación</h5>
+          <h5 class="text-sm font-black uppercase tracking-[0.2em] mb-8 text-white">Navigation</h5>
           <ul class="space-y-4">
-            <li><a class="text-slate-400 hover:text-white transition-colors font-medium flex items-center gap-2 group" href="/"><div class="size-1 bg-primary rounded-full scale-0 group-hover:scale-100 transition-transform"></div> Inicio</a></li>
-            <li><a class="text-slate-400 hover:text-white transition-colors font-medium flex items-center gap-2 group" href="/servicios.html"><div class="size-1 bg-primary rounded-full scale-0 group-hover:scale-100 transition-transform"></div> Servicios</a></li>
-            <li><a class="text-slate-400 hover:text-white transition-colors font-medium flex items-center gap-2 group" href="/el-doctor.html"><div class="size-1 bg-primary rounded-full scale-0 group-hover:scale-100 transition-transform"></div> Doctores</a></li>
-            
-            
+            <li><a class="text-slate-400 hover:text-white transition-colors font-medium flex items-center gap-2 group" href="/en/index.html"><div class="size-1 bg-primary rounded-full scale-0 group-hover:scale-100 transition-transform"></div> Home</a></li>
+            <li><a class="text-slate-400 hover:text-white transition-colors font-medium flex items-center gap-2 group" href="/en/servicios.html"><div class="size-1 bg-primary rounded-full scale-0 group-hover:scale-100 transition-transform"></div> Services</a></li>
+            <li><a class="text-slate-400 hover:text-white transition-colors font-medium flex items-center gap-2 group" href="/en/el-doctor.html"><div class="size-1 bg-primary rounded-full scale-0 group-hover:scale-100 transition-transform"></div> Doctors</a></li>
           </ul>
         </div>
 
         <div class="lg:col-span-3">
-          <h5 class="text-sm font-black uppercase tracking-[0.2em] mb-8 text-white">Contacto</h5>
+          <h5 class="text-sm font-black uppercase tracking-[0.2em] mb-8 text-white">Contact</h5>
           <ul class="space-y-6">
             <li class="flex items-start gap-4 group">
               <div class="size-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                 <span class="material-symbols-outlined text-primary text-xl">location_on</span>
               </div>
-              <span class="text-slate-400 font-medium">Cl. 52 Nte. #2 DN 05<br/>La Merced, Cali</span>
+              <span class="text-slate-400 font-medium">Cl. 52 Nte. #2 DN 05<br/>La Merced, Cali, Col</span>
             </li>
             <li class="flex items-center gap-4 group">
               <div class="size-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -261,22 +259,22 @@
         </div>
 
         <div class="lg:col-span-3">
-          <h5 class="text-sm font-black uppercase tracking-[0.2em] mb-8 text-white">Horarios</h5>
+          <h5 class="text-sm font-black uppercase tracking-[0.2em] mb-8 text-white">Hours</h5>
           <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
             <ul class="space-y-3">
-              <li class="flex justify-between text-sm"><span class="text-slate-400 font-medium">Martes:</span> <span class="text-white font-bold text-right">1:00 PM - 6:00 PM</span></li>
-              <li class="flex justify-between text-sm"><span class="text-slate-400 font-medium">Viernes:</span> <span class="text-white font-bold text-right">7:00 AM - 12:00 PM</span></li>
-              <li class="flex justify-between text-sm"><span class="text-slate-400 font-medium">Sábado:</span> <span class="text-white font-bold text-right">7:00 AM - 6:00 PM</span></li>
+              <li class="flex justify-between text-sm"><span class="text-slate-400 font-medium">Tuesday:</span> <span class="text-white font-bold text-right">1:00 PM - 6:00 PM</span></li>
+              <li class="flex justify-between text-sm"><span class="text-slate-400 font-medium">Friday:</span> <span class="text-white font-bold text-right">7:00 AM - 12:00 PM</span></li>
+              <li class="flex justify-between text-sm"><span class="text-slate-400 font-medium">Saturday:</span> <span class="text-white font-bold text-right">7:00 AM - 6:00 PM</span></li>
             </ul>
           </div>
         </div>
       </div>
       
       <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-center">
-        <p class="text-xs text-slate-500 font-medium">© 2026 C&P Smile Clinic. Todos los derechos reservados.</p>
+        <p class="text-xs text-slate-500 font-medium">© 2026 C&P Smile Clinic. All rights reserved.</p>
         <div class="flex items-center gap-8">
-          <a href="#" class="text-xs text-slate-500 hover:text-white transition-colors font-bold uppercase tracking-widest">Privacidad</a>
-          <a href="#" class="text-xs text-slate-500 hover:text-white transition-colors font-bold uppercase tracking-widest">Términos</a>
+          <a href="#" class="text-xs text-slate-500 hover:text-white transition-colors font-bold uppercase tracking-widest">Privacy</a>
+          <a href="#" class="text-xs text-slate-500 hover:text-white transition-colors font-bold uppercase tracking-widest">Terms</a>
         </div>
       </div>
     </div>
@@ -289,5 +287,3 @@
 
 </body>
 </html>
-
-

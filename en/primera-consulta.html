@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tu Primera Consulta — C&P Smile Clinic</title>
-  <meta name="description" content="Descubre qué esperar en tu primera visita a C&P Smile Clinic. Evaluación integral, plan de salud personalizado y atención profesional." />
+  <title>Your First Visit — C&P Smile Clinic</title>
+  <meta name="description" content="Find out what to expect during your first visit to C&P Smile Clinic. Comprehensive evaluation, personalized health plan, and professional care." />
   <link rel="icon" type="image/png" href="/logos/logo-clinic.svg" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
   <script type="module" src="/src/js/main.js"></script>
@@ -25,78 +25,78 @@
   <header class="sticky top-0 z-50 w-full border-b border-slate-100/50 bg-white/70 backdrop-blur-xl transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex h-24 items-center justify-between">
-        <a href="/" class="flex items-center group">
+        <a href="/en/index.html" class="flex items-center group">
           <img src="/logos/logo-clinic.svg" alt="C&P Smile Clinic" class="h-20 w-auto object-contain transition-all duration-300 group-hover:brightness-110" />
         </a>
         <nav class="hidden md:flex items-center gap-8">
-          <a class="nav-link" href="/">Inicio</a>
-          <a class="nav-link" href="/servicios.html">Servicios</a>
+          <a class="nav-link" href="/en/index.html">Home</a>
+          <a class="nav-link" href="/en/servicios.html">Services</a>
           <div class="relative group">
             <button class="nav-link flex items-center gap-1 cursor-pointer bg-transparent border-0 p-0 font-inherit">
-              Doctores
+              Doctors
               <span class="material-symbols-outlined text-[18px] transition-transform duration-200 group-hover:rotate-180">expand_more</span>
             </button>
             <div class="absolute top-full left-1/2 -translate-x-1/2 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
               <div class="bg-white rounded-2xl shadow-xl border border-slate-100 py-2 min-w-[270px]">
-                <a href="/el-doctor.html" class="flex items-center gap-4 px-5 py-3.5 hover:bg-slate-50 transition-all group/item">
+                <a href="/en/el-doctor.html" class="flex items-center gap-4 px-5 py-3.5 hover:bg-slate-50 transition-all group/item">
                   <div class="size-10 rounded-full bg-primary/5 flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-white transition-colors">
                     <span class="material-symbols-outlined text-[22px]">person</span>
                   </div>
                   <div>
                     <p class="font-bold text-slate-900 text-sm leading-tight">Dr. John Freddy Prado Giraldo</p>
-                    <p class="text-[11px] text-muted font-medium mt-0.5">Odontólogo Integral</p>
+                    <p class="text-[11px] text-muted font-medium mt-0.5">Comprehensive Dentist</p>
                   </div>
                 </a>
-                <a href="/la-doctora.html" class="flex items-center gap-4 px-5 py-3.5 hover:bg-slate-50 transition-all group/item">
+                <a href="/en/la-doctora.html" class="flex items-center gap-4 px-5 py-3.5 hover:bg-slate-50 transition-all group/item">
                   <div class="size-10 rounded-full bg-primary/5 flex items-center justify-center text-primary group-hover/item:bg-primary group-hover/item:text-white transition-colors">
                     <span class="material-symbols-outlined text-[22px]">person</span>
                   </div>
                   <div>
                     <p class="font-bold text-slate-900 text-sm leading-tight">Dra. Isabel Cristina Calero</p>
-                    <p class="text-[11px] text-muted font-medium mt-0.5">Odontopediatría</p>
+                    <p class="text-[11px] text-muted font-medium mt-0.5">Pediatric Dentistry</p>
                   </div>
                 </a>
               </div>
             </div>
           </div>
-          
-          <a class="nav-link" href="/contacto.html">Contacto</a>
+          <a class="nav-link" href="/en/pacientes-internacionales.html">International Patients</a>
+          <a class="nav-link" href="/en/contacto.html">Contact</a>
         </nav>
         <div class="flex items-center gap-4">
-          <!-- Selector de Idioma -->
+          <!-- Language Switcher -->
           <div class="flex items-center gap-1.5 mr-2">
-            <a href="/en/primera-consulta.html" class="text-[11px] font-bold text-slate-400 hover:text-primary transition-colors py-1 px-1.5 rounded hover:bg-slate-100">EN</a>
+            <span class="text-[11px] font-bold text-primary py-1 px-1.5 rounded bg-primary-light">EN</span>
             <span class="text-slate-200 text-xs">|</span>
-            <span class="text-[11px] font-bold text-primary py-1 px-1.5 rounded bg-primary-light">ES</span>
+            <a href="/primera-consulta.html" class="text-[11px] font-bold text-slate-400 hover:text-primary transition-colors py-1 px-1.5 rounded hover:bg-slate-100">ES</a>
           </div>
-          <a href="/contacto.html" class="hidden sm:flex items-center justify-center rounded-xl bg-primary px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-primary/20 hover:bg-primary-dark transition-all">
-            <span class="material-symbols-outlined mr-1 text-lg">calendar_month</span> Reservar Cita
+          <a href="/en/contacto.html" class="hidden sm:flex items-center justify-center rounded-xl bg-primary px-6 py-2.5 text-sm font-bold text-white shadow-lg shadow-primary/20 hover:bg-primary-dark transition-all">
+            <span class="material-symbols-outlined mr-1 text-lg">calendar_month</span> Book Appointment
           </a>
           <button id="mobile-menu-btn" class="md:hidden text-slate-900"><span class="material-symbols-outlined text-3xl">menu</span></button>
         </div>
       </div>
       <div id="mobile-menu" class="hidden md:hidden pb-6 border-t border-slate-100">
         <nav class="flex flex-col gap-4 pt-4">
-          <a class="nav-link" href="/">Inicio</a>
-          <a class="nav-link" href="/servicios.html">Servicios</a>
+          <a class="nav-link" href="/en/index.html">Home</a>
+          <a class="nav-link" href="/en/servicios.html">Services</a>
           <div>
             <button onclick="this.nextElementSibling.classList.toggle('hidden')" class="nav-link w-full text-left flex items-center justify-between">
-              Doctores
+              Doctors
               <span class="material-symbols-outlined text-[18px]">expand_more</span>
             </button>
             <div class="hidden flex-col gap-1 mt-2 pl-4 border-l-2 border-slate-100 ml-2">
-              <a class="nav-link text-sm py-1" href="/el-doctor.html">Dr. John Freddy Prado Giraldo</a>
-              <a class="nav-link text-sm py-1" href="/la-doctora.html">Dra. Isabel Cristina Calero</a>
+              <a class="nav-link text-sm py-1" href="/en/el-doctor.html">Dr. John Freddy Prado Giraldo</a>
+              <a class="nav-link text-sm py-1" href="/en/la-doctora.html">Dra. Isabel Cristina Calero</a>
             </div>
           </div>
-          
-          <a class="nav-link" href="/contacto.html">Contacto</a>
+          <a class="nav-link" href="/en/pacientes-internacionales.html">International Patients</a>
+          <a class="nav-link" href="/en/contacto.html">Contact</a>
           <div class="flex items-center justify-center gap-4 py-2 border-y border-slate-100 my-2">
-            <span class="text-xs font-bold text-primary py-1 px-2 rounded bg-primary-light">Español</span>
+            <span class="text-xs font-bold text-primary py-1 px-2 rounded bg-primary-light">English</span>
             <span class="text-slate-200">|</span>
-            <a href="/en/primera-consulta.html" class="text-xs font-bold text-slate-400 hover:text-primary transition-colors py-1 px-2 rounded">English</a>
+            <a href="/primera-consulta.html" class="text-xs font-bold text-slate-400 hover:text-primary transition-colors py-1 px-2 rounded">Español</a>
           </div>
-          <a href="/contacto.html" class="btn-primary text-center mt-2">Reservar Cita</a>
+          <a href="/en/contacto.html" class="btn-primary text-center mt-2">Book Appointment</a>
         </nav>
       </div>
     </div>
@@ -107,11 +107,11 @@
     <!-- HERO BANNER -->
     <section class="relative overflow-hidden">
       <div class="absolute inset-0 bg-gradient-to-r from-slate-900/80 to-slate-900/40 z-10"></div>
-      <img class="absolute inset-0 w-full h-full object-cover" alt="Consultorio dental moderno" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBicx_79xMfR3b9hsXiZ0Mda9i1RbGVV8WWM2c7zAPakT4yLSEQfIXPxZjr2-HOpwZ7VRGh93N42XdpvqFICyIXim--QK6FKidfdnigu7yics_i50Yw9aQM0iUM7QGaL4wQmbsUdXu1BbeKNMz_HkD6nWVovsAQIMrJ-LQh6FW-LnytV6vydVfs8wiDXq66Pit8Hg9ajODu_Dr8qkXmJsZrEHafLGPOHCXDt_azhybQk_Cwo3PkcmkitQBBT12xyYQ9u7YBl6gRaE0" />
+      <img class="absolute inset-0 w-full h-full object-cover" alt="Modern dental clinic office" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBicx_79xMfR3b9hsXiZ0Mda9i1RbGVV8WWM2c7zAPakT4yLSEQfIXPxZjr2-HOpwZ7VRGh93N42XdpvqFICyIXim--QK6FKidfdnigu7yics_i50Yw9aQM0iUM7QGaL4wQmbsUdXu1BbeKNMz_HkD6nWVovsAQIMrJ-LQh6FW-LnytV6vydVfs8wiDXq66Pit8Hg9ajODu_Dr8qkXmJsZrEHafLGPOHCXDt_azhybQk_Cwo3PkcmkitQBBT12xyYQ9u7YBl6gRaE0" />
       <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
-        <span class="inline-flex items-center rounded-full bg-primary px-4 py-1.5 text-white text-xs font-bold uppercase tracking-wider mb-6 fade-in">Tu Bienvenida</span>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-4 max-w-2xl fade-in">Tu Primera Consulta</h1>
-        <p class="text-xl text-slate-200 max-w-xl fade-in">Inicia tu camino hacia una sonrisa saludable con una evaluación integral y personalizada.</p>
+        <span class="inline-flex items-center rounded-full bg-primary px-4 py-1.5 text-white text-xs font-bold uppercase tracking-wider mb-6 fade-in">Your Welcome</span>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight mb-4 max-w-2xl fade-in">Your First Visit</h1>
+        <p class="text-xl text-slate-200 max-w-xl fade-in">Start your journey to a healthy smile with a comprehensive and personalized evaluation.</p>
       </div>
     </section>
 
@@ -120,13 +120,13 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex flex-col lg:flex-row justify-between items-start gap-8 mb-16">
           <div class="fade-in">
-            <h2 class="section-title mb-4">¿Qué esperar de tu visita?</h2>
-            <p class="text-lg text-slate-500 max-w-2xl">Diseñamos una experiencia profesional y tranquila para que te sientas cómodo desde el primer momento. Nos tomamos el tiempo necesario para escucharte y entender tus objetivos estéticos y de salud.</p>
+            <h2 class="section-title mb-4">What to Expect From Your Visit</h2>
+            <p class="text-lg text-slate-500 max-w-2xl">We design a professional and calm experience so you feel comfortable from the very first moment. We take the time to listen to you and understand your aesthetic and health goals.</p>
           </div>
           <div class="bg-primary-light rounded-2xl px-8 py-6 text-center flex-shrink-0 fade-in">
             <span class="material-symbols-outlined text-primary text-4xl">schedule</span>
             <p class="text-2xl font-black text-slate-900 mt-2">20 - 25 min</p>
-            <p class="text-muted text-sm">Duración estimada</p>
+            <p class="text-muted text-sm">Estimated duration</p>
           </div>
         </div>
 
@@ -136,22 +136,22 @@
             <div class="size-12 bg-primary-light rounded-xl flex items-center justify-center text-primary mb-6">
               <span class="material-symbols-outlined text-2xl">person_add</span>
             </div>
-            <h4 class="text-lg font-bold text-slate-900 mb-2">1. Recepción</h4>
-            <p class="text-slate-500">Te recibiremos con calidez para completar tu ficha médica y antecedentes de salud dental.</p>
+            <h4 class="text-lg font-bold text-slate-900 mb-2">1. Reception</h4>
+            <p class="text-slate-500">We will receive you warmly to complete your medical records and dental health history.</p>
           </div>
           <div class="card fade-in">
             <div class="size-12 bg-blue-50 rounded-xl flex items-center justify-center text-accent mb-6">
               <span class="material-symbols-outlined text-2xl">stethoscope</span>
             </div>
-            <h4 class="text-lg font-bold text-slate-900 mb-2">2. Evaluación</h4>
-            <p class="text-slate-500">Nuestros especialistas realizarán un examen clínico detallado utilizando tecnología de vanguardia.</p>
+            <h4 class="text-lg font-bold text-slate-900 mb-2">2. Evaluation</h4>
+            <p class="text-slate-500">Our specialists will perform a detailed clinical examination using state-of-the-art technology.</p>
           </div>
           <div class="card fade-in">
             <div class="size-12 bg-slate-100 rounded-xl flex items-center justify-center text-slate-600 mb-6">
               <span class="material-symbols-outlined text-2xl">description</span>
             </div>
-            <h4 class="text-lg font-bold text-slate-900 mb-2">3. Plan de Salud</h4>
-            <p class="text-slate-500">Explicaremos los hallazgos y propondremos el mejor plan de tratamiento adaptado a tus necesidades.</p>
+            <h4 class="text-lg font-bold text-slate-900 mb-2">3. Health Plan</h4>
+            <p class="text-slate-500">We will explain the findings and propose the best treatment plan adapted to your needs.</p>
           </div>
         </div>
       </div>
@@ -165,28 +165,28 @@
           <div class="card fade-in">
             <div class="flex items-center gap-3 mb-6">
               <span class="material-symbols-outlined text-primary text-2xl">inventory_2</span>
-              <h3 class="text-xl font-bold text-slate-900">¿Qué debes traer?</h3>
+              <h3 class="text-xl font-bold text-slate-900">What should you bring?</h3>
             </div>
             <div class="space-y-5">
               <div class="flex items-start gap-3">
                 <span class="material-symbols-outlined text-green-500 mt-0.5">check_circle</span>
                 <div>
-                  <p class="font-bold text-slate-900">Radiografías previas</p>
-                  <p class="text-slate-500 text-sm">Si posees estudios realizados en los últimos 6 meses, por favor tráelos contigo.</p>
+                  <p class="font-bold text-slate-900">Previous X-rays</p>
+                  <p class="text-slate-500 text-sm">If you have studies done within the last 6 months, please bring them with you.</p>
                 </div>
               </div>
               <div class="flex items-start gap-3">
                 <span class="material-symbols-outlined text-green-500 mt-0.5">check_circle</span>
                 <div>
-                  <p class="font-bold text-slate-900">Coordinación de registros</p>
-                  <p class="text-slate-500 text-sm">Si no tienes estudios, podemos coordinar la toma de imágenes digitales en nuestra clínica.</p>
+                  <p class="font-bold text-slate-900">Records coordination</p>
+                  <p class="text-slate-500 text-sm">If you do not have previous studies, we can coordinate digital imaging at our clinic.</p>
                 </div>
               </div>
               <div class="flex items-start gap-3">
                 <span class="material-symbols-outlined text-green-500 mt-0.5">check_circle</span>
                 <div>
-                  <p class="font-bold text-slate-900">Historial de medicación</p>
-                  <p class="text-slate-500 text-sm">Lista de medicamentos que estés tomando actualmente.</p>
+                  <p class="font-bold text-slate-900">Medication history</p>
+                  <p class="text-slate-500 text-sm">A list of any medications you are currently taking.</p>
                 </div>
               </div>
             </div>
@@ -196,15 +196,15 @@
           <div class="bg-primary-light border border-primary/10 p-8 rounded-2xl fade-in">
             <div class="flex items-center gap-3 mb-6">
               <span class="material-symbols-outlined text-primary text-2xl">info</span>
-              <h3 class="text-xl font-bold text-slate-900">Política de Cancelación</h3>
+              <h3 class="text-xl font-bold text-slate-900">Cancellation Policy</h3>
             </div>
             <p class="text-slate-600 mb-6">
-              Valoramos el tiempo de nuestros pacientes y profesionales. Por ello, requerimos un <strong>pre-pago para confirmar tu cita</strong>.
+              We value the time of our patients and professionals. Therefore, we require a <strong>pre-payment to confirm your appointment</strong>.
             </p>
             <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 flex items-start gap-3">
               <span class="material-symbols-outlined text-amber-600 mt-0.5">warning</span>
               <p class="text-amber-800 text-sm">
-                El pago inicial <strong>no es reembolsable</strong> si la cita no se cancela o reprograma con al menos 24 horas de antelación. Agradecemos tu comprensión.
+                The initial payment is <strong>non-refundable</strong> if the appointment is not cancelled or rescheduled at least 24 hours in advance. Thank you for your understanding.
               </p>
             </div>
           </div>
@@ -216,14 +216,14 @@
     <section class="py-20">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-gradient-to-br from-primary to-primary-dark rounded-3xl p-12 text-center text-white fade-in">
-          <h2 class="text-3xl sm:text-4xl font-bold mb-4">¿Listo para transformar tu sonrisa?</h2>
-          <p class="text-blue-100 mb-8 text-lg">Reserva tu primera consulta hoy mismo y da el primer paso hacia una salud dental óptima.</p>
+          <h2 class="text-3xl sm:text-4xl font-bold mb-4">Ready to transform your smile?</h2>
+          <p class="text-blue-100 mb-8 text-lg">Book your first consultation today and take the first step toward optimal dental health.</p>
           <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a href="/contacto.html" class="inline-flex items-center justify-center rounded-xl bg-white text-primary px-8 py-4 font-bold hover:bg-blue-50 transition-colors shadow-lg gap-2">
-              <span class="material-symbols-outlined">calendar_month</span> Reservar Ahora
+            <a href="/en/contacto.html" class="inline-flex items-center justify-center rounded-xl bg-white text-primary px-8 py-4 font-bold hover:bg-blue-50 transition-colors shadow-lg gap-2">
+              <span class="material-symbols-outlined">calendar_month</span> Book Now
             </a>
             <a href="https://wa.me/573137942686" target="_blank" class="inline-flex items-center justify-center rounded-xl bg-slate-700 px-8 py-4 font-bold text-white hover:bg-slate-600 transition-colors gap-2">
-              <span class="material-symbols-outlined">chat</span> Consultar por WhatsApp
+              <span class="material-symbols-outlined">chat</span> Inquire via WhatsApp
             </a>
           </div>
         </div>
@@ -240,11 +240,11 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-20">
         <div class="lg:col-span-4">
-          <a href="/" class="flex items-center mb-8 group">
+          <a href="/en/index.html" class="flex items-center mb-8 group">
             <img src="/logos/logo-clinic.svg" alt="C&P Smile Clinic" class="h-24 w-auto brightness-0 invert transition-all group-hover:brightness-100" />
           </a>
           <p class="text-slate-400 text-lg leading-relaxed mb-10 max-w-sm font-medium">
-            Redefiniendo la excelencia dental a través de la ciencia, la ética y el compromiso humano.
+            Redefining dental excellence through science, ethics, and a human-centered commitment.
           </p>
           <div class="flex gap-4">
             <a href="#" class="size-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-all duration-300">
@@ -257,24 +257,22 @@
         </div>
 
         <div class="lg:col-span-2">
-          <h5 class="text-sm font-black uppercase tracking-[0.2em] mb-8 text-white">Navegación</h5>
+          <h5 class="text-sm font-black uppercase tracking-[0.2em] mb-8 text-white">Navigation</h5>
           <ul class="space-y-4">
-            <li><a class="text-slate-400 hover:text-white transition-colors font-medium flex items-center gap-2 group" href="/"><div class="size-1 bg-primary rounded-full scale-0 group-hover:scale-100 transition-transform"></div> Inicio</a></li>
-            <li><a class="text-slate-400 hover:text-white transition-colors font-medium flex items-center gap-2 group" href="/servicios.html"><div class="size-1 bg-primary rounded-full scale-0 group-hover:scale-100 transition-transform"></div> Servicios</a></li>
-            <li><a class="text-slate-400 hover:text-white transition-colors font-medium flex items-center gap-2 group" href="/el-doctor.html"><div class="size-1 bg-primary rounded-full scale-0 group-hover:scale-100 transition-transform"></div> Doctores</a></li>
-            
-            
+            <li><a class="text-slate-400 hover:text-white transition-colors font-medium flex items-center gap-2 group" href="/en/index.html"><div class="size-1 bg-primary rounded-full scale-0 group-hover:scale-100 transition-transform"></div> Home</a></li>
+            <li><a class="text-slate-400 hover:text-white transition-colors font-medium flex items-center gap-2 group" href="/en/servicios.html"><div class="size-1 bg-primary rounded-full scale-0 group-hover:scale-100 transition-transform"></div> Services</a></li>
+            <li><a class="text-slate-400 hover:text-white transition-colors font-medium flex items-center gap-2 group" href="/en/el-doctor.html"><div class="size-1 bg-primary rounded-full scale-0 group-hover:scale-100 transition-transform"></div> Doctors</a></li>
           </ul>
         </div>
 
         <div class="lg:col-span-3">
-          <h5 class="text-sm font-black uppercase tracking-[0.2em] mb-8 text-white">Contacto</h5>
+          <h5 class="text-sm font-black uppercase tracking-[0.2em] mb-8 text-white">Contact</h5>
           <ul class="space-y-6">
             <li class="flex items-start gap-4 group">
               <div class="size-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                 <span class="material-symbols-outlined text-primary text-xl">location_on</span>
               </div>
-              <span class="text-slate-400 font-medium">Cl. 52 Nte. #2 DN 05<br/>La Merced, Cali</span>
+              <span class="text-slate-400 font-medium">Cl. 52 Nte. #2 DN 05<br/>La Merced, Cali, Col</span>
             </li>
             <li class="flex items-center gap-4 group">
               <div class="size-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -286,28 +284,28 @@
         </div>
 
         <div class="lg:col-span-3">
-          <h5 class="text-sm font-black uppercase tracking-[0.2em] mb-8 text-white">Horarios</h5>
+          <h5 class="text-sm font-black uppercase tracking-[0.2em] mb-8 text-white">Hours</h5>
           <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
             <ul class="space-y-3">
-              <li class="flex justify-between text-sm"><span class="text-slate-400 font-medium">Martes:</span> <span class="text-white font-bold text-right">1:00 PM - 6:00 PM</span></li>
-              <li class="flex justify-between text-sm"><span class="text-slate-400 font-medium">Viernes:</span> <span class="text-white font-bold text-right">7:00 AM - 12:00 PM</span></li>
-              <li class="flex justify-between text-sm"><span class="text-slate-400 font-medium">Sábado:</span> <span class="text-white font-bold text-right">7:00 AM - 6:00 PM</span></li>
+              <li class="flex justify-between text-sm"><span class="text-slate-400 font-medium">Tuesday:</span> <span class="text-white font-bold text-right">1:00 PM - 6:00 PM</span></li>
+              <li class="flex justify-between text-sm"><span class="text-slate-400 font-medium">Friday:</span> <span class="text-white font-bold text-right">7:00 AM - 12:00 PM</span></li>
+              <li class="flex justify-between text-sm"><span class="text-slate-400 font-medium">Saturday:</span> <span class="text-white font-bold text-right">7:00 AM - 6:00 PM</span></li>
             </ul>
           </div>
         </div>
       </div>
       
       <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-center">
-        <p class="text-xs text-slate-500 font-medium">© 2026 C&P Smile Clinic. Todos los derechos reservados.</p>
+        <p class="text-xs text-slate-500 font-medium">© 2026 C&P Smile Clinic. All rights reserved.</p>
         <div class="flex items-center gap-8">
-          <a href="#" class="text-xs text-slate-500 hover:text-white transition-colors font-bold uppercase tracking-widest">Privacidad</a>
-          <a href="#" class="text-xs text-slate-500 hover:text-white transition-colors font-bold uppercase tracking-widest">Términos</a>
+          <a href="#" class="text-xs text-slate-500 hover:text-white transition-colors font-bold uppercase tracking-widest">Privacy</a>
+          <a href="#" class="text-xs text-slate-500 hover:text-white transition-colors font-bold uppercase tracking-widest">Terms</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <!-- WHATSAPP -->
+  <!-- =================== WHATSAPP =================== -->
   <a href="https://wa.me/573137942686" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
     <span class="material-symbols-outlined">chat_bubble</span>
   </a>
