@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://cypsmile.online/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cypsmile.online/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cypsmile.online/en/index.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://cypsmile.online/servicios.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cypsmile.online/servicios.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cypsmile.online/en/servicios.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://cypsmile.online/el-doctor.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cypsmile.online/el-doctor.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cypsmile.online/en/el-doctor.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cypsmile.online/la-doctora.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cypsmile.online/la-doctora.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cypsmile.online/en/la-doctora.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cypsmile.online/contacto.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cypsmile.online/contacto.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cypsmile.online/en/contacto.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://cypsmile.online/casos-clinicos.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cypsmile.online/casos-clinicos.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cypsmile.online/en/casos-clinicos.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cypsmile.online/testimonios.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cypsmile.online/testimonios.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cypsmile.online/en/testimonios.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cypsmile.online/primera-consulta.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cypsmile.online/primera-consulta.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cypsmile.online/en/primera-consulta.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://cypsmile.online/pacientes-internacionales.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://cypsmile.online/pacientes-internacionales.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://cypsmile.online/en/pacientes-internacionales.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://cypsmile.online/privacidad.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://cypsmile.online/terminos.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

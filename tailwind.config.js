@@ -2,6 +2,7 @@
 export default {
   content: [
     "./*.html",
+    "./en/*.html",
     "./src/**/*.{js,css}",
   ],
   theme: {
@@ -13,7 +14,7 @@ export default {
         "accent": "#0033cc", /* Mapping accent to primary for now, could be another color if needed */
         "background-light": "#f2eee3",
         "background-dark": "#0F172A",
-        "muted": "#d8d8d8",
+        "muted": "#64748b",
         "surface": "#FFFFFF",
       },
       fontFamily: {

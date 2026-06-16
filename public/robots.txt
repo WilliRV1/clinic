@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /node_modules/
+Disallow: /dist/
+Disallow: /scratch/
+
+Sitemap: https://cypsmile.online/sitemap.xml
