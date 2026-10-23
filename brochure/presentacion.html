@@ -121,6 +121,10 @@
   .serv-panel { position: absolute; right: 0; top: 0; width: 600px; height: 1080px; border-radius: 300px 0 0 0; overflow: hidden;
     background: radial-gradient(520px 480px at 50% 22%, rgba(130, 175, 255, .55), transparent 70%), linear-gradient(170deg, #2f63ff 0%, var(--blue) 45%, var(--blue-dark) 100%); }
   .serv-head { position: absolute; left: 140px; top: 104px; }
+  .serv-note { position: absolute; left: 830px; top: 146px; width: 440px; display: flex; gap: 16px; align-items: flex-start; font-size: 19.5px; line-height: 1.45; color: var(--body); }
+  .serv-note strong { color: var(--ink); font-weight: 600; }
+  .serv-note .icon-dot { width: 52px; height: 52px; }
+  .serv-note .icon-dot svg { width: 26px; height: 26px; }
   .serv-grid { position: absolute; left: 140px; top: 316px; width: 1130px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
   .card { background: #fff; border: 1px solid var(--line); border-radius: 24px; padding: 28px 28px 26px; box-shadow: 0 18px 40px -26px rgba(15, 23, 42, .25); }
   .card h3 { margin-top: 18px; font-family: 'Inter Display', sans-serif; font-size: 27px; font-weight: 600; letter-spacing: -.02em; color: var(--ink); }
@@ -270,6 +274,7 @@
     <symbol id="i-scan" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></symbol>
     <symbol id="i-pen" viewBox="0 0 24 24"><path d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z"/><path d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18"/><path d="m2.3 2.3 7.286 7.286"/><circle cx="11" cy="11" r="2"/></symbol>
     <symbol id="i-cpu" viewBox="0 0 24 24"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/></symbol>
+    <symbol id="i-braces" viewBox="0 0 24 24"><path d="M2 12h20"/><rect x="4" y="8.5" width="4" height="7" rx="1.2"/><rect x="10" y="8.5" width="4" height="7" rx="1.2"/><rect x="16" y="8.5" width="4" height="7" rx="1.2"/></symbol>
     <symbol id="i-cash" viewBox="0 0 24 24"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></symbol>
     <symbol id="i-transfer" viewBox="0 0 24 24"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
@@ -292,7 +297,7 @@
   </div>
 
   <div class="cover-foot">
-    <div class="areas"><span>Rehabilitación oral</span><span>Estética dental</span><span>Implantología</span><span>Odontopediatría</span></div>
+    <div class="areas"><span>Rehabilitación oral</span><span>Estética dental</span><span>Implantología</span><span>Ortodoncia</span><span>Odontopediatría</span></div>
     <div>Cali · Colombia</div>
   </div>
 </section>
@@ -431,16 +436,17 @@
     <div class="eyebrow">Portafolio clínico</div>
     <h1>Nuestros <i>servicios</i></h1>
   </div>
+  <div class="serv-note"><span class="icon-dot"><svg class="ico"><use href="#i-steth"/></svg></span><p><strong>Todo empieza con una valoración:</strong> diagnóstico integral, radiografías digitales y un plan de tratamiento personalizado.</p></div>
 
   <div class="serv-grid">
-    <div class="card"><span class="icon-dot"><svg class="ico"><use href="#i-steth"/></svg></span><h3>Valoración y diagnóstico</h3><p class="benefit solo-nuevo">Conozca el estado de su salud oral y un plan claro, paso a paso.</p>
-      <ul><li>Diagnóstico integral</li><li>Radiografías digitales</li><li>Plan de tratamiento personalizado</li></ul></div>
     <div class="card"><span class="icon-dot"><svg class="ico"><use href="#i-layers"/></svg></span><h3>Rehabilitación oral</h3><p class="benefit solo-nuevo">Vuelva a masticar y hablar con comodidad.</p>
       <ul><li>Coronas en zirconio</li><li>Prótesis fijas y removibles</li><li>Prótesis híbridas y sobre implantes</li></ul></div>
     <div class="card"><span class="icon-dot"><svg class="ico"><use href="#i-sparkles"/></svg></span><h3>Estética dental</h3><p class="benefit solo-nuevo">Una sonrisa armónica y natural.</p>
       <ul><li>Diseño de sonrisa digital</li><li>Carillas cerámicas</li><li>Blanqueamiento profesional</li></ul></div>
     <div class="card"><span class="icon-dot"><svg class="ico"><use href="#i-implant"/></svg></span><h3>Implantología</h3><p class="benefit solo-nuevo">Reemplace los dientes perdidos con soluciones fijas.</p>
       <ul><li>Implantes de titanio</li><li class="solo-actual">Carga inmediata</li><li class="solo-nuevo">Carga inmediata, cuando el caso lo permite</li><li>Técnicas mínimamente invasivas</li></ul></div>
+    <div class="card"><span class="icon-dot"><svg class="ico"><use href="#i-braces"/></svg></span><h3>Ortodoncia</h3><p class="benefit solo-nuevo">Dientes alineados y una mordida correcta.</p>
+      <ul><li>Alineación dental</li><li>Corrección de la mordida</li><li>Seguimiento personalizado</li></ul></div>
     <div class="card"><span class="icon-dot"><svg class="ico"><use href="#i-leaf"/></svg></span><h3>Periodoncia y tejidos blandos</h3><p class="benefit solo-nuevo">Encías sanas, la base de una sonrisa duradera.</p>
       <ul><li class="solo-actual">Cirugía plástica gingival</li><li class="solo-nuevo">Cirugía plástica de encías</li><li>Injertos de encía</li><li>Alargamiento de corona</li></ul></div>
     <div class="card"><span class="icon-dot"><svg class="ico"><use href="#i-smile"/></svg></span><h3>Odontopediatría</h3><p class="benefit solo-nuevo">Atención amable para que los niños crezcan sin miedo al odontólogo.</p>
