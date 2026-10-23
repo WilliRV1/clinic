@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>C&amp;P Smile Clinic — Presentación institucional</title>
+<style>
+  @page { size: 1920px 1080px; margin: 0; }
+  :root {
+    --blue: #0033cc;
+    --blue-logo: #013bda;
+    --blue-dark: #013791;
+    --blue-deep: #001b78;
+    --sky: #a4d1fb;
+    --ice: #eaf0ff;
+    --cream: #f2eee3;
+    --paper: #fbfaf7;
+    --ink: #0f172a;
+    --body: #3a4357;
+    --muted: #6b7385;
+    --line: rgba(1, 55, 145, .14);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: 'Inter', sans-serif; color: var(--ink); -webkit-font-smoothing: antialiased; }
+  @media screen {
+    body { background: #1c2030; padding: 40px; display: flex; flex-direction: column; align-items: center; gap: 40px; }
+  }
+  img { display: block; }
+
+  /* ---------- base de diapositiva ---------- */
+  .slide { width: 1920px; height: 1080px; position: relative; overflow: hidden; background: var(--paper); break-after: page; }
+  .slide:last-child { break-after: auto; }
+  .display { font-family: 'Inter Display', 'Inter', sans-serif; }
+  .ico { fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+
+  .eyebrow { display: flex; align-items: center; gap: 14px; font-weight: 600; font-size: 19px; letter-spacing: .24em; text-transform: uppercase; color: var(--blue); }
+  .eyebrow::before { content: ''; width: 12px; height: 12px; border-radius: 50%; background: currentColor; }
+  h1, h2 { font-family: 'Inter Display', 'Inter', sans-serif; font-weight: 600; letter-spacing: -.035em; line-height: 1.02; color: var(--ink); }
+  h1 { font-size: 84px; margin-top: 26px; }
+  h1 i, h2 i { font-weight: 300; font-style: italic; color: var(--blue); letter-spacing: -.03em; }
+  .lead { font-size: 27px; line-height: 1.5; color: var(--body); }
+
+  /* anillos decorativos (reemplazan las líneas doradas) */
+  .rings { position: absolute; pointer-events: none; }
+  .rings circle { fill: none; stroke: rgba(0, 51, 204, .16); stroke-width: 1.5; }
+  .rings.light circle { stroke: rgba(255, 255, 255, .13); }
+
+  /* pie de página */
+  .pie { position: absolute; left: 140px; bottom: 40px; display: flex; align-items: center; gap: 14px; font-size: 15px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+  .pie svg { width: 20px; height: 28px; color: var(--blue); }
+  .pie b { font-weight: 600; color: var(--blue); }
+  .pie .sep { width: 28px; height: 1px; background: currentColor; opacity: .5; }
+
+  /* tarjeta flotante */
+  .float-card { position: absolute; background: #fff; border-radius: 22px; padding: 24px 30px; box-shadow: 0 30px 70px -20px rgba(15, 23, 42, .28), 0 2px 6px rgba(15, 23, 42, .06); display: flex; align-items: center; gap: 20px; }
+  .float-card .big { font-family: 'Inter Display', sans-serif; font-weight: 300; font-size: 72px; line-height: .9; letter-spacing: -.04em; color: var(--blue); }
+  .float-card .txt { font-size: 19px; line-height: 1.35; color: var(--body); }
+  .float-card .txt strong { display: block; font-size: 21px; color: var(--ink); font-weight: 600; }
+  .icon-dot { flex: none; width: 58px; height: 58px; border-radius: 50%; background: var(--ice); color: var(--blue); display: grid; place-items: center; }
+  .icon-dot svg { width: 28px; height: 28px; }
+
+  /* arco con foto */
+  .arch-wrap { position: absolute; }
+  .arch-wrap .outline { position: absolute; inset: 0; transform: translate(-26px, 26px); border: 2px solid var(--blue); border-radius: inherit; }
+  .arch-wrap .photo { position: absolute; inset: 0; border-radius: inherit; overflow: hidden; box-shadow: 0 40px 80px -30px rgba(15, 23, 42, .45); }
+  .arch-wrap .photo img { width: 100%; height: 100%; object-fit: cover; }
+
+  /* ---------- 1. Portada ---------- */
+  .s-cover, .s-contact {
+    color: #fff;
+    background:
+      radial-gradient(900px 760px at 80% 38%, rgba(86, 140, 255, .55), transparent 62%),
+      radial-gradient(700px 520px at 0% 100%, rgba(164, 209, 251, .16), transparent 70%),
+      linear-gradient(135deg, var(--blue-deep) 0%, #0029b8 45%, var(--blue) 72%, var(--blue-logo) 100%);
+  }
+  .giant-mark { position: absolute; width: 904px; height: 1240px; left: 978px; top: 40px; color: rgba(255, 255, 255, .085); }
+  .orb { position: absolute; width: 182px; height: 182px; left: 1677px; top: 65px; border-radius: 50%;
+    background: radial-gradient(circle at 34% 30%, #fff 0%, #d6e8ff 22%, #7fb0ff 55%, #2d63ff 100%);
+    box-shadow: 0 0 120px 30px rgba(120, 170, 255, .55), 0 0 40px 6px rgba(255, 255, 255, .35); }
+  .cover-content { position: absolute; left: 140px; top: 110px; width: 1300px; }
+  .cover-content .logo { width: 330px; height: 164px; color: #fff; display: block; }
+  .s-cover .eyebrow { color: var(--sky); margin-top: 150px; }
+  .s-cover h1 { color: #fff; font-size: 136px; line-height: .98; letter-spacing: -.045em; margin-top: 30px; }
+  .s-cover h1 i { color: var(--sky); }
+  .s-cover .lead { color: rgba(255, 255, 255, .84); font-size: 31px; max-width: 900px; margin-top: 38px; }
+  .cover-foot { position: absolute; left: 140px; right: 140px; bottom: 84px; padding-top: 26px; border-top: 1px solid rgba(255, 255, 255, .24); display: flex; justify-content: space-between; font-size: 18px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: rgba(255, 255, 255, .78); }
+  .cover-foot span + span::before { content: '·'; margin: 0 18px; color: var(--sky); }
+  .cover-foot .areas { display: flex; }
+
+  /* ---------- 2. Quiénes somos ---------- */
+  .s-about { background: radial-gradient(1000px 800px at 85% 15%, #fff 0%, transparent 60%), var(--cream); }
+  .about-text { position: absolute; left: 140px; top: 118px; width: 930px; }
+  .about-text .lead { margin-top: 34px; max-width: 880px; }
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 36px; margin-top: 84px; }
+  .stat { border-top: 2px solid var(--blue); padding-top: 22px; }
+  .stat .n { font-family: 'Inter Display', sans-serif; font-weight: 300; font-size: 112px; line-height: .9; letter-spacing: -.05em; color: var(--blue); }
+  .stat .n small { font-size: 44px; letter-spacing: -.02em; margin-left: 6px; }
+  .stat p { margin-top: 16px; font-size: 20px; line-height: 1.45; color: var(--body); }
+  .stat p strong { color: var(--ink); font-weight: 600; }
+
+  /* ---------- 3 y 4. Doctores ---------- */
+  .s-doc { background: radial-gradient(900px 700px at 15% 20%, #fff, transparent 70%), var(--paper); }
+  .doc-panel { position: absolute; right: 170px; bottom: 0; width: 720px; height: 850px; border-radius: 360px 360px 0 0; overflow: hidden;
+    background: radial-gradient(500px 420px at 50% 20%, rgba(130, 175, 255, .55), transparent 70%), linear-gradient(165deg, #2f63ff 0%, var(--blue) 45%, var(--blue-dark) 100%); }
+  .doc-cut { position: absolute; bottom: 0; height: 1000px; filter: drop-shadow(0 30px 40px rgba(1, 27, 120, .25)); }
+  .doc-text { position: absolute; top: 112px; }
+  .role { margin-top: 22px; font-size: 24px; font-weight: 600; color: var(--blue); letter-spacing: -.005em; }
+  .quote { margin-top: 30px; padding-left: 26px; border-left: 3px solid var(--blue); font-family: 'Inter Display', sans-serif; font-weight: 300; font-style: italic; font-size: 26px; line-height: 1.42; color: var(--ink); }
+  .creds { list-style: none; margin-top: 36px; display: grid; gap: 22px; }
+  .creds li { display: flex; gap: 20px; align-items: flex-start; font-size: 20.5px; line-height: 1.45; color: var(--body); }
+  .creds li strong { display: block; font-size: 22px; color: var(--ink); font-weight: 600; margin-bottom: 2px; }
+  .creds .icon-dot { width: 54px; height: 54px; }
+  .creds .icon-dot svg { width: 26px; height: 26px; }
+  .s-doc2 { background: radial-gradient(900px 700px at 90% 15%, #fff 0%, transparent 60%), var(--cream); }
+
+  /* ---------- 5. Servicios ---------- */
+  .s-serv { background: var(--paper); }
+  .serv-panel { position: absolute; right: 0; top: 0; width: 600px; height: 1080px; border-radius: 300px 0 0 0; overflow: hidden;
+    background: radial-gradient(520px 480px at 50% 22%, rgba(130, 175, 255, .55), transparent 70%), linear-gradient(170deg, #2f63ff 0%, var(--blue) 45%, var(--blue-dark) 100%); }
+  .serv-head { position: absolute; left: 140px; top: 104px; }
+  .serv-grid { position: absolute; left: 140px; top: 316px; width: 1130px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+  .card { background: #fff; border: 1px solid var(--line); border-radius: 24px; padding: 28px 28px 26px; box-shadow: 0 18px 40px -26px rgba(15, 23, 42, .25); }
+  .card h3 { margin-top: 18px; font-family: 'Inter Display', sans-serif; font-size: 27px; font-weight: 600; letter-spacing: -.02em; color: var(--ink); }
+  .card ul { list-style: none; margin-top: 12px; display: grid; gap: 7px; }
+  .card li { position: relative; padding-left: 22px; font-size: 19.5px; line-height: 1.38; color: var(--body); }
+  .card li::before { content: ''; position: absolute; left: 2px; top: 11px; width: 7px; height: 7px; border-radius: 50%; background: var(--blue); }
+
+  /* ---------- 6. Por qué elegirnos ---------- */
+  .s-why { background: radial-gradient(900px 700px at 10% 10%, #fff 0%, transparent 60%), var(--cream); }
+  .why-left { position: absolute; left: 140px; top: 112px; width: 600px; }
+  .why-left .lead { margin-top: 30px; font-size: 25px; }
+  .why-photo { position: absolute; left: 140px; bottom: 112px; width: 600px; height: 380px; border-radius: 26px; overflow: hidden; box-shadow: 0 40px 80px -36px rgba(15, 23, 42, .55); }
+  .why-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 55%; }
+  .pill { position: absolute; padding: 9px 18px; border-radius: 999px; font-size: 16px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+  .pill.dark { background: rgba(15, 23, 42, .62); color: #fff; border: 1px solid rgba(255, 255, 255, .25); }
+  .pill.blue { background: var(--blue); color: #fff; box-shadow: 0 8px 20px -6px rgba(0, 51, 204, .6); }
+  .pill.light { background: rgba(255, 255, 255, .92); color: var(--blue); }
+  .why-grid { position: absolute; left: 830px; right: 140px; top: 120px; bottom: 112px; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: repeat(3, 1fr); column-gap: 56px; row-gap: 40px; }
+  .why-item { border-top: 1px solid rgba(1, 55, 145, .22); padding-top: 22px; }
+  .why-item .num { font-family: 'Inter Display', sans-serif; font-weight: 300; font-size: 54px; line-height: 1; letter-spacing: -.04em; color: var(--blue); }
+  .why-item h3 { margin-top: 14px; font-family: 'Inter Display', sans-serif; font-size: 28px; font-weight: 600; letter-spacing: -.02em; }
+  .why-item p { margin-top: 10px; font-size: 20px; line-height: 1.48; color: var(--body); }
+
+  /* ---------- 7. Laboratorio ---------- */
+  .s-lab { color: #fff; background:
+      radial-gradient(820px 620px at 74% 34%, rgba(0, 51, 204, .38), transparent 70%),
+      radial-gradient(700px 520px at 6% 96%, rgba(1, 59, 218, .26), transparent 70%),
+      #05070f; }
+  .s-lab .rings circle { stroke: rgba(164, 209, 251, .10); }
+  .lab-photo { position: absolute; right: -20px; top: 70px; width: 1080px; height: 487px;
+    -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 58%, transparent 100%); mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 58%, transparent 100%); }
+  .lab-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .lab-text { position: absolute; left: 140px; top: 112px; width: 770px; }
+  .s-lab .eyebrow { color: var(--sky); }
+  .s-lab h1 { color: #fff; }
+  .s-lab h1 i { color: var(--sky); }
+  .s-lab .lead { color: rgba(255, 255, 255, .78); font-size: 24px; margin-top: 30px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+  .chip { padding: 10px 18px; border-radius: 999px; border: 1px solid rgba(164, 209, 251, .35); background: rgba(164, 209, 251, .06); font-size: 17px; font-weight: 500; color: rgba(255, 255, 255, .9); }
+  .lab-stat { position: absolute; right: 140px; top: 560px; display: flex; align-items: center; gap: 24px; }
+  .lab-stat .n { font-family: 'Inter Display', sans-serif; font-weight: 200; font-size: 128px; line-height: .85; letter-spacing: -.05em; }
+  .lab-stat .n small { font-size: 52px; font-weight: 300; color: var(--sky); margin-left: 4px; }
+  .lab-stat p { font-size: 19px; line-height: 1.42; color: rgba(255, 255, 255, .75); max-width: 300px; }
+  .flow { position: absolute; left: 140px; right: 140px; bottom: 104px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+  .flow::before { content: ''; position: absolute; left: 60px; right: 60px; top: 58px; height: 1px; background: linear-gradient(90deg, transparent, rgba(164, 209, 251, .5) 10%, rgba(164, 209, 251, .5) 90%, transparent); }
+  .step { position: relative; padding: 26px 28px 28px; border-radius: 24px; background: linear-gradient(180deg, #121a33, #0a0f20); border: 1px solid rgba(164, 209, 251, .18); }
+  .step .top { display: flex; align-items: center; justify-content: space-between; }
+  .step .ic { width: 64px; height: 64px; border-radius: 50%; display: grid; place-items: center; background: linear-gradient(145deg, #3b6dff, var(--blue)); box-shadow: 0 0 30px rgba(59, 109, 255, .55); }
+  .step .ic svg { width: 30px; height: 30px; color: #fff; }
+  .step .k { font-family: 'Inter Display', sans-serif; font-weight: 300; font-size: 40px; color: var(--sky); letter-spacing: -.03em; }
+  .step h3 { margin-top: 20px; font-family: 'Inter Display', sans-serif; font-size: 25px; font-weight: 600; letter-spacing: -.015em; }
+  .step p { margin-top: 8px; font-size: 18.5px; line-height: 1.45; color: rgba(255, 255, 255, .7); }
+  .s-lab .pie { color: rgba(255, 255, 255, .5); }
+  .s-lab .pie svg, .s-lab .pie b { color: var(--sky); }
+
+  /* ---------- 8. Casos clínicos ---------- */
+  .s-cases { background: var(--paper); }
+  .band { position: absolute; left: 0; top: 76px; width: 1210px; height: 196px; border-radius: 0 98px 98px 0; padding: 34px 0 0 140px;
+    background: radial-gradient(500px 300px at 85% 0%, rgba(130, 175, 255, .5), transparent 70%), linear-gradient(110deg, var(--blue-deep), var(--blue) 60%, #2f63ff); }
+  .band h2 { color: #fff; font-size: 74px; }
+  .band h2 i { color: var(--sky); }
+  .band p { margin-top: 12px; font-size: 23px; color: rgba(255, 255, 255, .82); }
+  .cases { position: absolute; left: 140px; right: 140px; top: 322px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
+  .shot { position: relative; height: 262px; border-radius: 20px; overflow: hidden; background: #000; }
+  .shot + .shot { margin-top: 14px; }
+  .shot img { width: 100%; height: 100%; object-fit: cover; }
+  .shot .pill { left: 16px; bottom: 16px; }
+  .case h3 { margin-top: 22px; font-family: 'Inter Display', sans-serif; font-size: 27px; font-weight: 600; letter-spacing: -.02em; }
+  .case p { margin-top: 6px; font-size: 19px; color: var(--muted); }
+
+  /* ---------- 9. Contacto ---------- */
+  .contact-left { position: absolute; left: 140px; top: 104px; width: 1000px; }
+  .contact-left .logo { width: 290px; height: 144px; color: #fff; display: block; }
+  .s-contact h2 { color: #fff; font-size: 104px; margin-top: 84px; }
+  .s-contact h2 i { color: var(--sky); }
+  .contact-grid { margin-top: 60px; display: grid; grid-template-columns: 1fr 1fr; column-gap: 50px; row-gap: 40px; }
+  .ci { display: flex; gap: 20px; align-items: flex-start; }
+  .ci .gl { flex: none; width: 62px; height: 62px; border-radius: 50%; display: grid; place-items: center; background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .22); }
+  .ci .gl svg { width: 28px; height: 28px; color: #fff; }
+  .ci .lbl { font-size: 15px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--sky); }
+  .ci .val { margin-top: 6px; font-size: 24px; line-height: 1.38; color: #fff; }
+  .qr-card { position: absolute; right: 150px; top: 330px; width: 560px; padding: 40px 44px 38px; background: #fff; border-radius: 32px; color: var(--ink);
+    box-shadow: 0 50px 100px -30px rgba(0, 10, 60, .6); }
+  .qr-card h3 { font-family: 'Inter Display', sans-serif; font-size: 30px; font-weight: 600; letter-spacing: -.02em; }
+  .qr-card > p { margin-top: 6px; font-size: 19px; color: var(--muted); }
+  .qrs { margin-top: 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .qr { text-align: center; }
+  .qr .code { padding: 20px; border-radius: 18px; border: 1px solid var(--line); }
+  .qr .code svg { width: 100%; height: auto; display: block; }
+  .qr .code svg path { stroke: var(--ink); }
+  .qr span { display: block; margin-top: 12px; font-size: 17px; font-weight: 600; color: var(--blue); letter-spacing: .04em; }
+  .contact-foot { position: absolute; left: 140px; right: 140px; bottom: 60px; padding-top: 22px; border-top: 1px solid rgba(255, 255, 255, .22); display: flex; justify-content: space-between; font-size: 17px; font-weight: 500; letter-spacing: .06em; color: rgba(255, 255, 255, .72); }
+</style>
+</head>
+<body>
+
+<!-- Símbolos: logo C&P (de public/logos/logo-clinic.svg) e iconos de línea -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="cp-mark" viewBox="178 164 175 240"><g fill="currentColor" stroke="none"><path d="M246.23,219.19c-14.08-14.69-38.15-13.43-48.67,4.36-6.35,10.78-3.77,23.67-.25,35.36,4.17,13.13,9.78,27.87,8.24,42.26-1,11.08-4.25,20.41-6.23,30.68-1.78,9.22-1.77,18.57.08,27.79,1.65,8.41,4.83,16.59,9.34,23.89.53,1.03,2.05,2.96,2.64,3.28.07.05-.14.02-.37.08-.19.05-.35.16-.47.3-.1.13,0,.12.16-.13.47-.83.77-2,.95-3.12,2.38-19.91,8.76-39.41,19.26-56.49,2.66-4.43,5.66-8.68,8.86-12.71-2.9,6.07-5.72,12.49-7.94,18.81-5.78,16.14-9.13,33.02-9.74,50.11.03,15.58-14.26,19.57-22.91,7.08-10.43-14.52-15.69-32.5-14.9-50.38.42-13.56,6.06-27.5,7.47-40.47.72-6.17,0-12-1.3-18.12-3.81-16.74-11.42-35.3-5.82-52.84,5.45-18.68,27.45-30.46,45.53-22.94,6.62,2.53,12.47,7.17,16.08,13.2h0Z"/><path d="M255.94,233.66c9.92-.82,17.8-6.94,25.36-12.88,7.85-6.33,16.47-12.52,27.04-13.99,6.32-.87,13.23.95,18.21,5.07,12.9,10.44,12.97,30.31,7.29,44.47-12.88,31.82-48.64,42.95-80.32,38.14-6.72-.8-12.24-1.74-18.04.47-.01,0-.06.03-.05.02.04-.01.07-.04.1-.06.29-.18.62-.5.86-.79,2.24-2.59,1.63-7.07-1.18-9.05-.86-.63-1.86-1.06-2.86-1.04,6.56-1.19,14.15-.46,20.09,3.08,8.8,5.15,14.82,14.04,16.24,24.03.18,1.23.59,4.3.76,5.56,3.1,22.89,3.72,46.19,3.04,69.22.07.55.11.56.11.62,0,.06.31.33.55.43,3.52.96,6.38-3.5,8.24-6.43,0,0,3.64-6.16,3.64-6.16,9.54-16.71,17.3-34.43,23.12-52.83,2.94-9.28,5.34-18.71,7.4-28.24-1.04,19.68-5,39.08-11.15,57.82-3.14,9.38-6.89,18.59-11.2,27.55-2.54,4.91-4.2,9.39-8.18,13.79-5.18,5.82-14.74,7.83-20.72,1.38-4.59-5.26-2.9-11.8-3.42-17.88-.47-19.22-2.16-38.39-4.95-57.4,0,0-.54-3.56-.54-3.56-.49-4.15-1.95-8.26-4.72-11.39-3.82-4.62-8.96-6.88-14.95-5.89-2.95.53-6.3.56-8.87-1.39-3.77-2.67-4.12-8.38-.89-11.59,2.23-2.22,4.08-2.75,6.49-3.59,7.35-2.36,16.2-1.46,23.01-.4,17.63,2.69,36.51.87,51.46-9.2,12.81-8.72,22.18-24.11,20.3-39.92-.6-9.96-7.86-18.51-18.33-18-19.26.76-33.07,21.44-52.97,20.02h0Z"/><circle cx="330.89" cy="186.45" r="17.57"/></g></symbol>
+    <symbol id="cp-logo" viewBox="176 162 486 242"><g fill="currentColor" stroke="none"><path d="M246.23,219.19c-14.08-14.69-38.15-13.43-48.67,4.36-6.35,10.78-3.77,23.67-.25,35.36,4.17,13.13,9.78,27.87,8.24,42.26-1,11.08-4.25,20.41-6.23,30.68-1.78,9.22-1.77,18.57.08,27.79,1.65,8.41,4.83,16.59,9.34,23.89.53,1.03,2.05,2.96,2.64,3.28.07.05-.14.02-.37.08-.19.05-.35.16-.47.3-.1.13,0,.12.16-.13.47-.83.77-2,.95-3.12,2.38-19.91,8.76-39.41,19.26-56.49,2.66-4.43,5.66-8.68,8.86-12.71-2.9,6.07-5.72,12.49-7.94,18.81-5.78,16.14-9.13,33.02-9.74,50.11.03,15.58-14.26,19.57-22.91,7.08-10.43-14.52-15.69-32.5-14.9-50.38.42-13.56,6.06-27.5,7.47-40.47.72-6.17,0-12-1.3-18.12-3.81-16.74-11.42-35.3-5.82-52.84,5.45-18.68,27.45-30.46,45.53-22.94,6.62,2.53,12.47,7.17,16.08,13.2h0Z"/><path d="M255.94,233.66c9.92-.82,17.8-6.94,25.36-12.88,7.85-6.33,16.47-12.52,27.04-13.99,6.32-.87,13.23.95,18.21,5.07,12.9,10.44,12.97,30.31,7.29,44.47-12.88,31.82-48.64,42.95-80.32,38.14-6.72-.8-12.24-1.74-18.04.47-.01,0-.06.03-.05.02.04-.01.07-.04.1-.06.29-.18.62-.5.86-.79,2.24-2.59,1.63-7.07-1.18-9.05-.86-.63-1.86-1.06-2.86-1.04,6.56-1.19,14.15-.46,20.09,3.08,8.8,5.15,14.82,14.04,16.24,24.03.18,1.23.59,4.3.76,5.56,3.1,22.89,3.72,46.19,3.04,69.22.07.55.11.56.11.62,0,.06.31.33.55.43,3.52.96,6.38-3.5,8.24-6.43,0,0,3.64-6.16,3.64-6.16,9.54-16.71,17.3-34.43,23.12-52.83,2.94-9.28,5.34-18.71,7.4-28.24-1.04,19.68-5,39.08-11.15,57.82-3.14,9.38-6.89,18.59-11.2,27.55-2.54,4.91-4.2,9.39-8.18,13.79-5.18,5.82-14.74,7.83-20.72,1.38-4.59-5.26-2.9-11.8-3.42-17.88-.47-19.22-2.16-38.39-4.95-57.4,0,0-.54-3.56-.54-3.56-.49-4.15-1.95-8.26-4.72-11.39-3.82-4.62-8.96-6.88-14.95-5.89-2.95.53-6.3.56-8.87-1.39-3.77-2.67-4.12-8.38-.89-11.59,2.23-2.22,4.08-2.75,6.49-3.59,7.35-2.36,16.2-1.46,23.01-.4,17.63,2.69,36.51.87,51.46-9.2,12.81-8.72,22.18-24.11,20.3-39.92-.6-9.96-7.86-18.51-18.33-18-19.26.76-33.07,21.44-52.97,20.02h0Z"/><circle cx="330.89" cy="186.45" r="17.57"/><path d="M416.58,323.86c-9.17,0-17.42-1.98-24.72-5.94-7.31-3.96-13.09-9.77-17.34-17.44-4.25-7.67-6.37-17.05-6.37-28.16s2.16-20.64,6.48-28.33,10.14-13.5,17.47-17.44c7.33-3.93,15.49-5.9,24.49-5.9,6.25,0,12.02.84,17.3,2.53,5.28,1.69,9.93,4.15,13.93,7.39,4,3.24,7.24,7.22,9.71,11.94,2.47,4.72,4.02,10.12,4.65,16.19h-27.66c-.27-2.16-.84-4.11-1.72-5.87s-2.04-3.26-3.47-4.52c-1.44-1.26-3.16-2.23-5.16-2.9-2-.67-4.26-1.01-6.78-1.01-4.54,0-8.4,1.11-11.57,3.34-3.17,2.23-5.57,5.42-7.18,9.58-1.62,4.16-2.43,9.16-2.43,15.01s.83,11.24,2.5,15.38c1.66,4.14,4.06,7.24,7.18,9.31,3.12,2.07,6.91,3.1,11.37,3.1,2.52,0,4.77-.34,6.74-1.01,1.98-.67,3.71-1.64,5.2-2.9,1.48-1.26,2.69-2.77,3.61-4.52.92-1.75,1.54-3.71,1.86-5.87h27.66c-.32,4.27-1.5,8.63-3.54,13.09-2.05,4.45-4.97,8.57-8.77,12.34-3.8,3.78-8.48,6.82-14.03,9.14-5.55,2.32-12.02,3.47-19.39,3.47Z"/><path d="M509.13,324.13c-7.2,0-13.4-1.28-18.62-3.84-5.22-2.56-9.22-5.99-12.01-10.29-2.79-4.29-4.18-9.03-4.18-14.2,0-3.78.7-7.14,2.09-10.08,1.39-2.94,3.38-5.63,5.97-8.06,2.59-2.43,5.65-4.74,9.21-6.95l22.8-14.17c1.53-.94,2.72-1.92,3.58-2.93.85-1.01,1.46-2.01,1.82-3,.36-.99.54-1.89.54-2.7,0-1.57-.6-2.98-1.79-4.22-1.19-1.24-3.02-1.85-5.5-1.85-1.53,0-2.85.28-3.95.84-1.1.56-1.96,1.36-2.56,2.39-.61,1.04-.91,2.25-.91,3.64,0,1.93.53,3.94,1.58,6,1.06,2.07,2.54,4.26,4.45,6.58,1.91,2.32,4.12,4.87,6.64,7.66l48.7,53.56h-27.12l-40.74-43.17c-2.02-2.16-4.24-4.78-6.64-7.86-2.41-3.08-4.48-6.56-6.24-10.46-1.75-3.89-2.63-8.13-2.63-12.71,0-5.13,1.22-9.79,3.68-14,2.45-4.2,5.88-7.55,10.29-10.05,4.41-2.5,9.55-3.74,15.45-3.74s10.46,1.16,14.54,3.47c4.07,2.32,7.21,5.4,9.41,9.24,2.2,3.84,3.3,8.11,3.3,12.78,0,3.1-.52,6.08-1.55,8.94-1.04,2.86-2.54,5.52-4.52,7.99-1.98,2.47-4.41,4.75-7.29,6.81l-20.78,14.7c-1.57,1.12-2.96,2.41-4.15,3.84-1.19,1.44-1.79,3.31-1.79,5.6,0,1.89.45,3.51,1.35,4.86.9,1.35,2.16,2.38,3.78,3.1,1.62.72,3.51,1.08,5.67,1.08,3.37,0,6.73-.81,10.09-2.43,3.35-1.62,6.41-3.9,9.17-6.85,2.77-2.94,4.99-6.42,6.68-10.42,1.69-4,2.53-8.36,2.53-13.09h21.45c0,5.8-.61,11.4-1.82,16.8-1.21,5.4-3.16,10.33-5.84,14.81s-6.2,8.24-10.56,11.3l-7.55,3.64c-4,2.61-8.29,4.5-12.85,5.67s-8.96,1.75-13.19,1.75Z"/><path d="M576.13,322.51v-100.5h43.3c7.46,0,14,1.47,19.59,4.42,5.6,2.95,9.96,7.09,13.09,12.44,3.12,5.35,4.69,11.6,4.69,18.75s-1.6,13.41-4.79,18.65c-3.2,5.24-7.67,9.29-13.42,12.14-5.76,2.86-12.46,4.28-20.1,4.28h-25.9v-21.18h20.37c3.24,0,6-.57,8.3-1.72,2.29-1.15,4.05-2.75,5.26-4.82,1.21-2.07,1.82-4.52,1.82-7.35s-.61-5.41-1.82-7.45c-1.21-2.05-2.97-3.61-5.26-4.69s-5.06-1.62-8.3-1.62h-9.58v78.65h-27.25Z"/><path d="M384.89,397.6c-3.18,0-6.01-.74-8.51-2.21-2.5-1.47-4.47-3.6-5.91-6.37s-2.16-6.1-2.16-9.99.73-7.25,2.18-10.03c1.45-2.78,3.43-4.91,5.93-6.38s5.33-2.21,8.47-2.21c1.98,0,3.83.28,5.56.84,1.73.56,3.27,1.38,4.62,2.46s2.47,2.39,3.34,3.95c.88,1.56,1.46,3.32,1.75,5.3h-6.54c-.21-1.09-.57-2.04-1.08-2.87-.51-.83-1.15-1.53-1.91-2.1-.76-.58-1.62-1.01-2.58-1.31-.96-.3-1.98-.45-3.06-.45-1.98,0-3.73.5-5.26,1.5-1.53,1-2.73,2.45-3.6,4.35s-1.3,4.23-1.3,6.96.44,5.11,1.31,7c.88,1.9,2.08,3.33,3.61,4.3,1.53.97,3.27,1.46,5.21,1.46,1.09,0,2.11-.15,3.06-.45.96-.3,1.82-.74,2.59-1.31s1.41-1.28,1.93-2.12.88-1.79,1.07-2.86h6.56c-.24,1.73-.77,3.36-1.59,4.87-.82,1.52-1.89,2.85-3.22,4-1.33,1.15-2.87,2.05-4.63,2.7-1.76.65-3.71.97-5.85.97Z"/><path d="M406.64,397.12v-36.23h6.49v30.75h16v5.47h-22.49Z"/><path d="M441.79,360.89v36.23h-6.49v-36.23h6.49Z"/><path d="M449.58,397.12v-36.23h7.34l12.52,19.96c.52.83,1.07,1.76,1.65,2.81.58,1.05,1.19,2.21,1.82,3.5.63,1.29,1.26,2.72,1.87,4.29h-.73c-.11-1.36-.21-2.76-.3-4.19-.09-1.43-.15-2.8-.19-4.08-.04-1.29-.06-2.38-.06-3.27v-19.01h6.59v36.23h-7.37l-11.3-17.97c-.71-1.15-1.38-2.29-2.02-3.4-.63-1.12-1.31-2.38-2.04-3.79-.73-1.41-1.61-3.11-2.65-5.11h.92c.1,1.77.19,3.44.27,5.02.08,1.58.15,2.99.21,4.24s.09,2.25.09,3.01v17.99h-6.61Z"/><path d="M494.37,360.89v36.23h-6.49v-36.23h6.49Z"/><path d="M517.6,397.6c-3.18,0-6.01-.74-8.51-2.21-2.5-1.47-4.47-3.6-5.91-6.37-1.44-2.77-2.16-6.1-2.16-9.99s.72-7.25,2.18-10.03c1.45-2.78,3.43-4.91,5.93-6.38s5.33-2.21,8.47-2.21c1.98,0,3.83.28,5.56.84,1.73.56,3.27,1.38,4.62,2.46s2.47,2.39,3.34,3.95c.88,1.56,1.46,3.32,1.75,5.3h-6.54c-.21-1.09-.57-2.04-1.08-2.87-.51-.83-1.15-1.53-1.91-2.1-.76-.58-1.62-1.01-2.58-1.31-.96-.3-1.98-.45-3.06-.45-1.98,0-3.73.5-5.26,1.5-1.53,1-2.73,2.45-3.6,4.35s-1.3,4.23-1.3,6.96.44,5.11,1.31,7c.88,1.9,2.08,3.33,3.61,4.3,1.53.97,3.27,1.46,5.21,1.46,1.09,0,2.11-.15,3.06-.45.96-.3,1.82-.74,2.59-1.31s1.41-1.28,1.93-2.12c.52-.83.88-1.79,1.07-2.86h6.56c-.24,1.73-.77,3.36-1.59,4.87-.82,1.52-1.89,2.85-3.22,4-1.33,1.15-2.87,2.05-4.63,2.7s-3.71.97-5.85.97Z"/></g></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+    <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></symbol>
+    <symbol id="i-cap" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+    <symbol id="i-scale" viewBox="0 0 24 24"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></symbol>
+    <symbol id="i-flask" viewBox="0 0 24 24"><path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></symbol>
+    <symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><path d="M9 9h.01"/><path d="M15 9h.01"/></symbol>
+    <symbol id="i-clipboard" viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></symbol>
+    <symbol id="i-steth" viewBox="0 0 24 24"><path d="M11 2v2"/><path d="M5 2v2"/><path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/></symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/></symbol>
+    <symbol id="i-implant" viewBox="0 0 24 24"><path d="M7.5 3.5c0-.8.7-1.5 1.5-1.5h6c.8 0 1.5.7 1.5 1.5 0 2.2-1.3 4-2.5 4.5h-4C8.8 7.5 7.5 5.7 7.5 3.5Z"/><path d="M9.5 8v9.5L12 22l2.5-4.5V8"/><path d="M9.5 11h5"/><path d="M9.5 14h5"/><path d="M10 17h4"/></symbol>
+    <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+    <symbol id="i-scan" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></symbol>
+    <symbol id="i-pen" viewBox="0 0 24 24"><path d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z"/><path d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18"/><path d="m2.3 2.3 7.286 7.286"/><circle cx="11" cy="11" r="2"/></symbol>
+    <symbol id="i-cpu" viewBox="0 0 24 24"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
+  </defs>
+</svg>
+
+<!-- ============ 1. PORTADA ============ -->
+<section class="slide s-cover">
+  <svg class="rings light" width="1920" height="1080" viewBox="0 0 1920 1080">
+    <circle cx="1430" cy="560" r="330"/><circle cx="1430" cy="560" r="470"/><circle cx="1430" cy="560" r="620"/><circle cx="1430" cy="560" r="790"/>
+  </svg>
+  <svg class="giant-mark"><use href="#cp-mark"/></svg>
+  <div class="orb"></div>
+
+  <div class="cover-content">
+    <svg class="logo" role="img" aria-label="C&amp;P Smile Clinic"><use href="#cp-logo"/></svg>
+    <div class="eyebrow">Presentación institucional</div>
+    <h1>Odontología<br><i>rigurosa</i> &amp; humana</h1>
+    <p class="lead">Redefiniendo la excelencia dental a través de la ciencia, la ética y el compromiso humano.</p>
+  </div>
+
+  <div class="cover-foot">
+    <div class="areas"><span>Rehabilitación oral</span><span>Estética dental</span><span>Implantología</span><span>Odontopediatría</span></div>
+    <div>Cali · Colombia</div>
+  </div>
+</section>
+
+<!-- ============ 2. QUIÉNES SOMOS ============ -->
+<section class="slide s-about">
+  <svg class="rings" width="700" height="700" viewBox="0 0 700 700" style="left:-350px; bottom:-350px">
+    <circle cx="350" cy="350" r="180"/><circle cx="350" cy="350" r="260"/><circle cx="350" cy="350" r="340"/>
+  </svg>
+
+  <div class="about-text">
+    <div class="eyebrow">Quiénes somos</div>
+    <h1>Ciencia, ética y<br><i>trato humano</i></h1>
+    <p class="lead">C&amp;P Smile Clinic es una clínica odontológica en Cali dirigida por docentes universitarios. Unimos protocolos basados en la evidencia científica, tecnología digital y una atención cercana para devolver la salud, la función y la estética a cada paciente.</p>
+    <div class="stats">
+      <div class="stat"><div class="n">38<small>años</small></div><p><strong>de experiencia combinada</strong> de nuestros doctores.</p></div>
+      <div class="stat"><div class="n">2</div><p><strong>universidades</strong> donde ejercen la docencia: U. del Valle y U. Santiago de Cali.</p></div>
+      <div class="stat"><div class="n">6</div><p><strong>áreas de atención</strong>, de la valoración inicial a la odontopediatría.</p></div>
+    </div>
+  </div>
+
+  <div class="arch-wrap" style="right:150px; top:96px; width:640px; height:880px; border-radius:320px 320px 28px 28px">
+    <div class="outline"></div>
+    <div class="photo"><img src="../public/images/clinica/consultorio-hero.jpg" alt="Consultorio de C&amp;P Smile Clinic"></div>
+  </div>
+  <div class="float-card" style="right:200px; bottom:118px">
+    <div class="icon-dot"><svg class="ico"><use href="#i-pin"/></svg></div>
+    <div class="txt"><strong>Nuestras instalaciones</strong>La Merced · Cali</div>
+  </div>
+
+  <div class="pie"><svg><use href="#cp-mark"/></svg>C&amp;P Smile Clinic<span class="sep"></span><b>02</b> / 09</div>
+</section>
+
+<!-- ============ 3. DR. PRADO ============ -->
+<section class="slide s-doc">
+  <svg class="rings" width="900" height="900" viewBox="0 0 900 900" style="right:-120px; top:-300px">
+    <circle cx="450" cy="450" r="250"/><circle cx="450" cy="450" r="340"/><circle cx="450" cy="450" r="430"/>
+  </svg>
+  <div class="doc-panel">
+    <svg class="rings light" width="720" height="850" viewBox="0 0 720 850" style="left:0; top:0">
+      <circle cx="360" cy="360" r="200"/><circle cx="360" cy="360" r="290"/><circle cx="360" cy="360" r="380"/>
+    </svg>
+  </div>
+  <img class="doc-cut" src="img/dr-prado-traje.png" alt="Dr. John Freddy Prado Giraldo" style="left:955px">
+
+  <div class="float-card" style="left:850px; top:300px">
+    <div class="big">16<span style="font-size:40px">+</span></div>
+    <div class="txt"><strong>años</strong>de experiencia clínica</div>
+  </div>
+
+  <div class="doc-text" style="left:140px; width:720px">
+    <div class="eyebrow">Director clínico</div>
+    <h1>Dr. John Freddy<br><i>Prado Giraldo</i></h1>
+    <div class="role">Odontólogo integral · Abogado · MSc. en Derecho Médico</div>
+    <p class="quote">“Mi propósito es transformar vidas integrando la ciencia odontológica con la ética más profunda.”</p>
+    <ul class="creds">
+      <li><span class="icon-dot"><svg class="ico"><use href="#i-cap"/></svg></span><div><strong>Docente universitario</strong>U. Santiago de Cali y Universidad del Valle: promoción y prevención, clínica integral del adulto y práctica comunitaria.</div></li>
+      <li><span class="icon-dot"><svg class="ico"><use href="#i-scale"/></svg></span><div><strong>Abogado y Magíster en Derecho Médico</strong>La seguridad del paciente y la ética como base de la práctica clínica.</div></li>
+      <li><span class="icon-dot"><svg class="ico"><use href="#i-award"/></svg></span><div><strong>Diplomados clínicos</strong>Estética dental, implantología y manejo de tejidos blandos.</div></li>
+      <li><span class="icon-dot"><svg class="ico"><use href="#i-flask"/></svg></span><div><strong>Odontología restaurativa</strong>Rehabilitación oral y estética con protocolos basados en la evidencia científica.</div></li>
+    </ul>
+  </div>
+
+  <div class="pie"><svg><use href="#cp-mark"/></svg>C&amp;P Smile Clinic<span class="sep"></span><b>03</b> / 09</div>
+</section>
+
+<!-- ============ 4. DRA. ISABEL ============ -->
+<section class="slide s-doc s-doc2">
+  <svg class="rings" width="900" height="900" viewBox="0 0 900 900" style="left:-380px; bottom:-420px">
+    <circle cx="450" cy="450" r="250"/><circle cx="450" cy="450" r="340"/><circle cx="450" cy="450" r="430"/>
+  </svg>
+  <div class="arch-wrap" style="left:176px; top:96px; width:600px; height:880px; border-radius:300px 300px 28px 28px">
+    <div class="outline" style="transform:translate(26px, 26px)"></div>
+    <div class="photo"><img src="../public/doctor/doctora.jpeg" alt="Dra. Isabel Cristina Calero" style="object-position:50% 70%"></div>
+  </div>
+  <div class="float-card" style="left:640px; bottom:150px">
+    <div class="big">22</div>
+    <div class="txt"><strong>años</strong>de experiencia profesional</div>
+  </div>
+
+  <div class="doc-text" style="left:960px; width:820px">
+    <div class="eyebrow">Odontopediatría</div>
+    <h1>Dra. Isabel<br><i>Cristina Calero</i></h1>
+    <div class="role">Especialista en Odontopediatría y Ortopedia Maxilar</div>
+    <p class="quote">“Cada niño merece un cuidado que combine el rigor científico con una paciencia inagotable.”</p>
+    <ul class="creds">
+      <li><span class="icon-dot"><svg class="ico"><use href="#i-smile"/></svg></span><div><strong>Atención infantil especializada</strong>Salud oral de niños y adolescentes, ortopedia maxilar temprana y manejo de la ansiedad dental.</div></li>
+      <li><span class="icon-dot"><svg class="ico"><use href="#i-cap"/></svg></span><div><strong>Magíster en Educación · Directora de programa</strong>Posgrado en la Universidad del Valle. Directora del Programa de Odontología en la U. Santiago de Cali.</div></li>
+      <li><span class="icon-dot"><svg class="ico"><use href="#i-clipboard"/></svg></span><div><strong>Especialista en Auditoría, Administración y Gestión de Servicios</strong>Odontóloga general de la Universidad Santiago de Cali.</div></li>
+    </ul>
+  </div>
+
+  <div class="pie" style="left:auto; right:140px"><svg><use href="#cp-mark"/></svg>C&amp;P Smile Clinic<span class="sep"></span><b>04</b> / 09</div>
+</section>
+
+<!-- ============ 5. SERVICIOS ============ -->
+<section class="slide s-serv">
+  <div class="serv-panel">
+    <svg class="rings light" width="600" height="1080" viewBox="0 0 600 1080" style="left:0; top:0">
+      <circle cx="320" cy="400" r="200"/><circle cx="320" cy="400" r="300"/><circle cx="320" cy="400" r="400"/>
+    </svg>
+  </div>
+  <img class="doc-cut" src="img/dr-prado-uniforme.png" alt="Dr. John Freddy Prado en la clínica" style="left:1300px; height:990px">
+
+  <div class="serv-head">
+    <div class="eyebrow">Portafolio clínico</div>
+    <h1>Nuestros <i>servicios</i></h1>
+  </div>
+
+  <div class="serv-grid">
+    <div class="card"><span class="icon-dot"><svg class="ico"><use href="#i-steth"/></svg></span><h3>Valoración y diagnóstico</h3>
+      <ul><li>Diagnóstico integral</li><li>Radiografías digitales</li><li>Plan de tratamiento personalizado</li></ul></div>
+    <div class="card"><span class="icon-dot"><svg class="ico"><use href="#i-layers"/></svg></span><h3>Rehabilitación oral</h3>
+      <ul><li>Coronas en zirconio</li><li>Prótesis fijas y removibles</li><li>Prótesis híbridas y sobre implantes</li></ul></div>
+    <div class="card"><span class="icon-dot"><svg class="ico"><use href="#i-sparkles"/></svg></span><h3>Estética dental</h3>
+      <ul><li>Diseño de sonrisa digital</li><li>Carillas cerámicas</li><li>Blanqueamiento profesional</li></ul></div>
+    <div class="card"><span class="icon-dot"><svg class="ico"><use href="#i-implant"/></svg></span><h3>Implantología</h3>
+      <ul><li>Implantes de titanio</li><li>Carga inmediata</li><li>Técnicas mínimamente invasivas</li></ul></div>
+    <div class="card"><span class="icon-dot"><svg class="ico"><use href="#i-leaf"/></svg></span><h3>Periodoncia y tejidos blandos</h3>
+      <ul><li>Cirugía plástica gingival</li><li>Injertos de encía</li><li>Alargamiento de corona</li></ul></div>
+    <div class="card"><span class="icon-dot"><svg class="ico"><use href="#i-smile"/></svg></span><h3>Odontopediatría</h3>
+      <ul><li>Atención infantil especializada</li><li>Ortopedia maxilar temprana</li><li>Manejo de la ansiedad dental</li></ul></div>
+  </div>
+
+  <div class="pie"><svg><use href="#cp-mark"/></svg>C&amp;P Smile Clinic<span class="sep"></span><b>05</b> / 09</div>
+</section>
+
+<!-- ============ 6. POR QUÉ ELEGIRNOS ============ -->
+<section class="slide s-why">
+  <svg class="rings" width="800" height="800" viewBox="0 0 800 800" style="right:-500px; bottom:-520px">
+    <circle cx="400" cy="400" r="220"/><circle cx="400" cy="400" r="310"/><circle cx="400" cy="400" r="395"/>
+  </svg>
+  <div class="why-left">
+    <div class="eyebrow">Diferenciadores</div>
+    <h1>¿Por qué<br><i>elegirnos</i>?</h1>
+    <p class="lead">Una práctica odontológica donde la seguridad del paciente es la prioridad absoluta.</p>
+  </div>
+  <div class="why-photo">
+    <img src="../public/casos-clinicos/despues%20keila%201.JPG" alt="Resultado de tratamiento estético en C&amp;P Smile Clinic">
+    <span class="pill light" style="left:20px; bottom:20px">Resultado real</span>
+  </div>
+
+  <div class="why-grid">
+    <div class="why-item"><div class="num">01</div><h3>Base científica</h3><p>Tratamientos respaldados por literatura clínica actualizada y protocolos estandarizados.</p></div>
+    <div class="why-item"><div class="num">02</div><h3>Docentes universitarios</h3><p>Un equipo vinculado a la academia, en constante actualización.</p></div>
+    <div class="why-item"><div class="num">03</div><h3>Ética y seguridad jurídica</h3><p>Formación en Derecho Médico: diagnósticos honestos y respeto por los derechos del paciente.</p></div>
+    <div class="why-item"><div class="num">04</div><h3>Tecnología digital</h3><p>Escáner intraoral y flujo de trabajo digital para mayor precisión y comodidad.</p></div>
+    <div class="why-item"><div class="num">05</div><h3>Laboratorio propio</h3><p>Coronas, carillas y prótesis fabricadas por nuestro laboratorio digital de apoyo.</p></div>
+    <div class="why-item"><div class="num">06</div><h3>Trato humano</h3><p>Atención empática y personalizada en cada etapa del tratamiento.</p></div>
+  </div>
+
+  <div class="pie"><svg><use href="#cp-mark"/></svg>C&amp;P Smile Clinic<span class="sep"></span><b>06</b> / 09</div>
+</section>
+
+<!-- ============ 7. LABORATORIO ============ -->
+<section class="slide s-lab">
+  <svg class="rings" width="1920" height="1080" viewBox="0 0 1920 1080">
+    <circle cx="1350" cy="310" r="300"/><circle cx="1350" cy="310" r="430"/><circle cx="1350" cy="310" r="580"/>
+  </svg>
+  <div class="lab-photo"><img src="../public/casos-clinicos/Restauraciones%20Stella.JPG" alt="Puente cerámico sobre implantes fabricado en el laboratorio"></div>
+
+  <div class="lab-text">
+    <div class="eyebrow">Laboratorio de apoyo</div>
+    <h1>Odontología <i>digital</i><br>de precisión</h1>
+    <p class="lead">Contamos con <strong style="color:#fff">C&amp;P Smile Laboratory</strong> como apoyo para la odontología digital: diseño y fabricación de coronas, carillas, incrustaciones y prótesis con tecnología CAD/CAM, en alianza tecnológica con Leaf Dental.</p>
+    <div class="chips">
+      <span class="chip">Fresado en 5 ejes</span><span class="chip">Sinterizado SEED Fire S9</span><span class="chip">Prensado SEED Press 2</span><span class="chip">Impresión 3D SEED Print 2+</span><span class="chip">CAD/CAM Millbox</span>
+    </div>
+  </div>
+
+  <div class="lab-stat">
+    <div class="n">24<small>h</small></div>
+    <p>Tiempos de entrega desde 24 horas en coronas y prótesis sobre implantes.</p>
+  </div>
+
+  <div class="flow">
+    <div class="step"><div class="top"><span class="ic"><svg class="ico"><use href="#i-scan"/></svg></span><span class="k">01</span></div><h3>Escaneo intraoral</h3><p>Impresión digital precisa, sin materiales incómodos.</p></div>
+    <div class="step"><div class="top"><span class="ic"><svg class="ico"><use href="#i-pen"/></svg></span><span class="k">02</span></div><h3>Diseño CAD</h3><p>Planificación virtual de cada restauración.</p></div>
+    <div class="step"><div class="top"><span class="ic"><svg class="ico"><use href="#i-cpu"/></svg></span><span class="k">03</span></div><h3>Fresado e impresión 3D</h3><p>Zirconio, disilicato de litio, PMMA y resinas.</p></div>
+    <div class="step"><div class="top"><span class="ic"><svg class="ico"><use href="#i-check"/></svg></span><span class="k">04</span></div><h3>Restauración final</h3><p>Ajuste y entrega en la clínica, con control de calidad.</p></div>
+  </div>
+
+  <div class="pie"><svg><use href="#cp-mark"/></svg>C&amp;P Smile Clinic<span class="sep"></span><b>07</b> / 09</div>
+</section>
+
+<!-- ============ 8. CASOS CLÍNICOS ============ -->
+<section class="slide s-cases">
+  <svg class="rings" width="900" height="900" viewBox="0 0 900 900" style="right:-260px; top:-520px">
+    <circle cx="450" cy="450" r="250"/><circle cx="450" cy="450" r="340"/><circle cx="450" cy="450" r="430"/>
+  </svg>
+  <div class="band">
+    <h2>Casos clínicos <i>reales</i></h2>
+    <p>Antes y después de tratamientos realizados en C&amp;P Smile Clinic</p>
+  </div>
+
+  <div class="cases">
+    <div class="case">
+      <div class="shot"><img src="../public/casos-clinicos/Antes%20stella.JPG" alt="Antes"><span class="pill dark">Antes</span></div>
+      <div class="shot"><img src="../public/casos-clinicos/Despues%20stella%20.JPG" alt="Después"><span class="pill blue">Después</span></div>
+      <h3>Rehabilitación sobre implantes</h3>
+      <p>Puente cerámico sobre 4 implantes · arco superior</p>
+    </div>
+    <div class="case">
+      <div class="shot"><img src="../public/casos-clinicos/antes%20keila.JPG" alt="Antes"><span class="pill dark">Antes</span></div>
+      <div class="shot"><img src="../public/casos-clinicos/despues%20keila.JPG" alt="Después"><span class="pill blue">Después</span></div>
+      <h3>Cierre de diastemas</h3>
+      <p>Restauraciones anteriores sin ortodoncia</p>
+    </div>
+    <div class="case">
+      <div class="shot"><img src="../public/casos-clinicos/Antes.JPG" alt="Antes"><span class="pill dark">Antes</span></div>
+      <div class="shot"><img src="../public/casos-clinicos/Despues.JPG" alt="Después" style="transform:scale(1.6); transform-origin:50% 44%"><span class="pill blue">Después</span></div>
+      <h3>Estética anterior en cerámica</h3>
+      <p>Mejora de color, forma y simetría de la sonrisa</p>
+    </div>
+  </div>
+
+  <div class="pie"><svg><use href="#cp-mark"/></svg>C&amp;P Smile Clinic<span class="sep"></span><b>08</b> / 09</div>
+</section>
+
+<!-- ============ 9. CONTACTO ============ -->
+<section class="slide s-contact">
+  <svg class="rings light" width="1920" height="1080" viewBox="0 0 1920 1080">
+    <circle cx="1430" cy="560" r="330"/><circle cx="1430" cy="560" r="470"/><circle cx="1430" cy="560" r="620"/><circle cx="1430" cy="560" r="790"/>
+  </svg>
+  <svg class="giant-mark"><use href="#cp-mark"/></svg>
+  <div class="orb"></div>
+
+  <div class="contact-left">
+    <svg class="logo" role="img" aria-label="C&amp;P Smile Clinic"><use href="#cp-logo"/></svg>
+    <h2>Contacto</h2>
+    <div class="contact-grid">
+      <div class="ci"><span class="gl"><svg class="ico"><use href="#i-pin"/></svg></span><div><div class="lbl">Dirección</div><div class="val">Cl. 52 Nte. #2 DN 05<br>La Merced, Cali</div></div></div>
+      <div class="ci"><span class="gl"><svg class="ico"><use href="#i-clock"/></svg></span><div><div class="lbl">Horarios</div><div class="val">Martes&nbsp;&nbsp;1:00&nbsp;–&nbsp;6:00&nbsp;p.&nbsp;m.<br>Viernes&nbsp;&nbsp;7:00&nbsp;a.&nbsp;m.&nbsp;–&nbsp;12:00&nbsp;m.<br>Sábado&nbsp;&nbsp;7:00&nbsp;a.&nbsp;m.&nbsp;–&nbsp;6:00&nbsp;p.&nbsp;m.</div></div></div>
+      <div class="ci"><span class="gl"><svg class="ico"><use href="#i-phone"/></svg></span><div><div class="lbl">WhatsApp clínica</div><div class="val">+57 313 794 2686</div></div></div>
+      <div class="ci"><span class="gl"><svg class="ico"><use href="#i-phone"/></svg></span><div><div class="lbl">Laboratorio</div><div class="val">+57 310 637 2455</div></div></div>
+      <div class="ci"><span class="gl"><svg class="ico"><use href="#i-globe"/></svg></span><div><div class="lbl">Web</div><div class="val">www.cypsmile.online</div></div></div>
+      <div class="ci"><span class="gl"><svg class="ico"><use href="#i-insta"/></svg></span><div><div class="lbl">Instagram</div><div class="val">@cyp_clinic · @cyp_lab</div></div></div>
+    </div>
+  </div>
+
+  <div class="qr-card">
+    <h3>Escanee y conéctese</h3>
+    <p>Conozca la clínica o escríbanos directamente.</p>
+    <div class="qrs">
+      <div class="qr"><div class="code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" shape-rendering="crispEdges"><path stroke="#0f172a" d="M0 0.5h7m2 0h2m1 0h1m2 0h6m1 0h7M0 1.5h1m5 0h1m5 0h1m4 0h1m2 0h1m1 0h1m5 0h1M0 2.5h1m1 0h3m1 0h1m1 0h2m1 0h1m2 0h1m1 0h1m1 0h3m1 0h1m1 0h3m1 0h1M0 3.5h1m1 0h3m1 0h1m1 0h1m1 0h3m3 0h2m1 0h1m2 0h1m1 0h3m1 0h1M0 4.5h1m1 0h3m1 0h1m1 0h3m1 0h4m1 0h4m1 0h1m1 0h3m1 0h1M0 5.5h1m5 0h1m1 0h1m4 0h4m5 0h1m5 0h1M0 6.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M8 7.5h1m2 0h1m1 0h1m1 0h1m2 0h3M0 8.5h1m1 0h5m3 0h2m2 0h2m1 0h1m1 0h1m2 0h5M0 9.5h2m2 0h2m2 0h1m6 0h5m1 0h4m3 0h1M0 10.5h8m2 0h1m1 0h1m5 0h1m1 0h2M4 11.5h2m1 0h1m1 0h1m1 0h2m1 0h1m1 0h1m3 0h1m1 0h2m1 0h1m1 0h1M3 12.5h1m1 0h2m4 0h2m3 0h2m7 0h2M0 13.5h1m1 0h4m1 0h2m1 0h6m1 0h4m1 0h1m1 0h1m3 0h1M0 14.5h3m2 0h6m2 0h5m3 0h3m1 0h2M0 15.5h1m8 0h1m1 0h3m1 0h1m2 0h1m1 0h1m2 0h2m2 0h1M0 16.5h4m1 0h2m1 0h1m5 0h2m1 0h1m1 0h1m3 0h1m1 0h2M0 17.5h2m2 0h2m1 0h1m1 0h3m3 0h2m1 0h3m1 0h3m1 0h1m1 0h1M0 18.5h1m2 0h2m1 0h4m1 0h2m7 0h2m1 0h1m2 0h1M0 19.5h1m1 0h4m3 0h2m3 0h1m1 0h1m4 0h1m1 0h2m2 0h1M0 20.5h1m3 0h1m1 0h2m3 0h1m4 0h1m1 0h7m1 0h3M8 21.5h1m4 0h3m1 0h2m1 0h1m3 0h5M0 22.5h7m2 0h3m1 0h5m1 0h2m1 0h1m1 0h3M0 23.5h1m5 0h1m1 0h1m2 0h3m1 0h1m1 0h4m3 0h1m3 0h1M0 24.5h1m1 0h3m1 0h1m1 0h1m2 0h1m2 0h2m4 0h5m1 0h3M0 25.5h1m1 0h3m1 0h1m1 0h1m3 0h2m1 0h2m1 0h2m3 0h1m1 0h2M0 26.5h1m1 0h3m1 0h1m1 0h1m1 0h1m7 0h3m1 0h6M0 27.5h1m5 0h1m3 0h1m2 0h1m2 0h1m3 0h2m1 0h1m1 0h1m1 0h1M0 28.5h7m1 0h2m1 0h2m3 0h1m1 0h2m2 0h5"/></svg></div><span>Sitio web</span></div>
+      <div class="qr"><div class="code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" shape-rendering="crispEdges"><path stroke="#0f172a" d="M0 0.5h7m2 0h3m6 0h7M0 1.5h1m5 0h1m2 0h1m1 0h3m1 0h2m1 0h1m5 0h1M0 2.5h1m1 0h3m1 0h1m1 0h2m1 0h1m3 0h2m1 0h1m1 0h3m1 0h1M0 3.5h1m1 0h3m1 0h1m1 0h1m1 0h5m1 0h1m1 0h1m1 0h3m1 0h1M0 4.5h1m1 0h3m1 0h1m1 0h3m1 0h3m3 0h1m1 0h3m1 0h1M0 5.5h1m5 0h1m1 0h1m2 0h1m1 0h1m1 0h1m2 0h1m5 0h1M0 6.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M8 7.5h4m1 0h1M0 8.5h1m1 0h5m5 0h5m1 0h5M1 9.5h4m3 0h3m2 0h1m5 0h1m3 0h1M4 10.5h1m1 0h3m2 0h1m1 0h1m1 0h1m2 0h4m1 0h2M12 11.5h2m1 0h1m1 0h3m4 0h1M0 12.5h5m1 0h5m1 0h2m1 0h2m1 0h3m1 0h3M0 13.5h1m1 0h1m10 0h3m3 0h1m1 0h1m1 0h1M0 14.5h1m1 0h1m1 0h4m1 0h1m1 0h2m2 0h3m1 0h3m1 0h2M0 15.5h1m1 0h3m2 0h1m3 0h1m4 0h1m2 0h2m3 0h1M0 16.5h1m3 0h3m4 0h1m4 0h5m1 0h1M8 17.5h1m1 0h1m1 0h2m1 0h2m3 0h2M0 18.5h7m2 0h1m3 0h2m1 0h1m1 0h1m1 0h1m1 0h3M0 19.5h1m5 0h1m1 0h3m1 0h2m1 0h2m3 0h2M0 20.5h1m1 0h3m1 0h1m1 0h1m3 0h1m1 0h7m1 0h2M0 21.5h1m1 0h3m1 0h1m1 0h2m7 0h2m1 0h3m1 0h1M0 22.5h1m1 0h3m1 0h1m1 0h5m8 0h2m1 0h1M0 23.5h1m5 0h1m4 0h1m2 0h4m1 0h3m2 0h1M0 24.5h7m1 0h1m2 0h1m5 0h8"/></svg></div><span>WhatsApp</span></div>
+    </div>
+  </div>
+
+  <div class="contact-foot">
+    <span>C&amp;P Smile Clinic · Odontología rigurosa &amp; humana</span>
+    <span>Con el apoyo de C&amp;P Smile Laboratory en odontología digital</span>
+  </div>
+</section>
+
+</body>
+</html>
