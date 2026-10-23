@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es">
+<html lang="es" data-version="actual">
 <head>
 <meta charset="utf-8">
 <title>C&amp;P Smile Clinic — Presentación institucional</title>
@@ -26,6 +26,9 @@
     body { background: #1c2030; padding: 40px; display: flex; flex-direction: column; align-items: center; gap: 40px; }
   }
   img { display: block; }
+
+  /* ---------- versiones: textos actuales / textos nuevos ---------- */
+  html[data-version="actual"] .solo-nuevo, html[data-version="nuevo"] .solo-actual { display: none !important; }
 
   /* ---------- base de diapositiva ---------- */
   .slide { width: 1920px; height: 1080px; position: relative; overflow: hidden; background: var(--paper); break-after: page; }
@@ -188,7 +191,36 @@
   .case h3 { margin-top: 22px; font-family: 'Inter Display', sans-serif; font-size: 27px; font-weight: 600; letter-spacing: -.02em; }
   .case p { margin-top: 6px; font-size: 19px; color: var(--muted); }
 
-  /* ---------- 10. Contacto ---------- */
+  /* ---------- 10. Medios de pago ---------- */
+  .s-pay { background: radial-gradient(900px 700px at 90% 10%, #fff 0%, transparent 60%), var(--cream); }
+  .pay-left { position: absolute; left: 140px; top: 96px; bottom: 112px; width: 620px; display: flex; flex-direction: column; justify-content: center; }
+  .s-pay h1 { font-size: 78px; }
+  .pay-left .lead { margin-top: 32px; font-size: 25px; }
+  .soon { align-self: flex-start; margin-top: 44px; display: inline-flex; align-items: center; gap: 14px; padding: 14px 24px; border-radius: 999px; border: 1.5px dashed rgba(0, 51, 204, .45); font-size: 19px; color: var(--body); }
+  .soon strong { color: var(--ink); font-weight: 600; }
+  .pay-groups { position: absolute; left: 830px; right: 140px; top: 120px; bottom: 112px; display: flex; flex-direction: column; justify-content: center; gap: 46px; }
+  .pay-label { font-size: 17px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: var(--blue); margin-bottom: 18px; }
+  .pay-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .pay-card { height: 224px; background: #fff; border: 1px solid var(--line); border-radius: 24px; box-shadow: 0 18px 40px -26px rgba(15, 23, 42, .25); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; padding: 24px; text-align: center; }
+  .pay-card .logos { display: flex; align-items: center; gap: 26px; }
+  .pay-card .name { font-size: 20px; font-weight: 600; color: var(--ink); line-height: 1.3; }
+  .pay-card .icon-dot { width: 84px; height: 84px; }
+  .pay-card .icon-dot svg { width: 40px; height: 40px; }
+  .pay-card.logo-only img { max-width: 78%; max-height: 120px; object-fit: contain; }
+
+  .cases-note { position: absolute; right: 140px; bottom: 44px; font-size: 16px; font-style: italic; color: var(--muted); }
+  .cta-inst { margin-top: 18px; font-size: 24px; color: rgba(255, 255, 255, .86); }
+  .cta-inst strong { color: #fff; font-weight: 600; }
+  html[data-version="nuevo"] .s-contact h2 { font-size: 92px; margin-top: 56px; }
+  html[data-version="nuevo"] .contact-grid { margin-top: 44px; row-gap: 32px; }
+
+  .card .benefit { grid-column: 1 / -1; margin-top: 14px; font-size: 19.5px; line-height: 1.4; color: var(--blue-dark); font-weight: 500; }
+  html[data-version="nuevo"] .serv-grid { top: 296px; gap: 22px; }
+  html[data-version="nuevo"] .card { display: grid; grid-template-columns: 58px 1fr; column-gap: 16px; align-items: center; padding: 24px 26px; }
+  html[data-version="nuevo"] .card h3 { margin-top: 0; line-height: 1.12; font-size: 25px; }
+  html[data-version="nuevo"] .card ul { grid-column: 1 / -1; margin-top: 12px; }
+
+  /* ---------- 11. Contacto ---------- */
   .contact-left { position: absolute; left: 140px; top: 104px; width: 1000px; }
   .contact-left .logo { width: 290px; height: 144px; color: #fff; display: block; }
   .s-contact h2 { color: #fff; font-size: 104px; margin-top: 84px; }
@@ -238,6 +270,8 @@
     <symbol id="i-scan" viewBox="0 0 24 24"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></symbol>
     <symbol id="i-pen" viewBox="0 0 24 24"><path d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z"/><path d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18"/><path d="m2.3 2.3 7.286 7.286"/><circle cx="11" cy="11" r="2"/></symbol>
     <symbol id="i-cpu" viewBox="0 0 24 24"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2M15 20v2M2 15h2M2 9h2M20 15h2M20 9h2M9 2v2M9 20v2"/></symbol>
+    <symbol id="i-cash" viewBox="0 0 24 24"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></symbol>
+    <symbol id="i-transfer" viewBox="0 0 24 24"><path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></symbol>
   </defs>
 </svg>
@@ -254,7 +288,7 @@
     <svg class="logo" role="img" aria-label="C&amp;P Smile Clinic"><use href="#cp-logo"/></svg>
     <div class="eyebrow">Presentación institucional</div>
     <h1>Odontología<br><i>rigurosa</i> &amp; humana</h1>
-    <p class="lead">Redefiniendo la excelencia dental a través de la ciencia, la ética y el compromiso humano.</p>
+    <p class="lead solo-actual">Redefiniendo la excelencia dental a través de la ciencia, la ética y el compromiso humano.</p><p class="lead solo-nuevo">Cuidamos la sonrisa de toda la familia con respaldo académico, tecnología digital y laboratorio propio.</p>
   </div>
 
   <div class="cover-foot">
@@ -272,10 +306,10 @@
   <div class="about-text">
     <div class="eyebrow">Quiénes somos</div>
     <h1>Ciencia, ética y<br><i>trato humano</i></h1>
-    <p class="lead">C&amp;P Smile Clinic es una clínica odontológica en Cali dirigida por docentes universitarios. Unimos protocolos basados en la evidencia científica, tecnología digital y una atención cercana para devolver la salud, la función y la estética a cada paciente.</p>
+    <p class="lead solo-actual">C&amp;P Smile Clinic es una clínica odontológica en Cali dirigida por docentes universitarios. Unimos protocolos basados en la evidencia científica, tecnología digital y una atención cercana para devolver la salud, la función y la estética a cada paciente.</p><p class="lead solo-nuevo">En C&amp;P Smile Clinic cuidamos la salud oral de niños y adultos en Cali. Nuestro equipo, formado por docentes universitarios, une la evidencia científica, la tecnología digital y un trato cercano para que cada paciente recupere la función, la estética y la confianza al sonreír.</p>
     <div class="stats">
       <div class="stat"><div class="n">+38<small>años</small></div><p><strong>de experiencia combinada</strong> de nuestros doctores.</p></div>
-      <div class="stat"><div class="n">2</div><p><strong>universidades</strong> donde ejercen la docencia: U. del Valle y U. Santiago de Cali.</p></div>
+      <div class="stat"><div class="n">2</div><p class="solo-actual"><strong>universidades</strong> donde ejercen la docencia: U. del Valle y U. Santiago de Cali.</p><p class="solo-nuevo"><strong>universidades</strong> donde ejercen la docencia: Universidad del Valle y Universidad Santiago de Cali.</p></div>
       <div class="stat"><div class="n">6</div><p><strong>áreas de atención</strong>, de la valoración inicial a la odontopediatría.</p></div>
     </div>
   </div>
@@ -289,7 +323,7 @@
     <div class="txt"><strong>Nuestras instalaciones</strong>La Merced · Cali</div>
   </div>
 
-  <div class="pie"><svg><use href="#cp-mark"/></svg>C&amp;P Smile Clinic<span class="sep"></span><b>02</b> / 10</div>
+  <div class="pie"><svg><use href="#cp-mark"/></svg>C&amp;P Smile Clinic<span class="sep"></span><b>02</b> / 11</div>
 </section>
 
 <!-- ============ 3. DR. PRADO ============ -->
@@ -304,7 +338,7 @@
   </div>
   <img class="doc-cut" src="img/dr-prado-traje.png" alt="Dr. John Freddy Prado Giraldo" style="left:955px">
 
-  <div class="float-card" style="left:850px; top:300px">
+  <div class="float-card" style="left:890px; top:290px">
     <div class="big">16<span style="font-size:40px">+</span></div>
     <div class="txt"><strong>años</strong>de experiencia clínica</div>
   </div>
@@ -312,17 +346,17 @@
   <div class="doc-text" style="left:140px; width:720px">
     <div class="eyebrow">Director clínico</div>
     <h1>Dr. John Freddy<br><i>Prado Giraldo</i></h1>
-    <div class="role">Odontólogo integral · Abogado · MSc. en Derecho Médico</div>
+    <div class="role solo-actual">Odontólogo integral · Abogado · MSc. en Derecho Médico</div><div class="role solo-nuevo">Odontólogo integral · Abogado · Magíster en Derecho Médico</div>
     <p class="quote">“Mi propósito es transformar vidas integrando la ciencia odontológica con la ética más profunda.”</p>
     <ul class="creds">
-      <li><span class="icon-dot"><svg class="ico"><use href="#i-cap"/></svg></span><div><strong>Docente universitario</strong>U. Santiago de Cali y Universidad del Valle: promoción y prevención, clínica integral del adulto y práctica comunitaria.</div></li>
-      <li><span class="icon-dot"><svg class="ico"><use href="#i-scale"/></svg></span><div><strong>Abogado y Magíster en Derecho Médico</strong>La seguridad del paciente y la ética como base de la práctica clínica.</div></li>
+      <li><span class="icon-dot"><svg class="ico"><use href="#i-cap"/></svg></span><div class="solo-actual"><strong>Docente universitario</strong>U. Santiago de Cali y Universidad del Valle: promoción y prevención, clínica integral del adulto y práctica comunitaria.</div><div class="solo-nuevo"><strong>Docente universitario</strong>Universidad Santiago de Cali y Universidad del Valle, en promoción y prevención, clínica integral del adulto y práctica comunitaria.</div></li>
+      <li><span class="icon-dot"><svg class="ico"><use href="#i-scale"/></svg></span><div class="solo-actual"><strong>Abogado y Magíster en Derecho Médico</strong>La seguridad del paciente y la ética como base de la práctica clínica.</div><div class="solo-nuevo"><strong>Abogado y Magíster en Derecho Médico</strong>Diagnósticos honestos y decisiones informadas: la seguridad del paciente es la base de su práctica.</div></li>
       <li><span class="icon-dot"><svg class="ico"><use href="#i-award"/></svg></span><div><strong>Diplomados clínicos</strong>Estética dental, implantología y manejo de tejidos blandos.</div></li>
       <li><span class="icon-dot"><svg class="ico"><use href="#i-flask"/></svg></span><div><strong>Odontología restaurativa</strong>Rehabilitación oral y estética con protocolos basados en la evidencia científica.</div></li>
     </ul>
   </div>
 
-  <div class="pie"><svg><use href="#cp-mark"/></svg>C&amp;P Smile Clinic<span class="sep"></span><b>03</b> / 10</div>
+  <div class="pie"><svg><use href="#cp-mark"/></svg>C&amp;P Smile Clinic<span class="sep"></span><b>03</b> / 11</div>
 </section>
 
 <!-- ============ 4. DRA. ISABEL ============ -->
@@ -346,12 +380,12 @@
     <p class="quote">“Cada niño merece un cuidado que combine el rigor científico con una paciencia inagotable.”</p>
     <ul class="creds">
       <li><span class="icon-dot"><svg class="ico"><use href="#i-smile"/></svg></span><div><strong>Atención infantil especializada</strong>Salud oral de niños y adolescentes, ortopedia maxilar temprana y manejo de la ansiedad dental.</div></li>
-      <li><span class="icon-dot"><svg class="ico"><use href="#i-cap"/></svg></span><div><strong>Magíster en Educación · Directora de programa</strong>Posgrado en la Universidad del Valle. Directora del Programa de Odontología en la U. Santiago de Cali.</div></li>
+      <li><span class="icon-dot"><svg class="ico"><use href="#i-cap"/></svg></span><div class="solo-actual"><strong>Magíster en Educación · Directora de programa</strong>Posgrado en la Universidad del Valle. Directora del Programa de Odontología en la U. Santiago de Cali.</div><div class="solo-nuevo"><strong>Magíster en Educación · Directora de programa</strong>Posgrado en la Universidad del Valle. Directora del Programa de Odontología en la Universidad Santiago de Cali.</div></li>
       <li><span class="icon-dot"><svg class="ico"><use href="#i-clipboard"/></svg></span><div><strong>Especialista en Auditoría, Administración y Gestión de Servicios</strong>Odontóloga general de la Universidad Santiago de Cali.</div></li>
     </ul>
   </div>
 
-  <div class="pie" style="left:auto; right:140px"><svg><use href="#cp-mark"/></svg>C&amp;P Smile Clinic<span class="sep"></span><b>04</b> / 10</div>
+  <div class="pie" style="left:auto; right:140px"><svg><use href="#cp-mark"/></svg>C&amp;P Smile Clinic<span class="sep"></span><b>04</b> / 11</div>
 </section>
 
 <!-- ============ 5. DRA. DAYANNA ============ -->
@@ -381,7 +415,7 @@
     </ul>
   </div>
 
-  <div class="pie"><svg><use href="#cp-mark"/></svg>C&amp;P Smile Clinic<span class="sep"></span><b>05</b> / 10</div>
+  <div class="pie"><svg><use href="#cp-mark"/></svg>C&amp;P Smile Clinic<span class="sep"></span><b>05</b> / 11</div>
 </section>
 
 <!-- ============ 6. SERVICIOS ============ -->
@@ -399,21 +433,21 @@
   </div>
 
   <div class="serv-grid">
-    <div class="card"><span class="icon-dot"><svg class="ico"><use href="#i-steth"/></svg></span><h3>Valoración y diagnóstico</h3>
+    <div class="card"><span class="icon-dot"><svg class="ico"><use href="#i-steth"/></svg></span><h3>Valoración y diagnóstico</h3><p class="benefit solo-nuevo">Conozca el estado de su salud oral y un plan claro, paso a paso.</p>
       <ul><li>Diagnóstico integral</li><li>Radiografías digitales</li><li>Plan de tratamiento personalizado</li></ul></div>
-    <div class="card"><span class="icon-dot"><svg class="ico"><use href="#i-layers"/></svg></span><h3>Rehabilitación oral</h3>
+    <div class="card"><span class="icon-dot"><svg class="ico"><use href="#i-layers"/></svg></span><h3>Rehabilitación oral</h3><p class="benefit solo-nuevo">Vuelva a masticar y hablar con comodidad.</p>
       <ul><li>Coronas en zirconio</li><li>Prótesis fijas y removibles</li><li>Prótesis híbridas y sobre implantes</li></ul></div>
-    <div class="card"><span class="icon-dot"><svg class="ico"><use href="#i-sparkles"/></svg></span><h3>Estética dental</h3>
+    <div class="card"><span class="icon-dot"><svg class="ico"><use href="#i-sparkles"/></svg></span><h3>Estética dental</h3><p class="benefit solo-nuevo">Una sonrisa armónica y natural.</p>
       <ul><li>Diseño de sonrisa digital</li><li>Carillas cerámicas</li><li>Blanqueamiento profesional</li></ul></div>
-    <div class="card"><span class="icon-dot"><svg class="ico"><use href="#i-implant"/></svg></span><h3>Implantología</h3>
-      <ul><li>Implantes de titanio</li><li>Carga inmediata</li><li>Técnicas mínimamente invasivas</li></ul></div>
-    <div class="card"><span class="icon-dot"><svg class="ico"><use href="#i-leaf"/></svg></span><h3>Periodoncia y tejidos blandos</h3>
-      <ul><li>Cirugía plástica gingival</li><li>Injertos de encía</li><li>Alargamiento de corona</li></ul></div>
-    <div class="card"><span class="icon-dot"><svg class="ico"><use href="#i-smile"/></svg></span><h3>Odontopediatría</h3>
+    <div class="card"><span class="icon-dot"><svg class="ico"><use href="#i-implant"/></svg></span><h3>Implantología</h3><p class="benefit solo-nuevo">Reemplace los dientes perdidos con soluciones fijas.</p>
+      <ul><li>Implantes de titanio</li><li class="solo-actual">Carga inmediata</li><li class="solo-nuevo">Carga inmediata, cuando el caso lo permite</li><li>Técnicas mínimamente invasivas</li></ul></div>
+    <div class="card"><span class="icon-dot"><svg class="ico"><use href="#i-leaf"/></svg></span><h3>Periodoncia y tejidos blandos</h3><p class="benefit solo-nuevo">Encías sanas, la base de una sonrisa duradera.</p>
+      <ul><li class="solo-actual">Cirugía plástica gingival</li><li class="solo-nuevo">Cirugía plástica de encías</li><li>Injertos de encía</li><li>Alargamiento de corona</li></ul></div>
+    <div class="card"><span class="icon-dot"><svg class="ico"><use href="#i-smile"/></svg></span><h3>Odontopediatría</h3><p class="benefit solo-nuevo">Atención amable para que los niños crezcan sin miedo al odontólogo.</p>
       <ul><li>Atención infantil especializada</li><li>Ortopedia maxilar temprana</li><li>Manejo de la ansiedad dental</li></ul></div>
   </div>
 
-  <div class="pie"><svg><use href="#cp-mark"/></svg>C&amp;P Smile Clinic<span class="sep"></span><b>06</b> / 10</div>
+  <div class="pie"><svg><use href="#cp-mark"/></svg>C&amp;P Smile Clinic<span class="sep"></span><b>06</b> / 11</div>
 </section>
 
 <!-- ============ 7. POR QUÉ ELEGIRNOS ============ -->
@@ -422,7 +456,7 @@
     <circle cx="400" cy="400" r="220"/><circle cx="400" cy="400" r="310"/><circle cx="400" cy="400" r="395"/>
   </svg>
   <div class="why-left">
-    <div class="eyebrow">Diferenciadores</div>
+    <div class="eyebrow solo-actual">Diferenciadores</div><div class="eyebrow solo-nuevo">Nuestro compromiso</div>
     <h1>¿Por qué<br><i>elegirnos</i>?</h1>
     <p class="lead">Una práctica odontológica donde la seguridad del paciente es la prioridad absoluta.</p>
   </div>
@@ -432,15 +466,15 @@
   </div>
 
   <div class="why-grid">
-    <div class="why-item"><div class="num">01</div><h3>Base científica</h3><p>Tratamientos respaldados por literatura clínica actualizada y protocolos estandarizados.</p></div>
-    <div class="why-item"><div class="num">02</div><h3>Docentes universitarios</h3><p>Un equipo vinculado a la academia, en constante actualización.</p></div>
-    <div class="why-item"><div class="num">03</div><h3>Ética y seguridad jurídica</h3><p>Formación en Derecho Médico: diagnósticos honestos y respeto por los derechos del paciente.</p></div>
-    <div class="why-item"><div class="num">04</div><h3>Tecnología digital</h3><p>Escáner intraoral y flujo de trabajo digital para mayor precisión y comodidad.</p></div>
-    <div class="why-item"><div class="num">05</div><h3>Laboratorio propio</h3><p>Coronas, carillas y prótesis fabricadas por nuestro laboratorio digital de apoyo.</p></div>
-    <div class="why-item"><div class="num">06</div><h3>Trato humano</h3><p>Atención empática y personalizada en cada etapa del tratamiento.</p></div>
+    <div class="why-item"><div class="num">01</div><h3>Base científica</h3><p class="solo-actual">Tratamientos respaldados por literatura clínica actualizada y protocolos estandarizados.</p><p class="solo-nuevo">Cada tratamiento se planifica con base en la evidencia clínica más actual.</p></div>
+    <div class="why-item"><div class="num">02</div><h3>Docentes universitarios</h3><p class="solo-actual">Un equipo vinculado a la academia, en constante actualización.</p><p class="solo-nuevo">Le atienden profesionales que enseñan odontología y se actualizan de forma permanente.</p></div>
+    <div class="why-item"><div class="num">03</div><h3 class="solo-actual">Ética y seguridad jurídica</h3><h3 class="solo-nuevo">Diagnósticos honestos</h3><p class="solo-actual">Formación en Derecho Médico: diagnósticos honestos y respeto por los derechos del paciente.</p><p class="solo-nuevo">Le explicamos su caso con claridad y solo le recomendamos lo que necesita.</p></div>
+    <div class="why-item"><div class="num">04</div><h3>Tecnología digital</h3><p class="solo-actual">Escáner intraoral y flujo de trabajo digital para mayor precisión y comodidad.</p><p class="solo-nuevo">Impresiones con escáner intraoral: más precisión y comodidad, sin pastas incómodas.</p></div>
+    <div class="why-item"><div class="num">05</div><h3>Laboratorio propio</h3><p class="solo-actual">Coronas, carillas y prótesis fabricadas por nuestro laboratorio digital de apoyo.</p><p class="solo-nuevo">Sus coronas y prótesis se diseñan y fabrican en nuestro laboratorio digital: más control de calidad y menos espera.</p></div>
+    <div class="why-item"><div class="num">06</div><h3>Trato humano</h3><p class="solo-actual">Atención empática y personalizada en cada etapa del tratamiento.</p><p class="solo-nuevo">Le acompañamos con empatía en cada etapa, también si siente temor al odontólogo.</p></div>
   </div>
 
-  <div class="pie"><svg><use href="#cp-mark"/></svg>C&amp;P Smile Clinic<span class="sep"></span><b>07</b> / 10</div>
+  <div class="pie"><svg><use href="#cp-mark"/></svg>C&amp;P Smile Clinic<span class="sep"></span><b>07</b> / 11</div>
 </section>
 
 <!-- ============ 8. LABORATORIO ============ -->
@@ -453,7 +487,7 @@
   <div class="lab-text">
     <div class="eyebrow">Laboratorio de apoyo</div>
     <h1>Odontología <i>digital</i><br>de precisión</h1>
-    <p class="lead">Contamos con <strong style="color:#fff">C&amp;P Smile Laboratory</strong> como apoyo para la odontología digital: diseño y fabricación de coronas, carillas, incrustaciones y prótesis con tecnología CAD/CAM, en alianza tecnológica con Leaf Dental.</p>
+    <p class="lead solo-actual">Contamos con <strong style="color:#fff">C&amp;P Smile Laboratory</strong> como apoyo para la odontología digital: diseño y fabricación de coronas, carillas, incrustaciones y prótesis con tecnología CAD/CAM, en alianza tecnológica con Leaf Dental.</p><p class="lead solo-nuevo">Nuestro laboratorio, <strong style="color:#fff">C&amp;P Smile Laboratory</strong>, respalda cada tratamiento con odontología digital: diseñamos y fabricamos coronas, carillas y prótesis con tecnología CAD/CAM, en alianza tecnológica con Leaf Dental. El resultado: restauraciones precisas y tiempos de entrega más cortos.</p>
     <div class="chips">
       <span class="chip">Fresado en 5 ejes</span><span class="chip">Sinterizado SEED Fire S9</span><span class="chip">Prensado SEED Press 2</span><span class="chip">Impresión 3D SEED Print 2+</span><span class="chip">CAD/CAM Millbox</span>
     </div>
@@ -466,12 +500,12 @@
 
   <div class="flow">
     <div class="step"><div class="top"><span class="ic"><svg class="ico"><use href="#i-scan"/></svg></span><span class="k">01</span></div><h3>Escaneo intraoral</h3><p>Impresión digital precisa, sin materiales incómodos.</p></div>
-    <div class="step"><div class="top"><span class="ic"><svg class="ico"><use href="#i-pen"/></svg></span><span class="k">02</span></div><h3>Diseño CAD</h3><p>Planificación virtual de cada restauración.</p></div>
+    <div class="step"><div class="top"><span class="ic"><svg class="ico"><use href="#i-pen"/></svg></span><span class="k">02</span></div><h3 class="solo-actual">Diseño CAD</h3><h3 class="solo-nuevo">Diseño digital (CAD)</h3><p>Planificación virtual de cada restauración.</p></div>
     <div class="step"><div class="top"><span class="ic"><svg class="ico"><use href="#i-cpu"/></svg></span><span class="k">03</span></div><h3>Fresado e impresión 3D</h3><p>Zirconio, disilicato de litio, PMMA y resinas.</p></div>
     <div class="step"><div class="top"><span class="ic"><svg class="ico"><use href="#i-check"/></svg></span><span class="k">04</span></div><h3>Restauración final</h3><p>Ajuste y entrega en la clínica, con control de calidad.</p></div>
   </div>
 
-  <div class="pie"><svg><use href="#cp-mark"/></svg>C&amp;P Smile Clinic<span class="sep"></span><b>08</b> / 10</div>
+  <div class="pie"><svg><use href="#cp-mark"/></svg>C&amp;P Smile Clinic<span class="sep"></span><b>08</b> / 11</div>
 </section>
 
 <!-- ============ 9. CASOS CLÍNICOS ============ -->
@@ -505,10 +539,45 @@
     </div>
   </div>
 
-  <div class="pie"><svg><use href="#cp-mark"/></svg>C&amp;P Smile Clinic<span class="sep"></span><b>09</b> / 10</div>
+  <p class="cases-note solo-nuevo">Fotografías de pacientes de la clínica, publicadas con su autorización. Los resultados varían en cada caso.</p>
+  <div class="pie"><svg><use href="#cp-mark"/></svg>C&amp;P Smile Clinic<span class="sep"></span><b>09</b> / 11</div>
 </section>
 
-<!-- ============ 10. CONTACTO ============ -->
+<!-- ============ 10. MEDIOS DE PAGO ============ -->
+<section class="slide s-pay">
+  <svg class="rings" width="900" height="900" viewBox="0 0 900 900" style="right:-430px; top:-480px">
+    <circle cx="450" cy="450" r="250"/><circle cx="450" cy="450" r="340"/><circle cx="450" cy="450" r="430"/>
+  </svg>
+  <div class="pay-left">
+    <div class="eyebrow">Facilidades de pago</div>
+    <h1>Medios de pago<br>y <i>financiación</i></h1>
+    <p class="lead">Elija la forma de pago que mejor se adapte a usted o financie su tratamiento con nuestros aliados.</p>
+    <div class="soon"><span class="icon-dot" style="width:40px; height:40px"><svg class="ico" style="width:20px; height:20px"><use href="#i-clock"/></svg></span><span><strong>Cooperativas:</strong> próximamente</span></div>
+  </div>
+
+  <div class="pay-groups">
+    <div>
+      <div class="pay-label">Pago directo</div>
+      <div class="pay-row">
+        <div class="pay-card"><div class="logos"><img src="img/pagos/visa.svg" alt="Visa" style="height:40px"><img src="img/pagos/mastercard.svg" alt="Mastercard" style="height:84px"></div><div class="name">Tarjetas de crédito y débito</div></div>
+        <div class="pay-card"><span class="icon-dot"><svg class="ico"><use href="#i-cash"/></svg></span><div class="name">Efectivo</div></div>
+        <div class="pay-card"><span class="icon-dot"><svg class="ico"><use href="#i-transfer"/></svg></span><div class="name">Transferencias</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="pay-label">Financiación</div>
+      <div class="pay-row">
+        <div class="pay-card logo-only"><img src="img/pagos/welli.png" alt="Welli" style="max-height:140px"></div>
+        <div class="pay-card logo-only"><img src="img/pagos/addi.png" alt="Addi" style="max-height:74px"></div>
+        <div class="pay-card logo-only"><img src="img/pagos/meddipay.svg" alt="Meddipay" style="max-height:84px"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pie"><svg><use href="#cp-mark"/></svg>C&amp;P Smile Clinic<span class="sep"></span><b>10</b> / 11</div>
+</section>
+
+<!-- ============ 11. CONTACTO ============ -->
 <section class="slide s-contact">
   <svg class="rings light" width="1920" height="1080" viewBox="0 0 1920 1080">
     <circle cx="1430" cy="560" r="330"/><circle cx="1430" cy="560" r="470"/><circle cx="1430" cy="560" r="620"/><circle cx="1430" cy="560" r="790"/>
@@ -518,7 +587,8 @@
 
   <div class="contact-left">
     <svg class="logo" role="img" aria-label="C&amp;P Smile Clinic"><use href="#cp-logo"/></svg>
-    <h2>Contacto</h2>
+    <h2 class="solo-actual">Contacto</h2><h2 class="solo-nuevo">Agende su<br><i>valoración</i></h2>
+    <p class="cta-inst solo-nuevo"><strong>¿Empresa o institución?</strong> Escríbanos para convenios y alianzas.</p>
     <div class="contact-grid">
       <div class="ci"><span class="gl"><svg class="ico"><use href="#i-pin"/></svg></span><div><div class="lbl">Dirección</div><div class="val">Cl. 52 Nte. #2 DN 05<br>La Merced, Cali</div></div></div>
       <div class="ci"><span class="gl"><svg class="ico"><use href="#i-clock"/></svg></span><div><div class="lbl">Horarios</div><div class="val">Martes&nbsp;&nbsp;1:00&nbsp;–&nbsp;6:00&nbsp;p.&nbsp;m.<br>Viernes&nbsp;&nbsp;7:00&nbsp;a.&nbsp;m.&nbsp;–&nbsp;12:00&nbsp;m.<br>Sábado&nbsp;&nbsp;7:00&nbsp;a.&nbsp;m.&nbsp;–&nbsp;6:00&nbsp;p.&nbsp;m.</div></div></div>
@@ -530,7 +600,7 @@
   </div>
 
   <div class="qr-card">
-    <h3>Escanee y conéctese</h3>
+    <h3 class="solo-actual">Escanee y conéctese</h3><h3 class="solo-nuevo">Escanee y escríbanos</h3>
     <p>Conozca la clínica o escríbanos directamente.</p>
     <div class="qrs">
       <div class="qr"><div class="code"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" shape-rendering="crispEdges"><path stroke="#0f172a" d="M0 0.5h7m2 0h2m1 0h1m2 0h6m1 0h7M0 1.5h1m5 0h1m5 0h1m4 0h1m2 0h1m1 0h1m5 0h1M0 2.5h1m1 0h3m1 0h1m1 0h2m1 0h1m2 0h1m1 0h1m1 0h3m1 0h1m1 0h3m1 0h1M0 3.5h1m1 0h3m1 0h1m1 0h1m1 0h3m3 0h2m1 0h1m2 0h1m1 0h3m1 0h1M0 4.5h1m1 0h3m1 0h1m1 0h3m1 0h4m1 0h4m1 0h1m1 0h3m1 0h1M0 5.5h1m5 0h1m1 0h1m4 0h4m5 0h1m5 0h1M0 6.5h7m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h1m1 0h7M8 7.5h1m2 0h1m1 0h1m1 0h1m2 0h3M0 8.5h1m1 0h5m3 0h2m2 0h2m1 0h1m1 0h1m2 0h5M0 9.5h2m2 0h2m2 0h1m6 0h5m1 0h4m3 0h1M0 10.5h8m2 0h1m1 0h1m5 0h1m1 0h2M4 11.5h2m1 0h1m1 0h1m1 0h2m1 0h1m1 0h1m3 0h1m1 0h2m1 0h1m1 0h1M3 12.5h1m1 0h2m4 0h2m3 0h2m7 0h2M0 13.5h1m1 0h4m1 0h2m1 0h6m1 0h4m1 0h1m1 0h1m3 0h1M0 14.5h3m2 0h6m2 0h5m3 0h3m1 0h2M0 15.5h1m8 0h1m1 0h3m1 0h1m2 0h1m1 0h1m2 0h2m2 0h1M0 16.5h4m1 0h2m1 0h1m5 0h2m1 0h1m1 0h1m3 0h1m1 0h2M0 17.5h2m2 0h2m1 0h1m1 0h3m3 0h2m1 0h3m1 0h3m1 0h1m1 0h1M0 18.5h1m2 0h2m1 0h4m1 0h2m7 0h2m1 0h1m2 0h1M0 19.5h1m1 0h4m3 0h2m3 0h1m1 0h1m4 0h1m1 0h2m2 0h1M0 20.5h1m3 0h1m1 0h2m3 0h1m4 0h1m1 0h7m1 0h3M8 21.5h1m4 0h3m1 0h2m1 0h1m3 0h5M0 22.5h7m2 0h3m1 0h5m1 0h2m1 0h1m1 0h3M0 23.5h1m5 0h1m1 0h1m2 0h3m1 0h1m1 0h4m3 0h1m3 0h1M0 24.5h1m1 0h3m1 0h1m1 0h1m2 0h1m2 0h2m4 0h5m1 0h3M0 25.5h1m1 0h3m1 0h1m1 0h1m3 0h2m1 0h2m1 0h2m3 0h1m1 0h2M0 26.5h1m1 0h3m1 0h1m1 0h1m1 0h1m7 0h3m1 0h6M0 27.5h1m5 0h1m3 0h1m2 0h1m2 0h1m3 0h2m1 0h1m1 0h1m1 0h1M0 28.5h7m1 0h2m1 0h2m3 0h1m1 0h2m2 0h5"/></svg></div><span>Sitio web</span></div>

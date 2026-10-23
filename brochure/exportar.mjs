@@ -1,7 +1,9 @@
-// Genera Presentacion_CP_Smile_Clinic.pdf a partir de presentacion.html.
+// Genera los PDF de la presentación a partir de presentacion.html, uno por versión de textos:
+//   Presentacion_CP_Smile_Clinic.pdf               -> textos actuales  (data-version="actual")
+//   Presentacion_CP_Smile_Clinic_textos_nuevos.pdf -> textos nuevos    (data-version="nuevo")
 // Uso (desde la raíz del repo clinic):
-//   node brochure/exportar.mjs                 -> solo el PDF
-//   node brochure/exportar.mjs --capturas DIR  -> además un PNG por diapositiva en DIR
+//   node brochure/exportar.mjs                 -> solo los PDF
+//   node brochure/exportar.mjs --capturas DIR  -> además un PNG por diapositiva en DIR/actual y DIR/nuevo
 // Requiere Playwright (local o global) y la fuente Inter instalada en el sistema.
 import { createRequire } from 'node:module';
 import { execSync } from 'node:child_process';
@@ -19,7 +21,10 @@ try {
 
 const dir = path.dirname(fileURLToPath(import.meta.url));
 const html = pathToFileURL(path.join(dir, 'presentacion.html')).href;
-const pdf = path.join(dir, 'Presentacion_CP_Smile_Clinic.pdf');
+const versiones = [
+  ['actual', 'Presentacion_CP_Smile_Clinic.pdf'],
+  ['nuevo', 'Presentacion_CP_Smile_Clinic_textos_nuevos.pdf'],
+];
 const i = process.argv.indexOf('--capturas');
 const capturas = i > -1 ? path.resolve(process.argv[i + 1]) : null;
 
@@ -34,16 +39,20 @@ if (rotas.length) {
   process.exit(1);
 }
 
-await page.pdf({ path: pdf, width: '1920px', height: '1080px', printBackground: true, preferCSSPageSize: true });
-console.log('PDF:', pdf);
+for (const [version, nombre] of versiones) {
+  await page.evaluate((v) => { document.documentElement.dataset.version = v; }, version);
+  const pdf = path.join(dir, nombre);
+  await page.pdf({ path: pdf, width: '1920px', height: '1080px', printBackground: true, preferCSSPageSize: true });
+  console.log('PDF:', pdf);
 
-if (capturas) {
-  mkdirSync(capturas, { recursive: true });
-  const slides = await page.locator('.slide').all();
-  for (const [n, slide] of slides.entries()) {
-    const out = path.join(capturas, String(n + 1).padStart(2, '0') + '.png');
-    await slide.screenshot({ path: out });
+  if (capturas) {
+    const carpeta = path.join(capturas, version);
+    mkdirSync(carpeta, { recursive: true });
+    const slides = await page.locator('.slide').all();
+    for (const [n, slide] of slides.entries()) {
+      await slide.screenshot({ path: path.join(carpeta, String(n + 1).padStart(2, '0') + '.png') });
+    }
+    console.log(`${slides.length} capturas en`, carpeta);
   }
-  console.log(`${slides.length} capturas en`, capturas);
 }
 await browser.close();
