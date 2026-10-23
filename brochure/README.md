@@ -1,10 +1,10 @@
 # Presentación institucional C&P Smile Clinic
 
-PDF horizontal 16:9 (9 diapositivas) para presentar la clínica, con la misma estructura del brochure de referencia y la identidad de C&P (azul `#0033CC`, crema `#F2EEE3`, Inter).
+PDF horizontal 16:9 (10 diapositivas) para presentar la clínica, con la misma estructura del brochure de referencia y la identidad de C&P (azul `#0033CC`, crema `#F2EEE3`, Inter).
 
 - `Presentacion_CP_Smile_Clinic.pdf`: el archivo final. No se sube al repo (el `.gitignore` excluye `*.pdf`); se genera con `exportar.mjs`.
 - `presentacion.html`: la fuente. Cada `<section class="slide">` es una diapositiva de 1920×1080. Las fotos salen de `../public/`.
-- `img/`: fotos del Dr. Prado sin fondo, generadas con `recortar.py`.
+- `img/`: fotos del Dr. Prado sin fondo, generadas con `recortar.py`, y la foto de la Dra. Dayanna Díaz, extraída de su PDF de presentación con `pdfimages -j -f 2 -l 2`.
 - `exportar.mjs`: convierte el HTML en PDF con Playwright (Chromium).
 
 ## Regenerar el PDF
