@@ -220,14 +220,9 @@
 
   .card .benefit { grid-column: 1 / -1; margin-top: 14px; font-size: 19.5px; line-height: 1.4; color: var(--blue-dark); font-weight: 500; }
   html[data-version="nuevo"] .serv-grid { top: 296px; gap: 22px; }
-  html[data-version="nuevo"] .card { display: grid; grid-template-columns: 58px 1fr; column-gap: 16px; align-items: center; padding: 24px 26px; }
+  html[data-version="nuevo"] .card { display: grid; grid-template-columns: 58px 1fr; column-gap: 16px; align-items: center; align-content: start; padding: 24px 26px; }
   html[data-version="nuevo"] .card h3 { margin-top: 0; line-height: 1.12; font-size: 25px; }
   html[data-version="nuevo"] .card ul { grid-column: 1 / -1; margin-top: 12px; }
-  html[data-version] .card.accent { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; border: none; color: #fff;
-    background: radial-gradient(260px 200px at 85% 10%, rgba(130, 175, 255, .55), transparent 70%), linear-gradient(160deg, #2f63ff 0%, var(--blue) 55%, var(--blue-dark) 100%); }
-  html[data-version] .card.accent .icon-dot { background: rgba(255, 255, 255, .16); color: #fff; }
-  html[data-version] .card.accent .tag { margin-top: 26px; font-size: 16px; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--sky); }
-  html[data-version] .card.accent h3 { margin-top: 8px; font-size: 40px; color: #fff; letter-spacing: -.03em; }
 
   /* ---------- 11. Contacto ---------- */
   .contact-left { position: absolute; left: 140px; top: 104px; width: 1000px; }
@@ -454,7 +449,7 @@
       <ul><li class="solo-actual">Cirugía plástica gingival</li><li class="solo-nuevo">Cirugía plástica de encías</li><li>Injertos de encía</li><li>Alargamiento de corona</li></ul></div>
     <div class="card"><span class="icon-dot"><svg class="ico"><use href="#i-smile"/></svg></span><h3>Odontopediatría</h3><p class="benefit solo-nuevo">Atención amable para que los niños crezcan sin miedo al odontólogo.</p>
       <ul><li>Atención infantil especializada</li><li>Ortopedia maxilar temprana</li><li>Manejo de la ansiedad dental</li></ul></div>
-    <div class="card accent"><span class="icon-dot"><svg class="ico"><use href="#i-braces"/></svg></span><div class="tag">También ofrecemos</div><h3>Ortodoncia</h3></div>
+    <div class="card"><span class="icon-dot"><svg class="ico"><use href="#i-braces"/></svg></span><h3>Ortodoncia</h3></div>
   </div>
 
   <div class="pie"><svg><use href="#cp-mark"/></svg>C&amp;P Smile Clinic<span class="sep"></span><b>06</b> / 11</div>
